@@ -17,11 +17,13 @@
 /**/*.project
 /**/*.pmd
 /**/*.springBeans
-/**/target
+/**/**/target
 .buildpath
 
 
 # Ignore Intellij config
-/.idea
+/**/.idea
 /**/*.iml
+/**/**/target
+
 
