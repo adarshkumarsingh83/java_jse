@@ -1,4 +1,4 @@
-/*
+package com.esprak.adarsh.pkg2;/*
  * Copyright (c) 2015 Espark And ©Adarsh Development Services @copyright All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,9 +28,8 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.esprak.adarsh;
 
-import java.util.function.BiConsumer;
+import java.util.function.ObjIntConsumer;
 
 /**
  * @author Adarsh Kumar
@@ -38,39 +37,37 @@ import java.util.function.BiConsumer;
  * @version $Revision: 0001 $, $Date:: 1/1/10 0:00 AM#$
  * @Espark @copyright all right reserve
  */
-public class BiConsumerExample {
+public class ObjectToIntConsumerExample {
 
-
-    public static void biConsumer(String value1, String value2, BiConsumer<String, String> biConsumer) {
-        System.out.println("Data " + value1 + " " + value2);
-        biConsumer.accept(value1, value2);
+    public static void objIntConsumer(String value1, Integer value2, ObjIntConsumer<String> objIntConsumer) {
+        objIntConsumer.accept(value1, value2);
     }
 
     public static void main(String[] args) {
         //1 approach
-        final BiConsumer<String, String> biConsumer = new BiConsumer<String, String>() {
+        final ObjIntConsumer<String> objIntConsumer = new ObjIntConsumer<String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(String object, int value) {
+                System.out.println("After Processing " + (Integer.parseInt(object) + value));
             }
         };
-        biConsumer("name", System.getProperty("user.name"), biConsumer);
+        objIntConsumer("10", 20, objIntConsumer);
 
         //2 approach
-        biConsumer("name", System.getProperty("user.name"), new BiConsumer<String, String>() {
+        objIntConsumer("10", 20, new ObjIntConsumer<String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(String object, int value) {
+                System.out.println("After Processing " + (Integer.parseInt(object) + value));
             }
         });
 
         //3 approach
-        biConsumer("name", System.getProperty("user.name"), (String value1, String value2) -> {
-            System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+        objIntConsumer("10", 20, (String object, int value) -> {
+            System.out.println("After Processing " + (Integer.parseInt(object) + value));
         });
 
         //4 approach
-        biConsumer("name", System.getProperty("user.name"), (value1, value2) -> System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase()));
+        objIntConsumer("10", 20, (object, value) -> System.out.println("After Processing " + (Integer.parseInt(object) + value)));
     }
 
 

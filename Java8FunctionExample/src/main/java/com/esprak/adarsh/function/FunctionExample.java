@@ -1,4 +1,4 @@
-/*
+package com.esprak.adarsh.function;/*
  * Copyright (c) 2015 Espark And ©Adarsh Development Services @copyright All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,9 +28,9 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.esprak.adarsh;
 
-import java.util.function.BiConsumer;
+
+import java.util.function.Function;
 
 /**
  * @author Adarsh Kumar
@@ -38,40 +38,44 @@ import java.util.function.BiConsumer;
  * @version $Revision: 0001 $, $Date:: 1/1/10 0:00 AM#$
  * @Espark @copyright all right reserve
  */
-public class BiConsumerExample {
+public class FunctionExample {
 
-
-    public static void biConsumer(String value1, String value2, BiConsumer<String, String> biConsumer) {
-        System.out.println("Data " + value1 + " " + value2);
-        biConsumer.accept(value1, value2);
+    public static String stringFunction(String inputDouble, Function<Object, String> function) {
+        final String output = function.apply(inputDouble);
+        return output;
     }
 
     public static void main(String[] args) {
         //1 approach
-        final BiConsumer<String, String> biConsumer = new BiConsumer<String, String>() {
+        final Function<Object, String> function = new Function<Object, String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public String apply(Object o) {
+                return o.toString().toUpperCase();
             }
         };
-        biConsumer("name", System.getProperty("user.name"), biConsumer);
+        System.out.println("Processed Date " + stringFunction(System.getProperty("user.name"), function));
+
 
         //2 approach
-        biConsumer("name", System.getProperty("user.name"), new BiConsumer<String, String>() {
+        System.out.println("Processed Date " + stringFunction(System.getProperty("user.name"), new Function<Object, String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public String apply(Object o) {
+                return o.toString().toUpperCase();
             }
-        });
+        }));
+
 
         //3 approach
-        biConsumer("name", System.getProperty("user.name"), (String value1, String value2) -> {
-            System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
-        });
+        System.out.println("Processed Date " + stringFunction(System.getProperty("user.name"), (Object o) -> {
+            return o.toString().toUpperCase();
+        }));
 
         //4 approach
-        biConsumer("name", System.getProperty("user.name"), (value1, value2) -> System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase()));
+        System.out.println("Processed Date " + stringFunction(System.getProperty("user.name"), (o) -> {
+            return o.toString().toUpperCase();
+        }));
+
+        //5 approach
+        System.out.println("Processed Date " + stringFunction(System.getProperty("user.name"), o -> o.toString().toUpperCase()));
     }
-
-
 }

@@ -1,4 +1,4 @@
-/*
+package com.esprak.adarsh.pkg2;/*
  * Copyright (c) 2015 Espark And ©Adarsh Development Services @copyright All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,9 +28,8 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.esprak.adarsh;
 
-import java.util.function.BiConsumer;
+import java.util.function.ObjDoubleConsumer;
 
 /**
  * @author Adarsh Kumar
@@ -38,39 +37,38 @@ import java.util.function.BiConsumer;
  * @version $Revision: 0001 $, $Date:: 1/1/10 0:00 AM#$
  * @Espark @copyright all right reserve
  */
-public class BiConsumerExample {
+public class ObjectToDoubleConsumerExample {
 
-
-    public static void biConsumer(String value1, String value2, BiConsumer<String, String> biConsumer) {
-        System.out.println("Data " + value1 + " " + value2);
-        biConsumer.accept(value1, value2);
+    public static void objDoubleConsumer(String value1, Double value2, ObjDoubleConsumer<String> objDoubleConsumer) {
+        objDoubleConsumer.accept(value1, value2);
     }
 
     public static void main(String[] args) {
+
         //1 approach
-        final BiConsumer<String, String> biConsumer = new BiConsumer<String, String>() {
+        final ObjDoubleConsumer<String> objDoubleConsumer = new ObjDoubleConsumer<String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(String object, double value) {
+                System.out.println("Data After Processing " + (Double.parseDouble(object) + value));
             }
         };
-        biConsumer("name", System.getProperty("user.name"), biConsumer);
+        objDoubleConsumer("10", 20D, objDoubleConsumer);
 
         //2 approach
-        biConsumer("name", System.getProperty("user.name"), new BiConsumer<String, String>() {
+        objDoubleConsumer("10", 20D, new ObjDoubleConsumer<String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(String object, double value) {
+                System.out.println("Data After Processing " + (Double.parseDouble(object) + value));
             }
         });
 
         //3 approach
-        biConsumer("name", System.getProperty("user.name"), (String value1, String value2) -> {
-            System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+        objDoubleConsumer("10", 20D, (String object, double value) -> {
+            System.out.println("Data After Processing " + (Double.parseDouble(object) + value));
         });
 
         //4 approach
-        biConsumer("name", System.getProperty("user.name"), (value1, value2) -> System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase()));
+        objDoubleConsumer("10", 20D, (object, value) -> System.out.println("Data After Processing " + (Double.parseDouble(object) + value)));
     }
 
 

@@ -1,4 +1,4 @@
-/*
+package com.esprak.adarsh.pkg1;/*
  * Copyright (c) 2015 Espark And ©Adarsh Development Services @copyright All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,9 +28,8 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.esprak.adarsh;
 
-import java.util.function.BiConsumer;
+import java.util.function.DoubleConsumer;
 
 /**
  * @author Adarsh Kumar
@@ -38,39 +37,45 @@ import java.util.function.BiConsumer;
  * @version $Revision: 0001 $, $Date:: 1/1/10 0:00 AM#$
  * @Espark @copyright all right reserve
  */
-public class BiConsumerExample {
+public class DoubleConsumerExample {
 
-
-    public static void biConsumer(String value1, String value2, BiConsumer<String, String> biConsumer) {
-        System.out.println("Data " + value1 + " " + value2);
-        biConsumer.accept(value1, value2);
+    public static void doubleConsumer(Double input, DoubleConsumer doubleConsumer) {
+        doubleConsumer.accept(input);
     }
 
     public static void main(String[] args) {
+
         //1 approach
-        final BiConsumer<String, String> biConsumer = new BiConsumer<String, String>() {
+        final DoubleConsumer doubleConsumer=new DoubleConsumer() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(double value) {
+                System.out.println("Data After Processing " + (value - Float.MAX_VALUE));
             }
         };
-        biConsumer("name", System.getProperty("user.name"), biConsumer);
+        doubleConsumer(Double.MAX_VALUE, doubleConsumer);
 
         //2 approach
-        biConsumer("name", System.getProperty("user.name"), new BiConsumer<String, String>() {
+        doubleConsumer(Double.MAX_VALUE, new DoubleConsumer() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(double value) {
+                System.out.println("Data After Processing " + (value - Float.MAX_VALUE));
             }
         });
 
         //3 approach
-        biConsumer("name", System.getProperty("user.name"), (String value1, String value2) -> {
-            System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+        doubleConsumer(Double.MAX_VALUE, (double value) -> {
+            System.out.println("Data After Processing " + (value - Float.MAX_VALUE));
         });
 
         //4 approach
-        biConsumer("name", System.getProperty("user.name"), (value1, value2) -> System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase()));
+        doubleConsumer(Double.MAX_VALUE, (value) -> System.out.println("Data After Processing " + (value - Float.MAX_VALUE)));
+
+        //5 approach
+        doubleConsumer(Double.MAX_VALUE, value -> System.out.println("Data After Processing " + (value - Float.MAX_VALUE)));
+
+
+        //6 approach
+        doubleConsumer(Double.MAX_VALUE, System.out::println);
     }
 
 

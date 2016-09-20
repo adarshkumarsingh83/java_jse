@@ -30,7 +30,15 @@
  */
 package com.esprak.adarsh;
 
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
+import java.util.stream.IntStream;
 
 /**
  * @author Adarsh Kumar
@@ -38,40 +46,43 @@ import java.util.function.BiConsumer;
  * @version $Revision: 0001 $, $Date:: 1/1/10 0:00 AM#$
  * @Espark @copyright all right reserve
  */
-public class BiConsumerExample {
-
-
-    public static void biConsumer(String value1, String value2, BiConsumer<String, String> biConsumer) {
-        System.out.println("Data " + value1 + " " + value2);
-        biConsumer.accept(value1, value2);
-    }
+public class GeneralExample {
 
     public static void main(String[] args) {
-        //1 approach
-        final BiConsumer<String, String> biConsumer = new BiConsumer<String, String>() {
+        /*consumer example in api */
+
+        List<String> list= Arrays.asList("1","2","3");
+
+        list.forEach(new Consumer<String>() {
             @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+            public void accept(String value) {
+                System.out.println(value);
+            }
+        });
+
+        list.forEach((value)->{
+            System.out.println(value);
+        });
+
+
+        /*bi consumer example in api */
+        Map<String,String> map=new HashMap<String,String>(){
+            {
+                put("1","adarsh");
+                put("2","amit");
+                put("3","radha");
             }
         };
-        biConsumer("name", System.getProperty("user.name"), biConsumer);
 
-        //2 approach
-        biConsumer("name", System.getProperty("user.name"), new BiConsumer<String, String>() {
-            @Override
-            public void accept(String value1, String value2) {
-                System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
+         map.forEach(new BiConsumer<String, String>() {
+             @Override
+             public void accept(String s1, String s2) {
+                 System.out.println(s1+" "+s2);
+             }
+         });
+        map.forEach((String s1, String s2)-> {
+                System.out.println(s1+" "+s2);
             }
-        });
-
-        //3 approach
-        biConsumer("name", System.getProperty("user.name"), (String value1, String value2) -> {
-            System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase());
-        });
-
-        //4 approach
-        biConsumer("name", System.getProperty("user.name"), (value1, value2) -> System.out.println("Data Processed " + value1.toUpperCase() + " == " + value2.toUpperCase()));
+        );
     }
-
-
 }
