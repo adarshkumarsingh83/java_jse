@@ -15,3 +15,4 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8 Lambda Expression
 - Java8 Supplier Example
 - Java8 Unary Operator
+- Java8 Predicate Example
