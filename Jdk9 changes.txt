@@ -1,0 +1,97 @@
+Java platform module system
+Interface Private Methods
+HTTP 2 Client
+JShell - REPL Tool
+Platform and JVM Logging
+Process API Updates
+Collection API Updates
+Stream API Improvements
+Multi-Release JAR Files
+@Deprecated Tag Changes
+Stack Walking
+Java Docs Updates
+Miscellaneous Other Features
+
+
+Collection API Updates
+-------------------------------
+List<String> namesList = List.of("Lokesh", "Amit", "John");
+ 
+ Set<String> namesSet = Set.of("Lokesh", "Amit", "John");
+ 
+ Map<String, String> namesMap = Map.ofEntries(
+                                    Map.entry("1", "Lokesh"),
+                                    Map.entry("2", "Amit"),
+                                    Map.entry("3", "Brian"));
+                                    
+                                    
+Stream API Improvements
+---------------------------------
+a.Limiting Stream with takeWhile() and dropWhile() methods
+
+List<String> alphabets = List.of("a", "b", "c", "d", "e", "f", "g", "h", "i");
+List<String> subset1 = alphabets
+        .stream()
+        .takeWhile(s -> !s.equals("d"))
+        .collect(Collectors.toList());   
+        
+List<String> alphabets = List.of("a", "b", "c", "d", "e", "f", "g", "h", "i");
+List<String> subset2 = alphabets
+        .stream()
+        .dropWhile(s -> !s.equals("d"))
+        .collect(Collectors.toList());                                         
+        
+        
+b.Overloaded Stream iterate method
+static Stream iterate(final T seed, final UnaryOperator f)
+static Stream iterate(T seed, Predicate hasNext, UnaryOperator next)
+
+List<Integer> numbers = Stream.iterate(1, i -> i+1)
+                            .limit(10)
+                            .collect(Collectors.toList());
+                            
+                            
+List<Integer> numbers = Stream.iterate(1, i -> i <= 10 ,i -> i+1)
+                                .collect(Collectors.toList());                            
+
+c.New Stream ofNullable() method        
+tream<String> stream = Stream.ofNullable("123");
+System.out.println(stream.count());
+ 
+stream = Stream.ofNullable(null);
+System.out.println(stream.count())
+
+
+
+Process API Updates
+--------------------------------------
+before jdk5 Runtime.getRuntime().exec() was used for process creation 
+after jdk5 ProcessBuilder API was introduced which supported a cleaner way of spawning new processes. 
+Java 9 is adding a new way of getting information about current and any spawned process.
+To get information of any process, now you should use java.lang.ProcessHandle.Info interface. 
+a.the command used to start the process
+b.the arguments of the command
+c.time instant when the process was started
+d.total time spent by it and the user who created it
+
+Ex:
+ProcessHandle processHandle = ProcessHandle.current();
+ProcessHandle.Info processInfo = processHandle.info();
+ 
+System.out.println( processHandle.getPid() );
+System.out.println( processInfo.arguments().isPresent() );
+System.out.println( pprocessInfo.command().isPresent() );
+System.out.println( processInfo.command().get().contains("java") );
+System.out.println( processInfo.startInstant().isPresent() );
+
+To get the information of a new spawned process, use process.toHandle() method to get ProcessHandle instance
+String javaPrompt = ProcessUtils.getJavaCmd().getAbsolutePath();
+ProcessBuilder processBuilder = new ProcessBuilder(javaPrompt, "-version");
+Process process = processBuilder.inheritIO().start();
+ProcessHandle processHandle = process.toHandle();
+
+use ProcessHandle.allProcesses() to get a stream of ProcessHandle of all processes available in system.
+To get the list of all child processes (direct as well as n-level deep), use children() and descendants() method.
+Ex:
+Stream<ProcessHandle> children    = ProcessHandle.current().children();
+Stream<ProcessHandle> descendants = ProcessHandle.current().descendants();

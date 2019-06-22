@@ -1,0 +1,11 @@
+
+$ gradle clean build --info
+
+$ gradle clean build --debug
+
+$ ./gradlew dependencies
+
+
+$ gradle -q tasks
+
+

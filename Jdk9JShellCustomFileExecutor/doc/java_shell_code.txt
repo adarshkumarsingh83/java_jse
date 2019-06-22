@@ -1,0 +1,2 @@
+String var1 = "Adarsh kumar Singh";
+System.out.println(var1);

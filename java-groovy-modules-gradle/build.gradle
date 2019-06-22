@@ -1,0 +1,33 @@
+
+subprojects {
+
+    group 'java-groovy-modules-gradle'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'groovy'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'checkstyle'
+    apply plugin: 'pmd'
+
+    sourceCompatibility = "${javaVersion}"
+    targetCompatibility = "${javaVersion}"
+
+
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+        testCompile group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4jVersion}"
+        testCompile group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4jVersion}"
+        testCompile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: "${log4jVersion}"
+        testCompile group: 'org.slf4j', name: 'slf4j-api', version: "${slf4jVersion}"
+        testCompile "junit:junit:4+"
+        testCompile "org.spockframework:spock-core:${spockVersion}"
+    }
+}

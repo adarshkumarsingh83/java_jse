@@ -1,0 +1,4 @@
+rootProject.name = 'java-groovy-modules-gradle'
+include 'module-core'
+include 'module-service'
+

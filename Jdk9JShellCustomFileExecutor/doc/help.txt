@@ -1,0 +1,15 @@
+$ java com.espark.adarsh.ApplicationMain ./java_shell_code.txt
+
+
+
+$ vi java_shell_code.txt
+-------------------------------
+
+String var1 = "Adarsh kumar Singh";
+System.out.println(var1);
+
+-------------------------------
+ESC:wq
+
+
+

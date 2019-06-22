@@ -1,0 +1,70 @@
+
+// gradle java plugin
+apply plugin: 'java'
+
+// gradle groovy plugin
+apply plugin: 'groovy'
+
+group = 'java-groovy-gradle'
+version = 1.0
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+description = 'sample project'
+
+// dependencies for project
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.espark.adarsh.ApplicationMain'
+    }
+}
+
+dependencies {
+
+    implementation 'org.codehaus.groovy:groovy-all:2.4.5'
+
+    // Use JUnit test framework for java
+    testImplementation 'junit:junit:4.12'
+
+    // Use spock test framework for groovy
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4') {
+        exclude group: 'org.codehaus.groovy'
+    }
+}
+
+test {
+
+    //Only run included tests
+    include '**com.espark.adarsh/*'
+
+    //Skip excluded tests
+    exclude '**org.espark.sample/*'
+
+    //Show all test output in the terminal
+    testLogging.showStandardStreams = false
+}
+
+sourceSets {
+    main {
+        java { srcDirs += ['src/main/groovy'] }
+        groovy { srcDirs += ['src/main/java'] }
+    }
+}
+
+task copyFile(type: Copy) {
+    from 'source'
+    into 'destination'
+}
+
+task invokedAfterCompileJava(dependsOn: 'compileJava')  {
+    doLast {
+        println 'This will be invoked right after the compileJava task is done'
+    }
+}

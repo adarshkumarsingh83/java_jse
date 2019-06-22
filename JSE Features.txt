@@ -1,0 +1,302 @@
+==========================================================================================
+JSE 1 Features February 19, 1997
+==========================================================================================
+  	@=> JDBC (Java Database Connectivity)
+  	@=> Inner Classes
+  	@=> Java Beans
+  	@=> RMI (Remote Method Invocation)
+  	@=> Reflection (introspection only)
+  	
+==========================================================================================
+JSE 2 Features December 8, 1998.
+==========================================================================================
+  	@=> Collections framework.
+  	@=> Java String memory map for constants.
+  	@=> Just In Time (JIT) compiler.
+  	@=> Jar Signer for signing Java ARchive (JAR) files.
+  	@=> Policy Tool for granting access to system resources.
+  	@=> Java Foundation Classes (JFC) which consists of Swing 1.0, Drag and Drop, and Java 2D class libraries.
+  	@=> Java Plug-in
+  	@=> Scrollable result sets, BLOB, CLOB, batch update, user-defined types in JDBC.
+  	@=> Audio support in Applets.
+==========================================================================================
+JSE 3 Features May 8, 2000.
+==========================================================================================
+  	@=> Java Sound
+	---------------------------  	  	
+  	
+  	@=> Jar Indexing
+	---------------------------  	
+  	
+==========================================================================================
+JSE 4 Features February 6, 2002    https://www.javatpoint.com/java-9-features
+==========================================================================================
+  	@=> Assertion (Java 4)  
+	---------------------------  	
+	  public static void main( String args[] ){    
+  		Scanner scanner = new Scanner( System.in );  
+	  	System.out.print("Enter ur age ");      
+  		int value = scanner.nextInt();  
+  		assert value>=18:" Not valid";    
+  		System.out.println("value is "+value);  
+ 	 }
+ 	 
+  	@=> XML Processing
+	---------------------------  	 
+	 	
+  	@=> Java Print Service
+	---------------------------  	  	
+  	
+  	@=> Logging API
+ 	---------------------------  	 	
+  	
+  	@=> Java Web Start
+	---------------------------  	  	
+  	
+  	@=> JDBC 3.0 API
+	---------------------------  	  	
+  	
+  	@=> Preferences API
+	---------------------------  	  	
+  	
+  	@=> Chained Exception
+	---------------------------  	  	
+  	
+  	@=> IPv6 Support
+	---------------------------  	
+	  	
+  	@=> Regular Expressions
+	---------------------------  	
+	  	
+  	@=> Image I/O API 	 
+	---------------------------  	  	
+==========================================================================================     
+JSE 5 Features September 30, 2004.
+==========================================================================================
+	
+	@=> For-each loop (Java 5)
+	---------------------------
+	public static void main(String args[]){  
+	   int arr[]={12,13,14,44};    
+   		for(int i:arr){  
+     		System.out.println(i);  
+    }  
+	
+	@=> Varargs (Java 5)
+	---------------------------
+	void display(String... values){  
+	   for(String data:values){
+	      System.out.println(data);  
+	   }
+ 	}  
+    display();//zero argument   
+    display("my","name","is","varargs");//four arguments  
+	
+	@=> Static Import (Java 5)
+	---------------------------
+	import static java.lang.System.*;    
+	public static void main(String args[]){       
+   		out.println("Hello");
+   		out.println("Java");  
+	 }   
+	
+	@=> Autoboxing and Unboxing (Java 5)
+	---------------------------
+	
+	@=> Enum (Java 5)
+	---------------------------
+	
+	@=> Covariant Return Type (Java 5)
+	----------------------------------	
+	
+	@=> Annotation (Java 5)
+	---------------------------	
+	
+	@=> Generics (Java 5)
+	---------------------------
+	
+==========================================================================================
+JSE 6 Features    December 11, 2006
+==========================================================================================
+	@=> Instrumentation (premain method) (Java 6)
+	---------------------------------------------	
+	
+==========================================================================================
+JSE 7 Features   July 28, 2011.
+==========================================================================================
+	@=> String in switch statement (Java 7)
+	---------------------------------------	
+	
+	@=> Binary Literals (Java 7)
+	---------------------------------------	
+	
+	@=> The try-with-resources (Java 7)
+	---------------------------------------	
+	
+	@=> Caching Multiple Exceptions by single catch (Java 7)
+	--------------------------------------------------------	
+	
+	@=> Underscores in Numeric Literals (Java 7)
+	--------------------------------------------	
+	
+	@=> Type Inference for Generic Instance Creation	
+	-------------------------------------------------		
+	
+==========================================================================================
+JSE 8 Features  18 March 2014.
+==========================================================================================
+	@=> Java 8 Date/Time API (Java 8)
+	---------------------------------
+		
+	@=> Lambda Expressions (Java 8)
+	-------------------------------
+		
+	@=> Method References (Java 8)
+	------------------------------	
+	
+	@=> Functional Interfaces (Java 8)
+	----------------------------------
+		
+	@=> Stream (Java 8)
+	---------------------------
+		
+	@=> Base64 Encode Decode (Java 8)
+	---------------------------------
+		
+	@=> Default Methods (Java 8)
+	-----------------------------
+		
+	@=> forEach method(Java 8)
+	---------------------------
+		
+	@=> Collectors(Java 8)
+	---------------------------
+		
+	@=> StringJoiner(Java 8)
+	---------------------------
+		
+	@=> Optional class (Java 8)
+	----------------------------
+		
+	@=> Nashorn JavaScript (Java 8)
+	-------------------------------
+		
+	@=> Parallel Array Sorting (Java 8)
+	-----------------------------------
+		
+	@=> Type Inference (Java 8)
+	-----------------------------
+		
+	@=> Method Parameter Reflection (Java 8)
+	----------------------------------------
+		
+	@=> Type annotations and repeating annotations (Java 8)
+	--------------------------------------------------------
+		
+	@=> Java JDBC Improvements (Java 8)
+	-----------------------------------
+		
+	@=> Java IO Improvement (Java 8)
+	---------------------------------
+		
+	@=> Java Concurrency Improvement (Java 8)
+	------------------------------------------
+	
+	@=> PermGen Error Removed
+	------------------------------------------
+	
+	@=> TLS SNI
+	------------------------------------------
+		
+==========================================================================================
+JSE 9 Features
+==========================================================================================
+
+	@=> Java 9 REPL (JShell)
+	-------------------------------------------		
+
+	@=> Platform Module System (Project Jigsaw)
+	-------------------------------------------	
+
+	@=> Interface Private Methods
+	------------------------------
+		
+	@=> Try-With Resources
+	---------------------------
+	
+	@=> Anonymous Classes
+	---------------------------
+		
+	@=> @SafeVarargs Annotation
+	---------------------------
+		
+	@=> Collection Factory Methods
+	-------------------------------	
+	List list = List.of( "adarsh","amit","radha","sonu","monu");
+	list.stream().takeWhile(name -> name.toString().contains("a")).forEach(System.out::println);
+	list.stream().dropWhile(name -> name.toString().contains("a")).forEach(System.out::println);
+	
+	@=> Process API Improvement
+	---------------------------
+		
+	@=> New Version-String Scheme
+	------------------------------
+		
+	@=> JShell: The Java Shell (REPL)
+	---------------------------------
+		
+	@=> Process API Improvement
+	----------------------------
+		
+	@=> Control Panel
+	---------------------------
+		
+	@=> Stream API Improvement
+	----------------------------
+		
+	@=> Installer Enhancement for Microsoft windows and many more
+	-------------------------------------------------------------
+		
+	@=>Compact Strings Improvement 
+	-------------------------------------------------------------
+	String classes internal storage to byte[] from char[]. This has resulted in saving of 
+	lots of space in heap memory because string objects take up really big portion of heap memory,	
+	strings can be represented only using Latin-1 characters set. A latin-1 char can be stored in
+	one byte, which is 50% (1 byte) less than char data type storage.
+	
+==========================================================================================
+JSE 10 Features  https://dzone.com/articles/features-in-java-10
+==========================================================================================
+	@=> Local Variable Type Inference
+	----------------------------------
+	var list = new ArrayList<>();
+
+	@=> Optional.orElseThrow() Method
+	----------------------------------
+	
+	@=> Removal of Runtime.getLocalizedInputStream and getLocalizedOutputStream Methods
+	----------------------------------
+	
+	@=> Unmodifiable Collections
+	----------------------------------
+	List.copyOf, Set.copyOf, and Map.copyOf 
+	
+	@=> Byte Code Generation for Enhanced For Loops
+	----------------------------------
+	
+	@=> Relax the Removal of Finalize Methods in FileInputStreams and FileOutputStreams
+	----------------------------------	
+	
+	@=> Removal of Deprecated Methods
+	----------------------------------
+	
+	@=> Parallel Full GC for G1
+	----------------------------------
+	 parallel full Garbage Collection support for G1 will improve the worst-case latencies. 
+	 It parallelized the mark-sweep-compact algorithm.
+     The number of threads in parallel can be controlled by the XX:ParallelGCThreads option.
+	
+	@=> Removal of javah  
+	----------------------------------	
+	The native header tool is now removed and we can generate the native header using the Java compiler with the -h option						
+==========================================================================================

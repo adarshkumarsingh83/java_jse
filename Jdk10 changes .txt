@@ -1,0 +1,78 @@
+https://howtodoinjava.com/java10/java10-features/#13
+
+
+JEP 286: Local Variable Type Inference
+JEP 322: Time-Based Release Versioning
+JEP 304: Garbage-Collector Interface
+JEP 307: Parallel Full GC for G1
+JEP 316: Heap Allocation on Alternative Memory Devices
+JEP 296: Consolidate the JDK Forest into a Single Repository
+JEP 310: Application Class-Data Sharing
+JEP 314: Additional Unicode Language-Tag Extensions
+JEP 319: Root Certificates
+JEP 317: Experimental Java-Based JIT Compiler
+JEP 312: Thread-Local Handshakes
+JEP 313: Remove the Native-Header Generation Tool
+New Added APIs and Options
+
+1.Java var – Local-Variable Type Inference
+----------------------------------------------
+a.var declaration and initialization at same time
+var i;  //Invalid Declaration - - Cannot use 'var' on variable without initializer         
+var j = 10; //Valid Declaration
+
+b.var is not keyword
+var var = 10;   //Valid Declaration         
+int var = 10;   //Also valid Declaration
+
+c.var usage
+Local variables with initializers
+Indexes in the enhanced for-loop
+Locals declared in a traditional for-loop
+
+d.Usage NOT allowed as :
+Method parameters
+Constructor parameters
+Method return types
+Class fields
+Catch formals (or any other kind of variable declaration)
+ex:
+public class Application {
+     
+    //var firstName;    //Not allowed as class fields
+         
+    //public Application(var param){    //Not allowed as parameter
+  
+    //}
+ 
+    /*try{
+         
+    } catch(var ex){    //Not allowed as catch formal
+ 
+    }*/
+ 
+    /*public var demoMethod(){  //Not allowed in method return type
+        return null;
+    }*/
+ 
+    /*public Integer demoMethod2( var input ){  //Not allowed in method parameters
+        return null;
+    }*/
+}
+
+e.var is not backward compatible
+
+f.var does not impact performance
+
+------------------------------------------
+New Added APIs and Options
+------------------------------------------
+Optional.orElseThrow()
+A new method orElseThrow has been added to the Optional class. 
+It is synonymous with and is now the preferred alternative to the existing get method.
+
+List.copyOf, Set.copyOf, and Map.copyOf	
+These methods create new collection instances from existing instances.
+
+Collectors.toUnmodifiableList, Collectors.toUnmodifiableSet, Collectors.toUnmodifiableMap	
+These methods allow the elements of a Stream to be collected into an unmodifiable collection
