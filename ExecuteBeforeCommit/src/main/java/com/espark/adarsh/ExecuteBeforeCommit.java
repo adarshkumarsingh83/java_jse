@@ -8,8 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ExecuteBeforeCommit {
-    final static List<String> fileTypes = Arrays.asList(".iml", ".log");
-    final static List<String> dirTypes = Arrays.asList("target", "log", "build", "out", "node_modules");
+    final static List<String> fileTypes = Arrays.asList(".iml", ".log", ".mvn");
+    final static List<String> dirTypes
+            = Arrays.asList("target", "log", "build", "out", "node_modules", ".idea", ".gradle");
 
 
     public static void main(String[] args) {
