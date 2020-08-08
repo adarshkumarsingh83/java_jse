@@ -1,0 +1,10 @@
+{
+    "empid": "101",
+    "empName": "Adarsh kumar",
+    "empDept": {
+        "deptId": "IT",
+        "deptLoc": "INDIA"
+    },
+    "empPhone": "8197416336",
+    "empEmail": "adarshkumarsingh83@gmail.com"
+}
