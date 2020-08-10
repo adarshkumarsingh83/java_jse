@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>JavaToolApplication2</groupId>
-    <artifactId>JavaToolApplication2</artifactId>
+    <groupId>avaToolApplication3</groupId>
+    <artifactId>avaToolApplication3</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>JavaToolApplication2</name>
+    <name>avaToolApplication3</name>
     <url>http://maven.apache.org</url>
 
 
@@ -56,7 +56,7 @@
     </repositories>
 
     <properties>
-        <project.name>JavaToolApplication2</project.name>
+        <project.name>avaToolApplication3</project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
         <junit.version>4.11</junit.version>
