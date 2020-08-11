@@ -8,7 +8,6 @@ import java.util.Comparator;
 public class ApplicationMain {
     public static void main(String[] args) {
         final MyTree<Integer> myTree = new MyTree<Integer>(new Comparator() {
-            @Override
             public int compare(Object o1, Object o2) {
                 Integer n1 = (Integer) o1;
                 Integer n2 = (Integer) o2;

@@ -1,4 +1,4 @@
-package com.espark.adarsh;
+package com.espark.adarsh.linkedlist;
 
 /**
  * Created by Adarsh on 1/8/16.
