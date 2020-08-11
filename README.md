@@ -5,6 +5,22 @@ OWNER : ADARSH KUMAR
 
 JAVA STANDARD EDITION APPLICATION REPOSITORY 
 ---------------------------------------------
+### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK7)
+### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK8)
+- Java8 Bi Function Example
+- Java8 Binary Operator	
+- Java8 Consumer Example
+- Java8 For Each Loop	
+- Java8 Function Example
+- Java8 Lambda Expression
+- Java8 Supplier Example
+- Java8 Unary Operator
+- Java8 Predicate Example
+
+### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
+### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
+
+
 ### [DATA-STRUCTURE](https://github.com/adarshkumarsingh83/java_jse/tree/master/DATA-STRUCTURE)
 - CircularQueue
 - HashMap
@@ -57,19 +73,6 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Jdk8ForkJoin-RecursiveTask		
 - JseConcurrentExchanger
 
-### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK7)
-### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK8)
-- Java8 Bi Function Example
-- Java8 Binary Operator	
-- Java8 Consumer Example
-- Java8 For Each Loop	
-- Java8 Function Example
-- Java8 Lambda Expression
-- Java8 Supplier Example
-- Java8 Unary Operator
-- Java8 Predicate Example
 
-### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
-### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
 
 
