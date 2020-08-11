@@ -42,8 +42,8 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - LinkedList
 - Stack
 - Tree
-- TreeConstructionExample
-- JavaBasedDataStructure
+- HomogeneousTreeConstruction
+- HeterogeneousTreeConstruction
 
 ### [JAVA_NATIVE_PROGRAMMING](https://github.com/adarshkumarsingh83/java_jse/tree/master/JAVA_NATIVE_PROGRAMMING)
 - JavaNativeBasic
