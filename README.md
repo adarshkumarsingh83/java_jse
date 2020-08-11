@@ -1,16 +1,34 @@
 
 OWNER : ADARSH KUMAR 
 
-EMAIL : ADARSHKUMARSINGH83@GMAIL.COM
-
 **[Espark Youtube JSE ](https://www.youtube.com/playlist?list=PLBH_SvM38ibECCbbb2GJpjQeBgYDg7tSH)**
 
 JAVA STANDARD EDITION APPLICATION REPOSITORY 
 ---------------------------------------------
 ### [DATA-STRUCTURE](https://github.com/adarshkumarsingh83/java_jse/tree/master/DATA-STRUCTURE)
+- CircularQueue
+- HashMap
+- LinkedList
+- Stack
+- Tree
+- TreeConstructionExample
+- JavaBasedDataStructure
+
 ### [JAVA_NATIVE_PROGRAMMING](https://github.com/adarshkumarsingh83/java_jse/tree/master/JAVA_NATIVE_PROGRAMMING)
+- JavaNativeBasic
+- JavaNativeMethod
+- JavaNativeStringReverse
+- JniArrayApplication
+- JniStringApplication
+
 ### [JDK-UTILS](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-UTILS)
+
 ### [JDK-TOOLS](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-TOOLS)
+- JavaCompilerAPI
+- JavaToolApplication1
+- JavaToolApplication2
+- JavaToolApplication3
+
 ### [JDK-THREAD](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-THREAD)
 ### [JDK-CONCURRENT](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-CONCURRENT)
 ### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK7)
