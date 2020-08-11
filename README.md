@@ -7,6 +7,14 @@ EMAIL : ADARSHKUMARSINGH83@GMAIL.COM
 
 JAVA STANDARD EDITION APPLICATION REPOSITORY 
 ---------------------------------------------
+* [DATA-STRUCTURE]()
+* [JAVA_NATIVE_PROGRAMMING]()
+* [JDK-UTILS]()
+* [JDK-TOOLS]()
+* [JDK-THREAD]()
+* [JDK-CONCURRENT]()
+* [JDK7]()
+* [JDK8]()
 - Java8 Bi Function Example
 - Java8 Binary Operator	
 - Java8 Consumer Example
@@ -16,3 +24,8 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8 Supplier Example
 - Java8 Unary Operator
 - Java8 Predicate Example
+
+* [JDK9]()
+* [JDK10]()
+
+
