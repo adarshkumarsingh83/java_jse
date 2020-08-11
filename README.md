@@ -7,15 +7,30 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 ---------------------------------------------
 ### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK7)
 ### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK8)
-- Java8 Bi Function Example
-- Java8 Binary Operator	
-- Java8 Consumer Example
-- Java8 For Each Loop	
-- Java8 Function Example
-- Java8 Lambda Expression
-- Java8 Supplier Example
-- Java8 Unary Operator
-- Java8 Predicate Example
+- Java8Application			
+- Java8Optional				
+- Java8WordCount
+- Java8BiFunctionExample			
+- Java8ParellStream			
+- Java8WordCountExample
+- Java8BinaryOperator			
+- Java8PredicateExample			
+- Jdk8ForkJoin-RecursiveAction
+- Java8CharcterCountExample		
+- Java8StandardEditionExamaple		
+- Jdk8ForkJoin-RecursiveTask
+- Java8ConsumerExample			
+- Java8StreamExample			
+- Jdk8ForkJoin-RecursiveTask-FileSearch
+- Java8ForEachLoop		
+- Java8SupplierExample			
+- Jdk8Pagenation
+- Java8FunctionExample			
+- Java8TimeApi				
+- JdkGropSorting
+- Java8LambdaExpression			
+- Java8UnaryOperator			
+- MapSortingKeyAndMultipleValues
 
 ### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
 ### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
