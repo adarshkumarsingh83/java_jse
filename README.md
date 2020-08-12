@@ -34,6 +34,10 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8MethodReferencingExample
 - Java8StreamExample
 - Java8AUtilsExample
+- Java8Concurrent
+- Java8LambdaWithInterfaceExample
+- Java8MethodReferencingExample
+- Java8PredicateExample
 
 ### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
 ### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
