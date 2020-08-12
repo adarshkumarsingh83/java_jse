@@ -31,6 +31,9 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8LambdaExpression			
 - Java8UnaryOperator			
 - MapSortingKeyAndMultipleValues
+- Java8MethodReferencingExample
+- Java8StreamExample
+- Java8AUtilsExample
 
 ### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
 ### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
