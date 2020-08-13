@@ -61,6 +61,25 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - JniStringApplication
 
 ### [JDK-UTILS](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-UTILS)
+- CoreJavaGenericApplications					
+- MagicFunction
+- CoreJavaMailApplication			
+- JDKJaxbApplication			
+- NumberGuess
+- CoreJavaNotepadOpener			
+- JDKTimerSample				
+- ObservableSample
+- CoreJavaStringToIntgerManullyConversion	
+- JSERubixCube				
+- java-groovy-gradle
+- CoreJavaSwingApplication		
+- JavaAnnoationApplication		
+- java-groovy-modules-gradle
+- CustomAnnotationApplication		
+- JavaCollectionExmaple
+- EnviormentVaiableSettingExmaple		
+- JavaRxExample
+- ExecuteBeforeCommit
 
 ### [JDK-TOOLS](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK-TOOLS)
 - JavaCompilerAPI
