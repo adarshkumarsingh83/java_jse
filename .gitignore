@@ -19,7 +19,9 @@
 /**/*.springBeans
 /**/**/target
 .buildpath
-
+.DS_Store
+/.DS_Store
+*/.DS_Store
 
 # Ignore Intellij config
 /**/.idea
