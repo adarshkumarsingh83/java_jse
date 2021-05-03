@@ -1,8 +1,8 @@
-package com.espark.adarsh;
+package com.espark.adarsh.bidirectional;
 
 import java.util.*;
 
-public class Graph<T> {
+public class BiDirectionalGraph<T> {
 
     Map<T, Node<T>> graphNode = new LinkedHashMap<>();
 
