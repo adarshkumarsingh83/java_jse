@@ -3,11 +3,9 @@ package com.espark.adarsh;
 
 import com.espark.adarsh.bidirectional.BiDirectionalGraph;
 import com.espark.adarsh.unitdirectioanl.UniDirectionalGraph;
+import com.espark.adarsh.weighted.WeightedGraph;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ApplicationMain {
     public static void main(String[] args) {
@@ -20,8 +18,52 @@ public class ApplicationMain {
         biDirectionOperation(data);
         System.out.println();
         uniDirectionOperation(data);
+
+
+        Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
+        wightedData.put("A", new HashMap<String, Integer>() {
+            {
+                put("B", 5);
+                put("E", 3);
+            }
+        });
+        wightedData.put("B", new HashMap<String, Integer>() {
+            {
+                put("A", 7);
+                put("C", 1);
+                put("E", 8);
+            }
+        });
+        wightedData.put("C", new HashMap<String, Integer>() {
+            {
+                put("B", 2);
+                put("D", 9);
+            }
+        });
+        wightedData.put("D", new HashMap<String, Integer>() {
+            {
+                put("C", 4);
+                put("E", 6);
+            }
+        });
+        wightedData.put("E", new HashMap<String, Integer>() {
+            {
+                put("A", 8);
+                put("B", 1);
+                put("D", 9);
+            }
+        });
+
+        weightedGraphOperation(wightedData);
     }
 
+    public static void weightedGraphOperation(Map<String, HashMap<String, Integer>> wightedData) {
+        WeightedGraph<String> graph = new WeightedGraph<>();
+        for (Map.Entry<String, HashMap<String, Integer>> entry : wightedData.entrySet()) {
+            graph.createGraph(entry.getKey(), entry.getValue());
+        }
+        graph.displayTree();
+    }
 
     public static void biDirectionOperation(Map<String, List<String>> data) {
         BiDirectionalGraph<String> graph = new BiDirectionalGraph<>();
