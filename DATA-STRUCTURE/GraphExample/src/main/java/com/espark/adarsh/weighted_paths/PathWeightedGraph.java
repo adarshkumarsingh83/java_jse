@@ -39,6 +39,7 @@ public class PathWeightedGraph<T> {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
 
