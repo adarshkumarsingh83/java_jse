@@ -4,6 +4,7 @@ package com.espark.adarsh;
 import com.espark.adarsh.bidirectional.BiDirectionalGraph;
 import com.espark.adarsh.unitdirectioanl.UniDirectionalGraph;
 import com.espark.adarsh.weighted.WeightedGraph;
+import com.espark.adarsh.weighted_paths.PathWeightedGraph;
 
 import java.util.*;
 
@@ -15,9 +16,9 @@ public class ApplicationMain {
         data.put("C", Arrays.asList("B", "D"));
         data.put("D", Arrays.asList("C", "E"));
         data.put("E", Arrays.asList("A", "B", "D"));
-        biDirectionOperation(data);
+        /*biDirectionOperation(data);
         System.out.println();
-        uniDirectionOperation(data);
+        uniDirectionOperation(data);*/
 
 
         Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
@@ -54,7 +55,51 @@ public class ApplicationMain {
             }
         });
 
-        weightedGraphOperation(wightedData);
+        //weightedGraphOperation(wightedData);
+
+
+        Map<String, HashMap<String, Integer>> wightedPathData = new LinkedHashMap();
+        wightedPathData.put("A", new HashMap<String, Integer>() {
+            {
+                put("B", 5);
+                put("C", 12);
+            }
+        });
+        wightedPathData.put("B", new HashMap<String, Integer>() {
+            {
+                put("C", 3);
+                put("E", 10);
+            }
+        });
+        wightedPathData.put("C", new HashMap<String, Integer>() {
+            {
+                put("D", 2);
+                put("F", 6);
+            }
+        });
+        wightedPathData.put("D", new HashMap<String, Integer>() {
+            {
+                put("E", 7);
+                put("F", 1);
+            }
+        });
+        wightedPathData.put("E", new HashMap<String, Integer>() {
+            {
+                put("F", 3);
+            }
+        });
+        wightedPathData.put("F", new HashMap<String, Integer>() {
+        });
+        weightedPathGraphOperation(wightedPathData);
+    }
+
+    public static void weightedPathGraphOperation(Map<String, HashMap<String, Integer>> wightedData) {
+        PathWeightedGraph<String> graph = new PathWeightedGraph<>();
+        for (Map.Entry<String, HashMap<String, Integer>> entry : wightedData.entrySet()) {
+            graph.createGraph(entry.getKey(), entry.getValue());
+        }
+        graph.displayTree();
+        graph.calculatePath();
     }
 
     public static void weightedGraphOperation(Map<String, HashMap<String, Integer>> wightedData) {
