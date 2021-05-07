@@ -24,12 +24,6 @@ public class PathWeightedGraph<T> {
             node = graphNode.get(data);
         } else {
             node = new PathWeightedGraph.Node<T>(data);
-            if (graphNode.isEmpty()) {
-                node.setShortedPathWeight(0);
-                node.setLongestPathWeight(0);
-                node.setLongestNodePath(node);
-                node.setShortedNodePath(node);
-            }
             graphNode.put(data, node);
         }
         return node;
@@ -48,9 +42,13 @@ public class PathWeightedGraph<T> {
     }
 
 
-    public void calculatePath() {
-        Node<T> rootNode = graphNode.get("A");
+    public void calculatePath(T start) {
+        Node<T> rootNode = graphNode.get(start);
         Queue<Node<T>> queue = new LinkedList<Node<T>>();
+        rootNode.setShortedPathWeight(0);
+        rootNode.setLongestPathWeight(0);
+        rootNode.setShortedNodePath(rootNode.getData());
+        rootNode.setLongestNodePath(rootNode.getData());
         queue.add(rootNode);
         while (!queue.isEmpty()) {
             Node<T> node = queue.poll();
@@ -60,37 +58,33 @@ public class PathWeightedGraph<T> {
                 Node<T> child = entryData.getKey();
                 if (child.getShortedPathWeight() > shortWeight) {
                     child.setShortedPathWeight(shortWeight);
-                    child.setShortedNodePath(node.getShortedNodePath());
-                    child.setShortedNodePath(child);
+                    child.setShortedNodePath(new ArrayList(node.getShortedNodePath()));
+                    child.setShortedNodePath(child.getData());
                 }
                 if (child.getLongestPathWeight() < longWeight) {
                     child.setLongestPathWeight(longWeight);
-                    child.setLongestNodePath(node.getLongestNodePath());
-                    child.setLongestNodePath(child);
+                    child.setLongestNodePath(new ArrayList(node.getLongestNodePath()));
+                    child.setLongestNodePath(child.getData());
                 }
                 queue.add(child);
             }
         }
-
         System.out.println();
         for (Map.Entry<T, PathWeightedGraph.Node<T>> entry : graphNode.entrySet()) {
-            PathWeightedGraph.Node<T> node = entry.getValue();
-            System.out.print(entry.getValue().getDetails());
-            for (Map.Entry<PathWeightedGraph.Node<T>, Integer> entryData : node.getAdjacent().entrySet()) {
-                System.out.print(entryData.getKey().getDetails());
-            }
+            System.out.print(entry.getValue().getDetails(start));
             System.out.println();
         }
     }
-    
+
 
     static class Node<T> {
+
         private T data;
-        private Map<PathWeightedGraph.Node<T>, Integer> adjacent = new HashMap<>();
         private int shortedPathWeight = Integer.MAX_VALUE;
         private int longestPathWeight = 0;
-        private List<Node> shortedNodePath = new LinkedList<>();
-        private List<Node> longestNodePath = new LinkedList<>();
+        private List<T> shortedNodePath = new LinkedList<>();
+        private List<T> longestNodePath = new LinkedList<>();
+        private Map<PathWeightedGraph.Node<T>, Integer> adjacent = new HashMap<>();
 
         public Node(T data) {
             this.data = data;
@@ -124,41 +118,47 @@ public class PathWeightedGraph<T> {
             this.longestPathWeight = longestPathWeight;
         }
 
-        public List<Node> getShortedNodePath() {
+        public List<T> getShortedNodePath() {
             return shortedNodePath;
         }
 
-        public void setShortedNodePath(Node shortedNode) {
+        public void setShortedNodePath(T shortedNode) {
             this.shortedNodePath.add(shortedNode);
         }
 
-        public void setShortedNodePath(List<Node> shortedNodePath) {
+        public void setShortedNodePath(List<T> shortedNodePath) {
             this.shortedNodePath = shortedNodePath;
         }
 
-        public List<Node> getLongestNodePath() {
+        public List<T> getLongestNodePath() {
             return longestNodePath;
         }
 
-        public void setLongestNodePath(Node longestNode) {
+        public void setLongestNodePath(T longestNode) {
             this.longestNodePath.add(longestNode);
         }
 
-        public void setLongestNodePath(List<Node> longestNodePath) {
+        public void setLongestNodePath(List<T> longestNodePath) {
             this.longestNodePath = longestNodePath;
         }
 
-        public String getDetails() {
+        public String getDetails(T start) {
+
             String shortPath = "";
-            for (Node n : shortedNodePath) {
-                shortPath += " -> " + n.getData();
+            for (T n : shortedNodePath) {
+                shortPath += " -> " + n;
             }
+
             String longPath = "";
-            for (Node n : longestNodePath) {
-                longPath += " -> " + n.getData();
+            for (T n : longestNodePath) {
+                longPath += " -> " + n;
             }
-            return "Name " + this.getData() + " Shorted Path Weight " + this.getShortedPathWeight() + " Longest Path Weight " + this.getLongestPathWeight()
-                    + " Short Path " + shortPath + " Long Path " + longPath;
+
+            return "From " + start + " to " + this.getData() +
+                    " Shorted Path Weight " + this.getShortedPathWeight() +
+                    " Longest Path Weight " + this.getLongestPathWeight() +
+                    " Short Path " + shortPath +
+                    " Long Path " + longPath;
 
         }
     }
