@@ -99,7 +99,8 @@ public class ApplicationMain {
             graph.createGraph(entry.getKey(), entry.getValue());
         }
         graph.displayTree();
-        graph.calculatePath("A");
+        graph.calculatePathBetweenAllNodes("A");
+        graph.calculatePathBetweenSpecificNodes("B","F");
     }
 
     public static void weightedGraphOperation(Map<String, HashMap<String, Integer>> wightedData) {

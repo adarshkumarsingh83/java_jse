@@ -4,12 +4,13 @@ package com.espark.adarsh.weighted_paths;
 import java.util.*;
 
 public class PathWeightedGraph<T> {
-
+    Integer nodeOrder = 0;
     Map<T, PathWeightedGraph.Node<T>> graphNode = new LinkedHashMap<>();
 
     public void createGraph(T data, HashMap<T, Integer> adjacentList) {
         PathWeightedGraph.Node node = createNode(data);
-
+        node.setOrder(nodeOrder);
+        nodeOrder++;
         for (Map.Entry<T, Integer> adjacentEntry : adjacentList.entrySet()) {
             PathWeightedGraph.Node adjacent = createNode(adjacentEntry.getKey());
             node.setAdjacent(adjacent, adjacentEntry.getValue());
@@ -43,7 +44,7 @@ public class PathWeightedGraph<T> {
     }
 
 
-    public void calculatePath(T start) {
+    public void calculatePathBetweenAllNodes(T start) {
         Node<T> rootNode = graphNode.get(start);
         Queue<Node<T>> queue = new LinkedList<Node<T>>();
         rootNode.setShortedPathWeight(0);
@@ -77,10 +78,48 @@ public class PathWeightedGraph<T> {
         }
     }
 
+    public void calculatePathBetweenSpecificNodes(T start, T end) {
+        Node<T> startNode = graphNode.get(start);
+        Node<T> endNode = graphNode.get(end);
+        Queue<Node<T>> queue = new LinkedList<Node<T>>();
+        startNode.setShortedPathWeight(0);
+        startNode.setLongestPathWeight(0);
+        startNode.setShortedNodePath(startNode.getData());
+        startNode.setLongestNodePath(startNode.getData());
+        Integer startOrder = startNode.getOrder();
+        Integer endOder = endNode.getOrder();
+        queue.add(startNode);
+        while (!queue.isEmpty()) {
+            Node<T> node = queue.poll();
+            for (Map.Entry<PathWeightedGraph.Node<T>, Integer> entryData : node.getAdjacent().entrySet()) {
+                int shortWeight = node.getShortedPathWeight() + entryData.getValue();
+                int longWeight = node.getLongestPathWeight() + entryData.getValue();
+                Node<T> child = entryData.getKey();
+                if (child.getShortedPathWeight() > shortWeight) {
+                    child.setShortedPathWeight(shortWeight);
+                    child.setShortedNodePath(new ArrayList(node.getShortedNodePath()));
+                    child.setShortedNodePath(child.getData());
+                }
+                if (child.getLongestPathWeight() < longWeight) {
+                    child.setLongestPathWeight(longWeight);
+                    child.setLongestNodePath(new ArrayList(node.getLongestNodePath()));
+                    child.setLongestNodePath(child.getData());
+                }
+                if (child.getOrder() >= startOrder && child.getOrder() <= endOder) {
+                    queue.add(child);
+                }
+            }
+        }
+        System.out.println();
+        System.out.print(graphNode.get(end).getDetails(start));
+        System.out.println("\n");
+    }
+
 
     static class Node<T> {
 
         private T data;
+        private Integer order;
         private int shortedPathWeight = Integer.MAX_VALUE;
         private int longestPathWeight = 0;
         private List<T> shortedNodePath = new LinkedList<>();
@@ -141,6 +180,14 @@ public class PathWeightedGraph<T> {
 
         public void setLongestNodePath(List<T> longestNodePath) {
             this.longestNodePath = longestNodePath;
+        }
+
+        public Integer getOrder() {
+            return order;
+        }
+
+        public void setOrder(Integer order) {
+            this.order = order;
         }
 
         public String getDetails(T start) {
