@@ -82,6 +82,41 @@ public class CyclicPathGraph<T> {
         }
     }
 
+    public void calculatePathBetweenNodes(T start,T end) {
+        CyclicPathGraph.Node<T> rootNode = graphNode.get(start);
+        Queue<CyclicPathGraph.Node<T>> queue = new LinkedList<>();
+        rootNode.setShortedPathWeight(0);
+        rootNode.setLongestPathWeight(0);
+        rootNode.setShortedNodePath(rootNode.getData());
+        rootNode.setLongestNodePath(rootNode.getData());
+        queue.add(rootNode);
+        while (!queue.isEmpty()) {
+            CyclicPathGraph.Node<T> node = queue.poll();
+            for (Map.Entry<CyclicPathGraph.Node<T>, Integer> entryData : node.getAdjacent().entrySet()) {
+                int shortWeight = node.getShortedPathWeight() + entryData.getValue();
+                int longWeight = node.getLongestPathWeight() + entryData.getValue();
+                CyclicPathGraph.Node<T> child = entryData.getKey();
+                if (child.getShortedPathWeight() > shortWeight) {
+                    child.setShortedPathWeight(shortWeight);
+                    child.setShortedNodePath(new ArrayList(node.getShortedNodePath()));
+                    child.setShortedNodePath(child.getData());
+                }
+                if (child.getLongestPathWeight() < longWeight
+                        && !node.getLongestNodePath().contains(child.getData())) {
+                    child.setLongestPathWeight(longWeight);
+                    child.setLongestNodePath(new ArrayList(node.getLongestNodePath()));
+                    child.setLongestNodePath(child.getData());
+                }
+                if (child.getOrder() > node.getOrder()) {
+                    queue.add(child);
+                }
+            }
+        }
+        System.out.println();
+        System.out.print(graphNode.get(end).getDetails(start));
+        System.out.println("\n");
+    }
+
     static class Node<T> {
 
         private T data;

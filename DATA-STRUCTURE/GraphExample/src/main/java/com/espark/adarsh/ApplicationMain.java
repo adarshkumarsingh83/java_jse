@@ -69,6 +69,7 @@ public class ApplicationMain {
         }
         graph.displayTree();
         graph.calculatePathBetweenAllNodes("A");
+        graph.calculatePathBetweenNodes("A","D");
     }
 
     public static void weightedPathGraphOperation() {
