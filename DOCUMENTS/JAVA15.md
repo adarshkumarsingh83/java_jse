@@ -106,6 +106,32 @@ Shenandoah a low pause time GC
 ```
 
 
+### Local interface/ local enum/ local Record 
+
+```
+
+    pubblic void method(){
+
+        interface X{
+
+
+        }
+
+        enum Y{
+
+
+        }
+
+        record R(){
+
+
+        }
+
+    }
+
+
+```
+
 
 
 
