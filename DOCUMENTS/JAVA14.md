@@ -155,3 +155,9 @@ public record Sample(String data1,String data2){
 Sample sample=new Sample("xxxx","yyyyy");
 System.out.println("Displaty "+Sample.display(ssample))
 ```
+
+### @Serial 
+* for compiletime checking for serilaliztion 
+
+
+### PrintStream ->  writeBytes(bytes[] buffer)
