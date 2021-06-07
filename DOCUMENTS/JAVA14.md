@@ -53,11 +53,34 @@ OR
         };
 ```
 
+### Text block 
+```
+// for multiline string like html or xml or json data 
+String text ="""
+            xxxxxx
+            xxxxxx
+            xxxxxx
+            """;
 
+
+```
+
+### Pattern Matching for instanceof operator 
+```
+ // check the object is instace of String then assigne to stringObject variable for furhter operation 
+ if(object instanceof String stringObject && !stringObject.isEmpty() && stringObject.equests("xxxx")){
+  
+       ..........
+ }
+
+```
 
 
 ### Record Keyword 
 ```
+// for pojo classes 
+// equals()/hascode()/tostring() will be generated automatically 
+// and with property name accessor method will be generated 
 // used with construcotr for creating immutable objects 
 
 class Sample{
