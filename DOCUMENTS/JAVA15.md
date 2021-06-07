@@ -72,7 +72,7 @@ public sealed interface ParentSealed permits Child1, Child2{
 
 ```
 
-* for searled classes 
+* for recored classes 
 ```
 public sealed interface Animal permit Cat {
 
