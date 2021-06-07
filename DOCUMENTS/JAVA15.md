@@ -1,26 +1,5 @@
 # java 15 
 ---
-### Text block 
-```
-
-String text ="""
-            xxxxxx
-            xxxxxx
-            xxxxxx
-            """;
-
-
-```
-
-### Pattern Matching for instanceof operator 
-```
- // check the object is instace of String then assigne to stringObject variable for furhter operation 
- if(object instanceof String stringObject && !stringObject.isEmpty() && stringObject.equests("xxxx")){
-  
-       ..........
- }
-
-```
 
 
 ### Sealed keyword  
