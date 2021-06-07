@@ -1,5 +1,58 @@
 # JAVA 14 
 
+### NPE Details pinpoint discription 
+* add the flag to enable in compiler vmoption :->  -XX:+ShowCodeDetailsInExceptionMessages 
+
+### Switch Cases 
+```
+//with yeld keyword 
+
+        String var = "XXXx";
+        String response = switch (var) {
+            case "1XXXX":
+                yield "1XXX";
+            case "2XXXX":
+                yield "2XXX";
+            case "3XXXX":
+                yield "3XXX";
+            case "4XXXX:
+                yield "4XXXX";
+            default:
+                yield "DEFAULT-XXXX";
+        };
+
+
+OR 
+//  with arrow function 
+
+        String var = "XXXx";
+        String response = switch (var) {
+            case "1XXXX" ->  "1XXX";
+            case "2XXXX" ->  "2XXX";
+            case "3XXXX" ->  "3XXX";
+            case "4XXXX" ->  "4XXX";
+            default:     ->  "DEFAULT-XXXX";
+        };
+
+OR 
+// mixed with arrow and yeld keyword 
+
+        String var = "XXXx";
+        String response = switch (var) {
+            case "1XXXX" -> {
+            	System.out.println("xxxxxxxx")
+                yield "1XXX";
+            }
+            case "2XXXX": ->{
+            	System.out.println("xxxxxxxx")
+                yield "2XXX";
+            }
+            case "3XXXX" ->  "3XXX";
+            case "4XXXX" ->  "4XXX";
+            default:     ->  "DEFAULT-XXXX";
+        };
+```
+
 
 
 
