@@ -1,4 +1,4 @@
 module com.adarsh.aggregator {
     requires transitive com.adarsh.services;
-    requires transitive com.adarsh.persistance;
+    requires transitive com.adarsh.persistence;
 }
