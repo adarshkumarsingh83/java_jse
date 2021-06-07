@@ -53,7 +53,7 @@ OR
         };
 ```
 
-### Text block 
+### Text block 1st preview 
 ```
 // for multiline string like html or xml or json data 
 String text ="""
@@ -65,7 +65,8 @@ String text ="""
 
 ```
 
-### Pattern Matching for instanceof operator 
+### Pattern Matching for instanceof operator 1st preview 
+
 ```
  // check the object is instace of String then assigne to stringObject variable for furhter operation 
  if(object instanceof String stringObject && !stringObject.isEmpty() && stringObject.equests("xxxx")){

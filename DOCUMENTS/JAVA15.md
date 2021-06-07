@@ -132,6 +132,27 @@ Shenandoah a low pause time GC
 
 ```
 
+#### Text Block 2nd preveiw 
+```
+   String data ="""
+                aaaaa\
+                bbbbb\
+                ccccc\
+                """;
+
+
+````
+
+
+### Pattern Matching for instanceof operator 2nd preveiw 
+```
+ // check the object is instace of String then assigne to stringObject variable for furhter operation 
+ if(object instanceof String stringObject && !stringObject.isEmpty() && stringObject.equests("xxxx")){
+  
+       ..........
+ }
+
+```
 
 
 
