@@ -99,7 +99,54 @@
     }
   ``` 
 
+### Var with Try with Resources 
 
+```
+  public static void main(String ...args){
+
+      try(var r1 = new MyResource();
+          var r2 = new MyResource()){
+         
+         ......................
+
+      }catch(Exception e){
+         System.out.println(":()");
+      }finally{
+         System.out.println(":(");
+      }
+  }
+ 
+ class MyResource implement AutoCloseable{
+ 	 public void close()throrws Exception{
+ 	 	 System.out.println("clse");
+ 	 }
+ }
+
+
+ // In java 9 now we can diclar like this 
+ //exception will not be handle by catch block now 
+   public static void main(String ...args){
+   	var r1 = new MyResource();
+    var r1 = new MyResource()
+
+      try(r1;r2){
+         
+         ......................
+
+      }catch(Exception e){
+         System.out.println(":()");
+      }finally{
+         System.out.println(":(");
+      }
+  }
+ 
+ class MyResource implement AutoCloseable{
+ 	 public void close()throrws Exception{
+ 	 	 System.out.println("clse");
+ 	 }
+ }
+
+```
 ----
 
 # 11
