@@ -1,20 +1,24 @@
 
 ----
+
 # 9 
 
 ### chars()
+
 ```
  String s = "xxxxxxxxxx";
  s.chars().forEach(x-> System.out.println((char)x));
 ```
 
 ### codePoints()
+
 ```
  String s = "\uface\ubeaf";
  s.codePoints().forEach(x-> System.out.println(x));
 ```
 
 ### Try with Resources 
+
 ```
  //Note R2 will close then R1 in reverse order of diclration 
  // catch block execution 
@@ -65,19 +69,22 @@
 
 ```
 
-----
-
 ### Jshell 
+
 *  jshell --enable-preview 
 
+
 ### Factory method for Immutable collection 
+
 * List.of(xxxxx,xxxxx,xxxxx)
 * Set.of(xxxxx,xxxxx,xxxxx)
 
 ---
+
 # 10 
 
 ### var keyword 
+
 * var x= 10;
 * assignement of null value is not possible expect type value is expected 
 * based on the value assiged type is defined 
@@ -93,11 +100,12 @@
   ``` 
 
 
-
 ----
+
 # 11
 
 ### Var Keyword 
+
 * var x = 10;
 * var with predicate 
 ```
@@ -110,6 +118,7 @@ Predicate<Integer> p1 = (var x) -> x % 2 == 0;
 
 
 ### repeat()
+
 ```
   String s ="radha ";
   s = s.repeat(3);
@@ -118,6 +127,7 @@ Predicate<Integer> p1 = (var x) -> x % 2 == 0;
 ```
 
 ### strip()
+
 ```
 String s ="      radha       singh ";
         s = s.strip();
@@ -125,6 +135,7 @@ String s ="      radha       singh ";
 ```
 
 #### stripLeading()
+
 ```
 String s ="      radha       singh ";
         s = s.stripLeading();
@@ -132,6 +143,7 @@ String s ="      radha       singh ";
 ```
 
 ### stripTrailing()
+
 ```
 String s ="      radha       singh ";
         s = s.stripTrailing();
@@ -140,12 +152,14 @@ String s ="      radha       singh ";
 ```
 
 ### isBlank()
+
 ````
 String s ="      ";
 System.out.printf("=> "+s.isBlank());
 ````
 
 ### lines()
+
 ```
 String s ="   Adarsh\nRadha   ";
 s.lines().forEach(System.out::println);
@@ -156,6 +170,7 @@ s.lines().forEach(System.out::println);
 # 12
 
 ### Swtich case
+
 ```
 var value = Xxxl;
 var response = switch(value){
@@ -170,6 +185,7 @@ var response = switch(value){
 ```
 
 ### indent()
+
 ```
  String s ="Adarsh\nRadha";
         s = s.indent(3);
@@ -178,6 +194,7 @@ var response = switch(value){
 
 
 ### transform()
+
 ```
 String s ="Adarsh\nRadha";
         s = s.transform(x -> x.toUpperCase());
@@ -189,6 +206,7 @@ String s ="Adarsh\nRadha";
 # 13
 
 ### multi line string 
+
 ```
 var data = """
 			{
@@ -200,3 +218,4 @@ var data = """
 ```
 
 
+---
