@@ -137,6 +137,20 @@ var response = switch(value){
 
 ```
 
+### indent()
+```
+ String s ="Adarsh\nRadha";
+        s = s.indent(3);
+        System.out.println(s);
+```
+
+
+### transform()
+```
+String s ="Adarsh\nRadha";
+        s = s.transform(x -> x.toUpperCase());
+        System.out.println(s);
+```
 ---
 13
 ### multi line string 
