@@ -98,6 +98,8 @@
     	System.out.println(x);
     }
   ``` 
+* var can't be used like this var x ={};
+* var can't be used like this var x = {1,2,3};  
 
 ### Var with Try with Resources 
 
