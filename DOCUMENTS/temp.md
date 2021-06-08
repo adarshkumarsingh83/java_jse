@@ -100,6 +100,7 @@
   ``` 
 * var can't be used like this var x ={};
 * var can't be used like this var x = {1,2,3};  
+* var can be used liek var x = new int[]{1,2,3,4,5}
 
 ### Var with Try with Resources 
 
