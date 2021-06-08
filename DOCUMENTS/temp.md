@@ -162,6 +162,7 @@ var response = switch(value){
 	case 1 -> "XXX";
 	case 2 -> "XXX";
 	case 3 -> "XXX";
+	case 4,5 -> "XXX";
 	default -> "-----xxx---";
 }
 
