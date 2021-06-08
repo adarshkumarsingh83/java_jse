@@ -1,6 +1,6 @@
 
 ----
-9 
+# 9 
 
 ### chars()
 ```
@@ -75,7 +75,7 @@
 * Set.of(xxxxx,xxxxx,xxxxx)
 
 ---
-10 
+# 10 
 
 ### var keyword 
 * var x= 10;
@@ -90,14 +90,12 @@
     for (var x : list){
     	System.out.println(x);
     }
-  ```
-
-*  
+  ``` 
 
 
 
 ----
-11
+# 11
 
 ### Var Keyword 
 * var x = 10;
@@ -108,7 +106,6 @@ Predicate<Integer> p1 = (x) -> x % 2 == 0;
 Predicate<Integer> p1 = (Integer x) -> x % 2 == 0;
 or now 
 Predicate<Integer> p1 = (var x) -> x % 2 == 0;
-
 ```
 
 
@@ -155,7 +152,9 @@ s.lines().forEach(System.out::println);
 ```
 
 ---
-12
+
+# 12
+
 ### Swtich case
 ```
 var value = Xxxl;
@@ -183,8 +182,11 @@ String s ="Adarsh\nRadha";
         s = s.transform(x -> x.toUpperCase());
         System.out.println(s);
 ```
+
 ---
-13
+
+# 13
+
 ### multi line string 
 ```
 var data = """
