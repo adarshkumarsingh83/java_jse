@@ -1,9 +1,18 @@
 
-
+----
 9 
 
-### 
-----
+### chars()
+```
+ String s = "xxxxxxxxxx";
+ s.chars().forEach(x-> System.out.println((char)x));
+```
+
+### codePoints()
+```
+ String s = "\uface\ubeaf";
+ s.codePoints().forEach(x-> System.out.println(x));
+```
 
 ### Try with Resources 
 ```
@@ -71,6 +80,47 @@
 ### Var Keyword 
 * var x = 10;
 
+### repeat()
+```
+  String s ="radha ";
+  s = s.repeat(3);
+  System.out.printf("=> "+s);
+
+```
+
+### strip()
+```
+String s ="      radha       singh ";
+        s = s.strip();
+        System.out.printf("=> "+s);
+```
+
+#### stripLeading()
+```
+String s ="      radha       singh ";
+        s = s.stripLeading();
+        System.out.printf("=> "+s);
+```
+
+### stripTrailing()
+```
+String s ="      radha       singh ";
+        s = s.stripTrailing();
+        System.out.printf("=> "+s);
+
+```
+
+### isBlank()
+````
+String s ="      ";
+System.out.printf("=> "+s.isBlank());
+````
+
+### lines()
+```
+String s ="   Adarsh\nRadha   ";
+s.lines().forEach(System.out::println);
+```
 
 ---
 12
