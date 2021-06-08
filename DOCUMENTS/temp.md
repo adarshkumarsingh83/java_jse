@@ -74,11 +74,43 @@
 * List.of(xxxxx,xxxxx,xxxxx)
 * Set.of(xxxxx,xxxxx,xxxxx)
 
+---
+10 
+
+### var keyword 
+* var x= 10;
+* assignement of null value is not possible expect type value is expected 
+* based on the value assiged type is defined 
+* reassignment of the differnt type is not possible 
+* var as return type of method is not possible 
+* var as method param is not possible 
+* var as a identifier not possible 
+* can be used in loop 
+  ```
+    for (var x : list){
+    	System.out.println(x);
+    }
+  ```
+
+*  
+
+
 
 ----
 11
+
 ### Var Keyword 
 * var x = 10;
+* var with predicate 
+```
+Predicate<Integer> p1 = x -> x % 2 == 0;
+Predicate<Integer> p1 = (x) -> x % 2 == 0;
+Predicate<Integer> p1 = (Integer x) -> x % 2 == 0;
+or now 
+Predicate<Integer> p1 = (var x) -> x % 2 == 0;
+
+```
+
 
 ### repeat()
 ```
