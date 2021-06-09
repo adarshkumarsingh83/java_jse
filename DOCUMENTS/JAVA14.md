@@ -88,6 +88,7 @@ or
 ### Record Keyword 
 
 * records are final can't inherit further 
+* records can't be abstracts becoz its final 
 * record can't extends any class 
 * record can implement the interface 
 * getter of records are with name of properties example  field is -> name  then method is -> name()
