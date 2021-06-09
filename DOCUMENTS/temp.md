@@ -278,7 +278,7 @@ var data = """
 
 ### switch case yeild keyword 
 ```
-```
+
 var value = Xxxl;
 var response = switch(value){
 	case 1 : yeild "XXX";
@@ -298,6 +298,5 @@ var response = switch(value){
 	default ->   "-----xxx---";
 }
 
-```
 ```
 ---
