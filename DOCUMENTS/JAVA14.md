@@ -86,6 +86,10 @@ or
 
 
 ### Record Keyword 
+* records are final can't inherit further 
+* record can't extends any class 
+* record can implement the interface 
+* getter of records are with name of properties example  field is -> name  then method is -> name()
 ```
 // for pojo classes 
 // equals()/hascode()/tostring() will be generated automatically 
@@ -109,7 +113,6 @@ System.out.println("Sample Data Value "+sample.data());
 or 
 
 // param to constructors of record 
-
 public record Sample(String data1,String data2){
 
 }
