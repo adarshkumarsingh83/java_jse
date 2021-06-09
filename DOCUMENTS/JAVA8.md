@@ -53,3 +53,8 @@
 * The JDBC-ODBC Bridge has been removed.
 * JDBC 4.2 introduces new features.
 
+### java.lang and java.util Packages
+* Parallel Array Sorting
+* Standard Encoding and Decoding Base64
+* Unsigned Arithmetic Support
+
