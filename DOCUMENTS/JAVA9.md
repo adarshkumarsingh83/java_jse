@@ -4,6 +4,20 @@
 
 ---
 
+### Modular programming 
+> new optional phase, link time, which is in-between compile time and run time, during which a set of modules can be assembled and optimized into a custom runtime image
+
+
+
+### Versioning format 
+
+* $MAJOR.$MINOR.$SECURITY.$PATCH
+
+
+### Jshell 
+
+*  jshell --enable-preview 
+
 
 ### chars()
 
@@ -70,10 +84,6 @@
  }
 
 ```
-
-### Jshell 
-
-*  jshell --enable-preview 
 
 
 ### Factory method for Immutable collection 
