@@ -3,7 +3,7 @@
 ### NPE Details pinpoint discription 
 * add the flag to enable in compiler vmoption :->  -XX:+ShowCodeDetailsInExceptionMessages 
 
-### Switch Cases 
+### Switch Cases no longer pewivew its part of langaue as official release 
 ```
 //with yeld keyword 
 
@@ -53,7 +53,7 @@ OR
         };
 ```
 
-### Text block 1st preview 
+### Text block 2nd preview 
 ```
 // for multiline string like html or xml or json data 
 String text ="""
@@ -74,7 +74,15 @@ String text ="""
        ..........
  }
 
+or
+  
+  if (n instanceof Integer i){
+
+  	  ..........
+
+  }
 ```
+
 
 
 ### Record Keyword 
@@ -162,3 +170,4 @@ System.out.println("Displaty "+Sample.display(ssample))
 
 
 ### PrintStream ->  writeBytes(bytes[] buffer)
+
