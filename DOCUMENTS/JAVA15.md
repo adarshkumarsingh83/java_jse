@@ -1,4 +1,5 @@
 # java 15 
+
 ---
 
 * Sealed classes (NEW)
@@ -23,7 +24,9 @@
 * JEP 385: Deprecate RMI Activation for Removal
 
 
+
 ### Sealed keyword  
+
 * for classses 
 ```
 // with sealed keyword we have restric the inhertance to limited child classes 
@@ -86,6 +89,7 @@ public record Cat (String name) implements Animal{
 ```
 
 ### Hiden Classes 
+
 * can't be used directly by other classes 
 * generated at runtime by underlying framework 
 * it can be unloaded from jvm completely for avoide memeo leaking 
@@ -93,14 +97,17 @@ public record Cat (String name) implements Animal{
 
 
 ### Foregin Memoary Access Api 
+
 ```
 by default objects are created on heap but now we can use external memoarty and access them using api 
 ```
+
 
 ### Cryptographiic Signature 
 
 
 ### GC 
+
 ```
 Shenandoah a low pause time GC 
 ```
@@ -132,7 +139,9 @@ Shenandoah a low pause time GC
 
 ```
 
+
 #### Text Block 2nd preveiw 
+
 ```
    String data ="""
                 aaaaa\
@@ -145,6 +154,7 @@ Shenandoah a low pause time GC
 
 
 ### Pattern Matching for instanceof operator 2nd preveiw 
+
 ```
  // check the object is instace of String then assigne to stringObject variable for furhter operation 
  if(object instanceof String stringObject && !stringObject.isEmpty() && stringObject.equests("xxxx")){
