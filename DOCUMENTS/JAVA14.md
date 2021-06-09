@@ -169,5 +169,6 @@ System.out.println("Displaty "+Sample.display(ssample))
 * for compiletime checking for serilaliztion 
 
 
-### PrintStream ->  writeBytes(bytes[] buffer)
+### writeBytes()
+* PrintStream ->  writeBytes(bytes[] buffer)
 
