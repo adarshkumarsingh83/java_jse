@@ -1,9 +1,14 @@
 # JAVA 14 
 
+---
+
 ### NPE Details pinpoint discription 
+
 * add the flag to enable in compiler vmoption :->  -XX:+ShowCodeDetailsInExceptionMessages 
 
+
 ### Switch Cases no longer pewivew its part of langaue as official release 
+
 ```
 //with yeld keyword 
 
@@ -53,7 +58,9 @@ OR
         };
 ```
 
+
 ### Text block 2nd preview 
+
 ```
 // for multiline string like html or xml or json data 
 String text ="""
@@ -82,7 +89,6 @@ or
 
   }
 ```
-
 
 
 ### Record Keyword 
@@ -172,9 +178,11 @@ System.out.println("Displaty "+Sample.display(ssample))
 ```
 
 ### @Serial 
+
 * for compiletime checking for serilaliztion 
 
 
 ### writeBytes()
+
 * PrintStream ->  writeBytes(bytes[] buffer)
 

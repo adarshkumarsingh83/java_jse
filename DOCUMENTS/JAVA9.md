@@ -7,7 +7,29 @@
 ### Modular programming 
 > new optional phase, link time, which is in-between compile time and run time, during which a set of modules can be assembled and optimized into a custom runtime image
 
+*  To list the java moduels 
+  * $ java --list-modules 
 
+* To veiw module jar contnet 
+  * jar -f xyx.jar -d 
+
+```
+- any jar runing in classpath without module descriptor is class an unamed module 
+- any traditional jar running is module paht is a automatic module 
+- any jar running in module path with module descriptor is a explicty nameed module  and if run in classpath is again unnammed module 
+  
+- module can't share packages 
+- unamed module can talk to other unamed modules 
+- automatic modules can talk to other automatic modules 
+- automatic modules can tlak to unamed modules 
+- an explicit named module can talk to other explict named module 
+- an explict name module can talk to automatic modules 
+- and explicit named module can't talk to unamed modules 
+- and explicit named module has to requries any nmodules it need 
+- an explicit name modules exports only what is specifically exported 
+- and automatic named modules automatically export all its packages 
+
+```
 
 ### Versioning format 
 
