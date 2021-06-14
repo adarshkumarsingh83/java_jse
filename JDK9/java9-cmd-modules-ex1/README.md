@@ -1,5 +1,5 @@
 ### Simple without any changes just compile and run it with class path 
-> compile class create a jar file and add it in module path and run it 
+> compile class create a jar file and add it in class path and run it 
 
 ### To Compile and run 
 * $ sh run.sh 
