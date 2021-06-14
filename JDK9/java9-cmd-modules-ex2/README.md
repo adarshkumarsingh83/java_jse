@@ -1,5 +1,7 @@
 ### Simple without any changes just compile and run it with class path 
 > compile class create a jar file and add it in module path and run it 
+> this is the example of automatic module where the old jars are running 
+> in the module path 
 
 
 
