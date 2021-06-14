@@ -14,9 +14,17 @@
   * jar -f xyx.jar -d 
 
 ```
+# Unammed Module 
 - any jar runing in classpath without module descriptor is class an unamed module 
-- any traditional jar running is module paht is a automatic module 
+> therir are many module in project but only one unammed module in classpath i
+
+# Automatic Module 
+- any traditional jar running is module path is a automatic module 
+> old jar file runing in module path 
+
+# Explict Name Module 
 - any jar running in module path with module descriptor is a explicty nameed module  and if run in classpath is again unnammed module 
+> new jar with module descriptor in module path 
   
 - module can't share packages 
 - unamed module can talk to other unamed modules 
