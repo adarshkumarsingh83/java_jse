@@ -1,5 +1,7 @@
 ### Simple without any changes just compile and run it with class path 
 > compile class create a jar file and add it in class path and run it 
+> this is example of unnamed module where all the code run in the classpath 
+> as a single group without a module name 
 ```
 java9-cmd-modules-ex1
 |
