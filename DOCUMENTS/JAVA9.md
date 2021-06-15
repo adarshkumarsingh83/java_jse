@@ -183,8 +183,38 @@ numbers.stream().dropWhile(e-> e > 26).forEach(System.out::println);
 ```
 
 
+### loop in functional style 
+* iterate(seed,function);
+* iterate(seed,[predicate],function);
+```
+// imprative style 
+//for(seed;predicate;function)
+  for(int i=0;i<=15;i=i+2){
+    System.out.println(i);
+  }
 
+// functional style 
+// iterate(seed,function);
+// iterate(seed,[predicate],function);
+  IntStream.iterrate(0,i-> i <=15, i-> i+2)
+        .forEach(System.out::println);
 
+```
+
+### loop without prediate
+```
+  for(int i=0; ;i=i+2){
+    if(i<=15){
+      break;
+    }
+    System.out.println(i);
+  }
+  or 
+  IntStream.iterrate(0, i-> i+2)
+        .takeWhile(i-> i<=15)
+        .forEach(System.out::println);
+
+```
 
 
 

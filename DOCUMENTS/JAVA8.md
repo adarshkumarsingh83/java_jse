@@ -90,3 +90,31 @@ interface Util{
 ```
 int _ = 10;
 ```
+
+### range(st,end)
+```
+IntStream.range(0,5).forEach(System.out::println);
+```
+
+### rangeClose(st,end)
+```
+IntStream.rangeClose(0,5).forEach(System.out::println);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
