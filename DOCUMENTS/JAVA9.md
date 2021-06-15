@@ -223,7 +223,11 @@ numbers.stream().dropWhile(e-> e > 26).forEach(System.out::println);
 ```
 
 
-
+### Stream from Optional 
+````
+ Optional<Integer> optional = IntStream.range(0,6).stream().filter(e-> e>10).findFirst();
+ optionl.stream().forEach(System.out.println);
+```
 
 
 
