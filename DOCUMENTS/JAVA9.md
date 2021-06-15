@@ -98,14 +98,15 @@
 
  // In java 9 now we can diclar like this 
  //exception will not be handle by catch block now 
- 
+
    public static void main(String ...args){
    	MyResource r1 = new MyResource();
     MyResource r2 = new MyResource()
       doOperation(r1,r2);
   }
 
-  public static void doOperation(MyResource r1, MyResource r2 ){
+  // MyResource is bydefault effectively final/ final 
+  public static void doOperation(final MyResource r1,final MyResource r2 ){
   
        try( r1;r2){
          
