@@ -5,8 +5,8 @@ OWNER : ADARSH KUMAR
 
 JAVA STANDARD EDITION APPLICATION REPOSITORY 
 ---------------------------------------------
-### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK7)
-### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK8)
+### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK7)
+### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK8)
 - Java8Application			
 - Java8Optional				
 - Java8WordCount
@@ -40,8 +40,7 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8PredicateExample
 - FlatternNestedList
 
-### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK7)
-### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK8)
+
 ### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK9)
 ### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK10)
 ### [JDK11](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK11)
