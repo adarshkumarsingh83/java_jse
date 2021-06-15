@@ -134,6 +134,7 @@
 * List.of(xxxxx,xxxxx,xxxxx)
 * Set.of(xxxxx,xxxxx,xxxxx)
 * Map.of(key1,value1,xxxxx,xxxxxx)
+  * Map<KeyType,ValueType>.of(key1,value1,xxxxx,xxxxxx)
 
 ---
 
