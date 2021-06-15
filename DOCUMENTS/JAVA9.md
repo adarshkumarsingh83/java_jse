@@ -98,6 +98,7 @@
 
  // In java 9 now we can diclar like this 
  //exception will not be handle by catch block now 
+ 
    public static void main(String ...args){
    	MyResource r1 = new MyResource();
     MyResource r2 = new MyResource()
@@ -106,7 +107,7 @@
 
   public static void doOperation(MyResource r1, MyResource r2 ){
   
-       try( r1;r2{
+       try( r1;r2){
          
          ......................
 
@@ -115,7 +116,6 @@
       }finally{
          System.out.println(":(");
       }
-
   }
 
  
