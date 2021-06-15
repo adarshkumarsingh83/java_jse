@@ -40,8 +40,15 @@ JAVA STANDARD EDITION APPLICATION REPOSITORY
 - Java8PredicateExample
 - FlatternNestedList
 
-### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK9)
-### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/JDK10)
+### [JDK7](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK7)
+### [JDK8](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK8)
+### [JDK9](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK9)
+### [JDK10](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK10)
+### [JDK11](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK11)
+### [JDK12](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK12)
+### [JDK13](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK13)
+### [JDK14](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK14)
+### [JDK15](https://github.com/adarshkumarsingh83/java_jse/tree/master/APPLICATION/JDK15)
 
 
 ### [DATA-STRUCTURE](https://github.com/adarshkumarsingh83/java_jse/tree/master/DATA-STRUCTURE)
