@@ -216,7 +216,11 @@ numbers.stream().dropWhile(e-> e > 26).forEach(System.out::println);
 
 ```
 
-
+### ifPresentOrElse(value -> {"true part of if "} ,()->{ " runnable object for else part " })
+```
+ Optional<Integer> optional = IntStream.range(0,6).stream().filter(e-> e>10).findFirst();
+ optional.ifPresentOrElse(value -> System.outl.println("The Value is "+value), () -> System.out.println("Value not Found "));
+```
 
 
 
