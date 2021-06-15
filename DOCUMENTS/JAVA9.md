@@ -123,3 +123,28 @@
 
 ---
 
+### Interfaces 
+
+* private method 
+```
+interface Util{
+     privagte retrntype methodName(types argsName ){
+
+        -----------xxxxx----------------
+        return value;
+     }
+
+}
+``` 
+
+* private static method 
+```
+interface Util{
+     privagte static retrntype methodName(types argsName ){
+
+        -----------xxxxx----------------
+        return value;
+     }
+
+}
+``` 

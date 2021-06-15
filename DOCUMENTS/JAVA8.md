@@ -58,3 +58,31 @@
 * Standard Encoding and Decoding Base64
 * Unsigned Arithmetic Support
 
+
+-----
+
+### Interfaces 
+* default method
+```
+interface Util{
+     default retrntype methodName(types argsName ){
+
+     	  -----------xxxxx----------------
+     	  return value;
+     }
+
+}
+``` 
+
+* static method 
+```
+interface Util{
+     static retrntype methodName(types argsName ){
+
+     	  -----------xxxxx----------------
+     	  return value;
+     }
+
+}
+``` 
+
