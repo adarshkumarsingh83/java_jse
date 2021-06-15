@@ -169,3 +169,40 @@ interface Util{
 ```
 int _ = 10;
 ```
+
+### takeWhile(Predicate p)
+```
+List<Integer> numbers = Arraya.asList(10,20,30,40,50);
+numbers.stream().takWhile(e-> e > 38).forEach(System.out::println);
+```
+
+### dropWhile(Predicate p)
+```
+List<Integer> numbers = Arraya.asList(10,20,30,40,50);
+numbers.stream().dropWhile(e-> e > 26).forEach(System.out::println);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
