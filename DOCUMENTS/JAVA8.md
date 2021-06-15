@@ -86,3 +86,7 @@ interface Util{
 }
 ``` 
 
+### Underscore as only identifieer Warnning 
+```
+int _ = 10;
+```

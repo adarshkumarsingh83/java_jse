@@ -163,3 +163,9 @@ interface Util{
 ``` 
 
 ### finilized() in Object class is depracated 
+
+
+### Underscore as only identifieer Errors 
+```
+int _ = 10;
+```
