@@ -71,7 +71,12 @@
  // finally will be close at last 
   public static void main(String ...args){
 
-      try(MyResource r1 = new MyResource();
+       doOperation();       
+  }
+
+  public static void doOperation(){
+  
+       try(MyResource r1 = new MyResource();
           MyResource r1 = new MyResource()){
          
          ......................
@@ -81,6 +86,7 @@
       }finally{
          System.out.println(":(");
       }
+
   }
  
  class MyResource implement AutoCloseable{
@@ -94,9 +100,13 @@
  //exception will not be handle by catch block now 
    public static void main(String ...args){
    	MyResource r1 = new MyResource();
-    MyResource r1 = new MyResource()
+    MyResource r2 = new MyResource()
+      doOperation(r1,r2);
+  }
 
-      try(r1;r2){
+  public static void doOperation(MyResource r1, MyResource r2 ){
+  
+       try( r1;r2{
          
          ......................
 
@@ -105,7 +115,9 @@
       }finally{
          System.out.println(":(");
       }
+
   }
+
  
  class MyResource implement AutoCloseable{
  	 public void close()throrws Exception{
