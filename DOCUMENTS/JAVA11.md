@@ -65,3 +65,22 @@ String s ="   Adarsh\nRadha   ";
 s.lines().forEach(System.out::println);
 ```
 
+### Predicate.not(Predicate p) for other then predicate value 
+```
+// in jdk8 
+public static boolean isEven(int n){
+	return n % 2 ==0 ;
+}
+
+IntStream.range(0,10).stream().filter(((Predicate<Integer>)(Sample::isEven)).negate()).forEach(System.out.println);
+// or 
+IntStream.range(0,10).stream().filter(((Predicate<Integer>)(e->e%2==0)).negate()).forEach(System.out.println);
+
+// in jdk11 
+
+
+IntStream.range(0,10).stream().filter(Predicate.not(Sample::isEven).forEach(System.out.println);
+// or 
+IntStream.range(0,10).stream().filter(Predicate.not(e->e%2==0)).forEach(System.out.println);
+
+```
