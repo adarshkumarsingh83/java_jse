@@ -50,6 +50,9 @@ String s ="      radha       singh ";
         System.out.printf("=> "+s);
 
 ```
+### readString(Paht.of(path of file ))
+
+### writeString()
 
 ### isBlank()
 

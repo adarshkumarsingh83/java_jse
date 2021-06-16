@@ -101,7 +101,22 @@ IntStream.range(0,5).forEach(System.out::println);
 IntStream.rangeClose(0,5).forEach(System.out::println);
 ```
 
+### prodicateObject.and(prodicateObject)
+```
+Prodicate<Integer> isEven = e -> e % 2 ===0;
+Prodicate<Integer> isGtr = e -> e > 5 ; 
 
+static void process(int n, Prediate<Integer> p){
+	System.out.println(n+" "+p.test())
+}
+
+process(5 , isEven);
+process(10 , isGtr);
+process(5 , isEven.add(isGtr));
+process(10 , isEven.add(isGtr));
+process(10 , isEven.add(isGtr.negate()));
+
+```
 
 
 
