@@ -33,3 +33,5 @@ String s ="Adarsh\nRadha";
         s = s.transform(x -> x.toUpperCase());
         System.out.println(s);
 ```
+
+ 
