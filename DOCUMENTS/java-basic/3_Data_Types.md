@@ -3,6 +3,8 @@
 ---
 ![types](types.png)
 
+![types promotion](3_Datatype.png)
+
 ```
 
                                                             (primitive / Wrapper)
@@ -25,4 +27,3 @@
 
 ```
 
-![types promotion](3_Datatype.png)
