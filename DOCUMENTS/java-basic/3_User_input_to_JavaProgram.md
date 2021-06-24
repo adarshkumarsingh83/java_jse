@@ -1,5 +1,5 @@
-1.Cmd Prompt
--------------------------------------------------------------------------------
+## Cmd Prompt
+```
   public class CmdLineArgsTest{
 
 	  public static void main(String ...args){  
@@ -17,9 +17,10 @@
 
 > javac Test.javac
 >java Test a b c d e f g h i j k l m n o p q r s t u v w x y z
--------------------------------------------------------------------------------
-2.BufferedReader
+```
 
+## BufferedReader
+```
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -33,9 +34,11 @@ public class BufferedReaderTest {
         System.out.println("Data Enter by User "+dataInput);
     }
 }
--------------------------------------------------------------------------------
-3.Scanner 
+```
 
+
+## Scanner 
+```
 import java.util.Scanner;
 
 public class ScannerTest {
@@ -48,8 +51,10 @@ public class ScannerTest {
         System.out.println("Data Enter by User "+dataInput);
     }
 }
--------------------------------------------------------------------------------
-4.Console
+```
+
+## Console
+```
 this will work on cmd prompt only 
 .................................
 
@@ -72,8 +77,10 @@ public class ConsoleTest{
 
 Enter the Data ? hi this is adarsh
 Data Enter by User hi this is adarsh
+```
 
--------------------------------------------------------------------------------
+## DataInputStream 
+```
 import java.io.DataInputStream;
 
 public class DataInputStreamTest {
@@ -84,3 +91,4 @@ public class DataInputStreamTest {
         System.out.println("Data Enter  "+data);
     }
 }
+```
