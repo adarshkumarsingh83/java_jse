@@ -9,6 +9,8 @@
 * [java programm cojmplilation/exceution process ](java-basic/1.3_Java-Program-Compilation-and-Execution-Process.md)
 * [oops ](java-basic/2_OOPS.md)
 * [java keywords](java-basic/2.1_Java_keyWords.md)
+* [java data types](java-basic/3_Data_Types.md)
+
 
 
 
