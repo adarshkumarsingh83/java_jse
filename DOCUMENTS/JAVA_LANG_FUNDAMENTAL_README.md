@@ -7,5 +7,8 @@
 * [class loader](java-basic/1.2_ClassLoader.md)
 * [jdk installation](java-basic/jdk_installation.md)
 * [java programm cojmplilation/exceution process ](java-basic/1.3_Java-Program-Compilation-and-Execution-Process.md)
+* [oops ](java-basic/2_OOPS.md)
+* [java keywords](2.1_Java_keyWords.md)
+
 
 
