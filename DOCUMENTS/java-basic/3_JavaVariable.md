@@ -1,7 +1,8 @@
-Java Variable
-========================================================================================================================
-Rules for Variable Declaration
-========================================================================================================================
+# Java Variable
+---
+
+## Rules for Variable Declaration
+```
 a.can Start with a-z|A-Z|0-9|$| _ 
 b.can't start with 0-9
 c.any predefine class name ,interface name ,enums  or Event name can be used as the variable 
@@ -9,24 +10,32 @@ d.java keyword can't be use as the variable.
 e.camel case is the variable case convention and Capital case for constant 
 f.$ symbol can be suffix for currency variable
 g._ is for system variable which is used internally.
+```
 
-
-Variable:= is the named storage container in the program which is manipulated during the program execution.
+* Variable:= 
+```
+is the named storage container in the program which is manipulated during the program execution.
            its bind with specific data type and its size depend on that defined data type.
-Identifier:=Name assign to any class , Interface ,Variable ,package ,methods ,enums 
+```
 
-Literals:=constant value assign to the variable is know as literals
+* Identifier:=
+```
+Name assign to any class , Interface ,Variable ,package ,methods ,enums 
+```
+
+* Literals:=
+```
+constant value assign to the variable is know as literals
 NOTE:=> Underscore can be used in between the literals irrespective of binary,decimal,octal and hexadecimal literal
+```
+ * Types of Literals
+  * Integer literal(binary,decimal,octal,hexadecimal)
+  * Floating Literal
+  * Char Literal
+  * String Literal
+  * Boolean Literal	  	   	   	  
 
-========================================================================================================================
-Types of Literals
-========================================================================================================================
-	  1.Integer literal(binary,decimal,octal,hexadecimal)
-      2.Floating Literal
-      3.Char Literal
-      4.String Literal
-      5.Boolean Literal	  	   	   	  
-------------------------------------------------------------------------------------------------------------------------		  
+```
 	   a.Integer Literals 
 	     0.Binary literal 
 		   a.base 2 value [0-1]
@@ -48,9 +57,11 @@ Types of Literals
 	     1.Decimal literals 
 		   a.base 10 value [0-9] 
 		   b.no prefix and no suffix		   
+
 		 2.Octal literals 
 		   a.base 8 value [0-7]
 		   b.prefix with small o or capital O [o]|[O]
+
 		 3.Hexadecimal literals
 		   a.base 16 value [0-9][a-f][A-F]
 		   b.prefix with zero and alphabet x small or capital [0x]|[0X]
@@ -63,6 +74,7 @@ Types of Literals
 	     1.Float literals
 		   a.base 10 value [0-9] with the floating point precession and after decimal value.
 		   b.suffix with small f or capital F after the literal value ex 10.00f ,10.00F
+
 		 2.Double literals
 		  a.base 10 value [0-9] with the floating point precession value after decimal 
 		  b.suffix with small d or capital D after the literal value ex 10.00d ,10.00D
@@ -82,16 +94,18 @@ Types of Literals
 		  
 	   h.String Literals
 	      sequence of the character set with in double quotes is string literals ex String st="radha";
+```
+
 		  
-		  
-------------------------------------------------------------------------------------------------------------------------		  
-Variable Types
-========================================================================================================================
-a.Primitive Variable
-========================================================================================================================
+
+## Variable Types
+
+### Primitive Variable
+```
  Variable which are declared and bonded with the primitive data type is primitive variable.
- 1.Primitive Class Variable
-------------------------------------------------------------------------------------------------------------------------		  
+```
+* Primitive Class Variable
+```
    a.variable which is declared directly inside the class and out side of any blocks with the static keyword with primitive datatype
    b.class variable is shared among all the instances of the class 
    c.Jvm will automatically initialised the value with the default value according to the data type if literal is not assign to it.
@@ -99,9 +113,9 @@ a.Primitive Variable
    e.keywords for class level variable 
      public,private,protected,final,volatile,transient
    f.static variable are stored in permanent generation(permgen) area of heap which is for class loader and this variable is reference by class name. 
- 
- 2.Primitive Instance Variable
-------------------------------------------------------------------------------------------------------------------------		  
+``` 
+* Primitive Instance Variable
+```
    a.variable which is declared directly inside the class and outside of any block with primitive datatype
    b.every instance is having separate copy of the variable associated to the instance of the class
    c.Jvm will automatically initialised the value with the default value according to the data type if literal is not assign to it.
@@ -109,9 +123,10 @@ a.Primitive Variable
    e.keywords for instance level variable 
      public,private,protected,final,volatile,transient
    f.all objects are stored in young generation area of the heap and this type of variable will be referenced by object 
- 
- 3.Primitive Local Variable
-------------------------------------------------------------------------------------------------------------------------		  
+``` 
+ * Primitive Local Variable
+
+```
   a.variable which is declared within some block or method or loop or if or switch with primitive datatype is know as local variable
   b.its scope is with in the block and it is created on stack
   c.this variable is only alive until block execution 
@@ -119,13 +134,14 @@ a.Primitive Variable
   e.keywords for class level variable 
      final
   f.all the local variable are stored in stack	 
-	 
-========================================================================================================================
-b.Reference Variable
-========================================================================================================================
+```
+
+### Reference Variable
+```
  Variable which are declared and bonded with the predefine or custom Class type or Interface type variable is Reference variable 
-1.Reference Class Variable
-------------------------------------------------------------------------------------------------------------------------		  
+``` 
+* Reference Class Variable
+```
    a.variable which is declared directly inside the class and out side of any blocks with the static keyword with predefine or custom Class or Interface type
    b.class variable is shared among all the instances of the class 
    c.Jvm will automatically initialised the value with the default value according to the data type if literal is not assign to it.
@@ -133,9 +149,9 @@ b.Reference Variable
    e.keywords for class level variable 
      public,private,protected,final,volatile,transient
   f.static variable are stored in permanent generation(permgen) area of heap which is for class loader and this variable is reference by class name 
- 
- 2.Reference Instance Variable
-------------------------------------------------------------------------------------------------------------------------		  
+``` 
+ * Reference Instance Variable
+```
    a.variable which is declared directly inside the class and outside of any block with predefine or custom Class or Interface type
    b.every instance is having separate copy of the variable associated to the instance of the class
    c.Jvm will automatically initialised the value with the default value according to the data type if literal is not assign to it.
@@ -143,9 +159,9 @@ b.Reference Variable
    e.keywords for instance level variable 
      public,private,protected,final,volatile,transient
   f.all objects are stored in young generation area of the heap and this type of variable will be referenced by object 
- 
- 3.Reference Local Variable
-------------------------------------------------------------------------------------------------------------------------		  
+``` 
+ * Reference Local Variable
+```
   a.variable which is declared within some block or method or loop or if or switch with predefine or custom Class or Interface type is know as local variable
   b.its scope is with in the block and it is created on stack
   c.this variable is only alive until block execution 
@@ -153,7 +169,11 @@ b.Reference Variable
   e.keywords for class level variable 
      final
   f.all the local variable are stored in stack 
-===========================================================================================================
+```  
+---
+
+### Examples 
+```
 
     /* -128 to 127 for byte   */
     // Byte Literal
@@ -228,3 +248,5 @@ b.Reference Variable
 	//boolean Literal
 	boolean b1=true;
 	boolean b2=false;
+
+```  
