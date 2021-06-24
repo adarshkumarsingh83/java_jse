@@ -1,6 +1,7 @@
 # Data Type
 
 ---
+![types](types.png)
 
 ```
 
