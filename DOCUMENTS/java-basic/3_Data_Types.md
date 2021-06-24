@@ -24,3 +24,5 @@
 						|-long/Long
 
 ```
+
+![types promotion](3_Datatype.png)
