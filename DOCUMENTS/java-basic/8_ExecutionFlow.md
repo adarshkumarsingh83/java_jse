@@ -8,9 +8,9 @@
    a.identification of the all the static member of the class top to bottom parent to child.
    b.initialisation or assignment of the static variable 
    c.execution of the all the static blocks
-
-   Example 1: 
-   .................
+```
+### Example 1: 
+```
    public class Parent {
 
     (1)static int x; ----------->(8)
@@ -36,9 +36,9 @@
     (7)static int z=30;----------->(12)
 
 	}
-	
-    Example 2:
-   .................
+```	
+### Example 2:
+```
    public class Parent {
 
     (1)static int parentX;----------->(15)
@@ -99,10 +99,9 @@
    b.initialisation or assignment of the instance variable 
    c.execution of the all the instance blocks
    d.execution of the constructor if object is created.
-   
- Example 1
-....................
-
+```   
+### Example 1
+```
 public class Parent {
 
     (4)int parentInstanceX;----------->(11)
@@ -132,10 +131,9 @@ public class Parent {
 
     (10)int parentInstanceZ = 30;----------->(15)
 }
-
-Example 2
-...........................
-
+```
+### Example 2
+```
 	public class Parent {
 
     (5)int parentInstanceX;----------->(19)
@@ -199,11 +197,11 @@ Example 2
     (18)int childInstanceZ=30;----------->(28)
 	}
  
+```   
    
    
-   
-c.Mixed Flow
-----------------
+## Mixed Flow
+```
  1.flow which is associated with the static and instance member of the class and its parent class.
  2.it include flowing step
    a.identification of the all the static member of the class top to bottom parent to child.
@@ -215,9 +213,10 @@ c.Mixed Flow
    g.initialisation or assignment of the instance variable 
    h.execution of the all the instance blocks
    i.execution of the constructor if object is created
-   
- Example 1
-...................
+```   
+ 
+### Example 1
+```
  public class Parent {
 
     (1)static int parentStaticX;----------->(8)
@@ -265,10 +264,10 @@ c.Mixed Flow
     (7)static int parentStaticZ = 30;----------->(12)
     (23)int parentInstanceZ = 30;----------->(28)
   }
-
+```
  
- Example 2
- ...............
+### Example 2
+```
    public class Parent {
 
     (1)static int parentStaticX;----------->(15)
