@@ -16,6 +16,7 @@
 * [console printing ](java-basic/3_Printing_on_Console.md)
 * [java interfaces ](java-basic/4_Interface.md)
 * [java abstract classes ](java-basic/5_abstract_class.md)
+* [java classes ](java-basic/6_classes.md)
 * [ ](java-basic/)
 
 
