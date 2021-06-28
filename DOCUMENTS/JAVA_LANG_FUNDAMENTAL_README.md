@@ -23,6 +23,7 @@
 * [java execution flow ](java-basic/8_ExecutionFlow.md)
 * [overloading and overriding ](java-basic/9_Overloading_Overridding.md)
 * [java arrays ](java-basic/10_java_Arrays.md)
+* [java enum ](java-basic/11_Enum.md)
 * [ ](java-basic/)
 
 
