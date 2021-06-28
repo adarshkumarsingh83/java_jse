@@ -14,7 +14,7 @@
 * [java variables ](java-basic/3_JavaVariable.md)
 * [user input to the java program ](java-basic/3_User_input_to_JavaProgram.md)
 * [console printing ](java-basic/3_Printing_on_Console.md)
-* [java interfaces]((java-basic/4_Interface.md)
+* [java interfaces ](java-basic/4_Interface.md)
 * [ ](java-basic/)
 
 
