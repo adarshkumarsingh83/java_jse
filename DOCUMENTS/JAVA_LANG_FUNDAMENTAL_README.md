@@ -15,6 +15,7 @@
 * [user input to the java program ](java-basic/3_User_input_to_JavaProgram.md)
 * [console printing ](java-basic/3_Printing_on_Console.md)
 * [java interfaces ](java-basic/4_Interface.md)
+* [java abstract classes ](java-basic/5_abstract_class.md)
 * [ ](java-basic/)
 
 
