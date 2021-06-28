@@ -7,6 +7,7 @@
 * [class loader](java-basic/1.2_ClassLoader.md)
 * [jdk installation](java-basic/jdk_installation.md)
 * [java programm cojmplilation/exceution process ](java-basic/1.3_Java-Program-Compilation-and-Execution-Process.md)
+* [java standalone prog execution ](java-basic/7_Java_Standalone_Program_Execution.md)
 * [oops ](java-basic/2_OOPS.md)
 * [java keywords](java-basic/2.1_Java_keyWords.md)
 * [java data types](java-basic/3_Data_Types.md)
@@ -18,7 +19,7 @@
 * [java abstract classes ](java-basic/5_abstract_class.md)
 * [java classes ](java-basic/6_classes.md)
 * [string stringbuffer stringbuilder ](java-basic/6.1_String_StringBuffer_StringBuilder.md)
-* [java standalone prog execution ](java-basic/7_Java_Standalone_Program_Execution.md)
+* [blocks types in java ](java-basic/7.1_Types_of_Blocks.md)
 * [ ](java-basic/)
 
 
