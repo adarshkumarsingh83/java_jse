@@ -22,6 +22,7 @@
 * [blocks types in java ](java-basic/7.1_Types_of_Blocks.md)
 * [java execution flow ](java-basic/8_ExecutionFlow.md)
 * [overloading and overriding ](java-basic/9_Overloading_Overridding.md)
+* [java arrays ](java-basic/10_java_Arrays.md)
 * [ ](java-basic/)
 
 
