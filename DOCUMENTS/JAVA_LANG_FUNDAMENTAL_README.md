@@ -24,6 +24,7 @@
 * [overloading and overriding ](java-basic/9_Overloading_Overridding.md)
 * [java arrays ](java-basic/10_java_Arrays.md)
 * [java enum ](java-basic/11_Enum.md)
+* [java generics ](java-basic/12_JavaGenerics.md)
 * [ ](java-basic/)
 
 
