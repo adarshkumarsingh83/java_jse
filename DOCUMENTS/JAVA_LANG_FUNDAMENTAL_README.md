@@ -28,6 +28,10 @@
 * [wideing autoboxing var-args ](java-basic/13_Wideing_Autoboxing_Varagrs.md)
 * [java collections ](java-basic/14_Collections_data.md)
 * [java import statement types  ](java-basic/15_import_statements_types.md)
+* [java input type from console ](java-basic/16_inputs_types_from_console.md)
+* [java loops and conditional statements ](java-basic/17_LoopsConditionalStatements.md)
+* [java exception handling ](java-basic/18_ExceptionHandling.md)
+* [java garbage collection  ](java-basic/19_GarbageCollector.md)
 * [ ](java-basic/)
 
 
