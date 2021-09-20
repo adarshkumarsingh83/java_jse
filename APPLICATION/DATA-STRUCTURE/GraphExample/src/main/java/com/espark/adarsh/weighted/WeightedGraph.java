@@ -1,9 +1,9 @@
 package com.espark.adarsh.weighted;
 
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import com.espark.adarsh.unitdirectioanl.UniDirectionalGraph;
+
+import java.util.*;
 
 public class WeightedGraph<T> {
 
@@ -43,8 +43,30 @@ public class WeightedGraph<T> {
         }
     }
 
+    public void displayTreeWithQueue() {
+        System.out.println();
+        WeightedGraph.Node<T> root = graphNode.get("A");
+        Queue<WeightedGraph.Node<T>> queue = new LinkedList();
+        if (queue.isEmpty()) {
+            queue.offer(root);
+        }
+        while (!queue.isEmpty()) {
+            WeightedGraph.Node<T> node = queue.poll();
+            node.setVisited(true);
+            System.out.print(node.getData()+" -0-> "+node.getData());
+            node.getAdjacent().entrySet().forEach(e -> {
+                System.out.print(" -"+e.getValue()+"-> " + e.getKey().getData());
+                if (!queue.contains(e.getKey()) && !e.getKey().isVisited()) {
+                    queue.add(e.getKey());
+                }
+            });
+            System.out.println();
+        }
+    }
+
     static class Node<T> {
         private T data;
+        private boolean visited;
         Map<Node<T>, Integer> adjacent = new HashMap<>();
 
         public Node(T data) {
@@ -53,6 +75,14 @@ public class WeightedGraph<T> {
 
         public T getData() {
             return data;
+        }
+
+        public boolean isVisited() {
+            return visited;
+        }
+
+        public void setVisited(boolean visited) {
+            this.visited = visited;
         }
 
         public Map<Node<T>, Integer> getAdjacent() {

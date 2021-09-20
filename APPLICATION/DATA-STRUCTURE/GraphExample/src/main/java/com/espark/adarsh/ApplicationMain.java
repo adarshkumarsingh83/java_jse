@@ -23,7 +23,7 @@ public class ApplicationMain {
         System.out.println();
         //biDirectionOperation(data);
         System.out.println();
-        //weightedGraphOperation();
+        weightedGraphOperation();
         System.out.println();
         //weightedPathGraphOperation();
         System.out.println();
@@ -155,6 +155,7 @@ public class ApplicationMain {
             graph.createGraph(entry.getKey(), entry.getValue());
         }
         graph.displayTree();
+        graph.displayTreeWithQueue();
     }
 
     public static void biDirectionOperation(Map<String, List<String>> data) {
