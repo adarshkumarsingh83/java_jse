@@ -23,7 +23,7 @@ public class ApplicationMain {
         System.out.println();
         //biDirectionOperation(data);
         System.out.println();
-        weightedGraphOperation();
+        //weightedGraphOperation();
         System.out.println();
         //weightedPathGraphOperation();
         System.out.println();
