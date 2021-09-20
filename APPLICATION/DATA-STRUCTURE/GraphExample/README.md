@@ -42,4 +42,55 @@ if it is then add that also in the queue
 and do for other once adjecent list is finished then 
 again take from queue 
 ```
+
+---
+
+# BiDirectionalGraph
+
+### graph creating
+``` 
+```
+
+### printing the graph
+```
+
+```
+
+---
+# WeightedGraph
+
+### graph creating
+``` 
+```
+
+### printing the graph
+```
+
+```
+
+---
+# PathWeightedGraph
+
+### graph creating
+``` 
+```
+
+### printing the graph
+```
+
+```
+
+---
+
+# CyclicPathGraph
+
+### graph creating
+``` 
+```
+
+### printing the graph
+```
+
+```
+
 ---
