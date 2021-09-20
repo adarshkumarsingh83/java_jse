@@ -1,6 +1,8 @@
 package com.espark.adarsh.weighted_paths;
 
 
+import com.espark.adarsh.weighted.WeightedGraph;
+
 import java.util.*;
 
 public class PathWeightedGraph<T> {
@@ -78,6 +80,27 @@ public class PathWeightedGraph<T> {
         }
     }
 
+    public void displayTreeWithQueue() {
+        System.out.println();
+        PathWeightedGraph.Node<T> root = graphNode.get("A");
+        Queue<PathWeightedGraph.Node<T>> queue = new LinkedList();
+        if (queue.isEmpty()) {
+            queue.offer(root);
+        }
+        while (!queue.isEmpty()) {
+            PathWeightedGraph.Node<T> node = queue.poll();
+            node.setVisited(true);
+            System.out.print(node.getData()+" -0-> "+node.getData());
+            node.getAdjacent().entrySet().forEach(e -> {
+                System.out.print(" -"+e.getValue()+"-> " + e.getKey().getData());
+                if (!queue.contains(e.getKey()) && !e.getKey().isVisited()) {
+                    queue.add(e.getKey());
+                }
+            });
+            System.out.println();
+        }
+    }
+
     public void calculatePathBetweenSpecificNodes(T start, T end) {
         Node<T> startNode = graphNode.get(start);
         Node<T> endNode = graphNode.get(end);
@@ -120,6 +143,7 @@ public class PathWeightedGraph<T> {
 
         private T data;
         private Integer order;
+        private boolean visited;
         private int shortedPathWeight = Integer.MAX_VALUE;
         private int longestPathWeight = 0;
         private List<T> shortedNodePath = new LinkedList<>();
@@ -132,6 +156,14 @@ public class PathWeightedGraph<T> {
 
         public T getData() {
             return data;
+        }
+
+        public boolean isVisited() {
+            return visited;
+        }
+
+        public void setVisited(boolean visited) {
+            this.visited = visited;
         }
 
         public Map<PathWeightedGraph.Node<T>, Integer> getAdjacent() {

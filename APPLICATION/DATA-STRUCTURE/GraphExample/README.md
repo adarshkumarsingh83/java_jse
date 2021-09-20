@@ -134,14 +134,61 @@ again take from queue
 
 ---
 # PathWeightedGraph
-
+```
+every node is having value then weight of node and the list of adjecent nodes  
+```
+### graph input data
+``` 
+    Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
+        wightedData.put("A", new HashMap<String, Integer>() {
+            {
+                put("B", 5);
+                put("E", 3);
+            }
+        });
+        wightedData.put("B", new HashMap<String, Integer>() {
+            {
+                put("A", 7);
+                put("C", 1);
+                put("E", 8);
+            }
+        });
+     above is the input for the graph    
+```
 ### graph creating
 ``` 
+firt check the key exist in the graph collection 
+ Map<T, PathWeightedGraph.Node<T>> graphNode = new LinkedHashMap<>();
+ if key exist then return the existing one otherwise create new  with node weight and return  
+ then iterate on adjecent list and do the above for same and add them to the main node adjecent list 
+  then save the main node to the graph collection 
 ```
 
 ### printing the graph
 ```
+take the first value of the graph collection 
+and add into the queue 
+then check queue is not empty then 
+then take first value from queue then then check for the visited 
+if not visited then 
+then mark as visited and print that value 
+then find the adjecents of that 
+check that it must be not be marked as visited and it must not contains in queue 
+if it is then add that also in the queue 
+and do for other once adjecent list is finished then 
+again take from queue 
+```
 
+### calculating shorted path 
+``` 
+```
+
+### calculating longest path
+``` 
+```
+
+### calculating path between nodes 
+``` 
 ```
 
 ---

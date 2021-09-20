@@ -25,7 +25,7 @@ public class ApplicationMain {
         System.out.println();
         //weightedGraphOperation();
         System.out.println();
-        //weightedPathGraphOperation();
+        weightedPathGraphOperation();
         System.out.println();
         //cyclicPathGraphOperation();
     }
@@ -112,6 +112,7 @@ public class ApplicationMain {
             graph.createGraph(entry.getKey(), entry.getValue());
         }
         graph.displayTree();
+        graph.displayTreeWithQueue();
         graph.calculatePathBetweenAllNodes("A");
         graph.calculatePathBetweenSpecificNodes("B", "F");
     }
