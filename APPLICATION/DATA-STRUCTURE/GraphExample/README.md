@@ -49,11 +49,28 @@ again take from queue
 
 ### graph creating
 ``` 
+ firt check the key exist in the graph collection 
+ Map<T, Node<T>> graphNode = new LinkedHashMap<>();
+ if key exist then return the existing one otherwise create new and return  
+ then iterate on adjecent list and 
+ then do the same for the adjecent nodes list and then add them to the main key node adjecent list
+ for every adjecent node add the reference of main node to it and add the reference of adjcent node to the main node 
+ then save the main node to the graph collection 
 ```
 
 ### printing the graph
 ```
-
+take the first value of the graph collection 
+and add into the queue 
+then check queue is not empty then 
+then take first value from queue then then check for the visited 
+if not visited then 
+then mark as visited and print that value 
+then find the adjecents of that 
+check that it must be not be marked as visited and it must not contains in queue 
+if it is then add that also in the queue 
+and do for other once adjecent list is finished then 
+again take from queue 
 ```
 
 ---

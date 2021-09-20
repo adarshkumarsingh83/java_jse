@@ -21,7 +21,7 @@ public class ApplicationMain {
         System.out.println();
         //uniDirectionOperation(data);
         System.out.println();
-        //biDirectionOperation(data);
+        biDirectionOperation(data);
         System.out.println();
         //weightedGraphOperation();
         System.out.println();
@@ -162,7 +162,8 @@ public class ApplicationMain {
         for (Map.Entry<String, List<String>> entry : data.entrySet()) {
             graph.createTree(entry.getKey(), entry.getValue());
         }
-        graph.displayTree();
+        //graph.displayTree();
+        graph.displayTreeWithQueue();
     }
 
     public static void uniDirectionOperation(Map<String, List<String>> data) {
