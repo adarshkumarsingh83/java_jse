@@ -51,12 +51,10 @@ public class UniDirectionalGraph<T> {
             System.out.print(node.getData());
             node.getAdjacentNodes().forEach(e -> {
                 System.out.print(" -> " + e.getData());
-            });
-            for (Node<T> nd : node.getAdjacentNodes()) {
-                if (!queue.contains(nd) && !nd.isVisited()) {
-                    queue.add(nd);
+                if (!queue.contains(e) && !e.isVisited()) {
+                    queue.add(e);
                 }
-            }
+            });
             System.out.println();
         }
     }

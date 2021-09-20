@@ -17,15 +17,17 @@ public class ApplicationMain {
         data.put("C", Arrays.asList("B", "D"));
         data.put("D", Arrays.asList("C", "E"));
         data.put("E", Arrays.asList("A", "B", "D"));
-        //biDirectionOperation(data);
+
         System.out.println();
         //uniDirectionOperation(data);
-
+        System.out.println();
+        //biDirectionOperation(data);
+        System.out.println();
         //weightedGraphOperation();
-
+        System.out.println();
         //weightedPathGraphOperation();
-
-        cyclicPathGraphOperation();
+        System.out.println();
+        //cyclicPathGraphOperation();
     }
 
 
