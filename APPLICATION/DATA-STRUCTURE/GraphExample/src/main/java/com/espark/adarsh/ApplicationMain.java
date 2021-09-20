@@ -21,7 +21,7 @@ public class ApplicationMain {
         System.out.println();
         //uniDirectionOperation(data);
         System.out.println();
-        biDirectionOperation(data);
+        //biDirectionOperation(data);
         System.out.println();
         //weightedGraphOperation();
         System.out.println();
