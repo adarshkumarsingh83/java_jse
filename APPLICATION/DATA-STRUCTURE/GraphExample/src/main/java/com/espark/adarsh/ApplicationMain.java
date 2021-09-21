@@ -25,9 +25,9 @@ public class ApplicationMain {
         System.out.println();
         //weightedGraphOperation();
         System.out.println();
-        weightedPathGraphOperation();
+        //weightedPathGraphOperation();
         System.out.println();
-        //cyclicPathGraphOperation();
+        cyclicPathGraphOperation();
     }
 
 

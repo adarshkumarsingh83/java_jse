@@ -201,6 +201,7 @@ every node is having value then weight of node and the list of adjecent nodes
 firt check the key exist in the graph collection 
  Map<T, PathWeightedGraph.Node<T>> graphNode = new LinkedHashMap<>();
  if key exist then return the existing one otherwise create new  with node weight and return  
+ add the order for every node which is created new and assigned back to that node 
  then iterate on adjecent list and do the above for same and add them to the main node adjecent list 
   then save the main node to the graph collection 
 ```
