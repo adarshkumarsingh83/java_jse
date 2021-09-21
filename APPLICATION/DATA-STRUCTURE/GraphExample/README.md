@@ -9,6 +9,7 @@
 ---
 # UniDirectionalGraph
 
+![img](./image/graph1.png)
 ### graph input data
 ``` 
 value to any graph types will be send in key and list of values 
@@ -47,6 +48,7 @@ again take from queue
 ---
 
 # BiDirectionalGraph
+![img](./image/graph1.png)
 ### graph input data
 ``` 
 value to any graph types will be send in key and list of values 
@@ -87,6 +89,7 @@ again take from queue
 
 ---
 # WeightedGraph
+![img](./image/graph2.png)
 ```
 every node is having value then weight of node and the list of adjecent nodes  
 ```
@@ -134,6 +137,7 @@ again take from queue
 
 ---
 # PathWeightedGraph
+![img](./image/graph3.png)
 ```
 every node is having value then weight of node and the list of adjecent nodes  
 ```

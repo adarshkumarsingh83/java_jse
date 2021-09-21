@@ -25,53 +25,71 @@ public class ApplicationMain {
         System.out.println();
         //weightedGraphOperation();
         System.out.println();
-        weightedPathGraphOperation();
+        // weightedPathGraphOperation();
         System.out.println();
         //cyclicPathGraphOperation();
     }
 
 
-    public static void cyclicPathGraphOperation() {
-        Map<String, HashMap<String, Integer>> cyclicPathGraph = new LinkedHashMap();
-        cyclicPathGraph.put("A", new HashMap<String, Integer>() {
+
+    public static void uniDirectionOperation(Map<String, List<String>> data) {
+        UniDirectionalGraph<String> graph = new UniDirectionalGraph<>();
+        for (Map.Entry<String, List<String>> entry : data.entrySet()) {
+            graph.createTree(entry.getKey(), entry.getValue());
+        }
+        //graph.displayTree();
+        graph.displayTreeWithQueue();
+    }
+
+    public static void biDirectionOperation(Map<String, List<String>> data) {
+        BiDirectionalGraph<String> graph = new BiDirectionalGraph<>();
+        for (Map.Entry<String, List<String>> entry : data.entrySet()) {
+            graph.createTree(entry.getKey(), entry.getValue());
+        }
+        //graph.displayTree();
+        graph.displayTreeWithQueue();
+    }
+
+    public static void weightedGraphOperation() {
+        Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
+        wightedData.put("A", new HashMap<String, Integer>() {
             {
                 put("B", 5);
-                put("E", 12);
+                put("E", 3);
             }
         });
-        cyclicPathGraph.put("B", new HashMap<String, Integer>() {
+        wightedData.put("B", new HashMap<String, Integer>() {
             {
-                put("A", 5);
-                put("C", 8);
-                put("E", 12);
+                put("A", 7);
+                put("C", 1);
+                put("E", 8);
             }
         });
-        cyclicPathGraph.put("C", new HashMap<String, Integer>() {
+        wightedData.put("C", new HashMap<String, Integer>() {
             {
-                put("B", 8);
-                put("D", 3);
+                put("B", 2);
+                put("D", 9);
             }
         });
-        cyclicPathGraph.put("D", new HashMap<String, Integer>() {
+        wightedData.put("D", new HashMap<String, Integer>() {
             {
-                put("C", 3);
-                put("E", 11);
+                put("C", 4);
+                put("E", 6);
             }
         });
-        cyclicPathGraph.put("E", new HashMap<String, Integer>() {
+        wightedData.put("E", new HashMap<String, Integer>() {
             {
-                put("A", 12);
-                put("B", 12);
-                put("D", 11);
+                put("A", 8);
+                put("B", 1);
+                put("D", 9);
             }
         });
-        CyclicPathGraph<String> graph = new CyclicPathGraph<>();
-        for (Map.Entry<String, HashMap<String, Integer>> entry : cyclicPathGraph.entrySet()) {
+        WeightedGraph<String> graph = new WeightedGraph<>();
+        for (Map.Entry<String, HashMap<String, Integer>> entry : wightedData.entrySet()) {
             graph.createGraph(entry.getKey(), entry.getValue());
         }
         graph.displayTree();
-        graph.calculatePathBetweenAllNodes("A");
-        graph.calculatePathBetweenNodes("A","D");
+        graph.displayTreeWithQueue();
     }
 
     public static void weightedPathGraphOperation() {
@@ -117,63 +135,47 @@ public class ApplicationMain {
         graph.calculatePathBetweenSpecificNodes("B", "F");
     }
 
-    public static void weightedGraphOperation() {
-        Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
-        wightedData.put("A", new HashMap<String, Integer>() {
+    public static void cyclicPathGraphOperation() {
+        Map<String, HashMap<String, Integer>> cyclicPathGraph = new LinkedHashMap();
+        cyclicPathGraph.put("A", new HashMap<String, Integer>() {
             {
                 put("B", 5);
-                put("E", 3);
+                put("E", 12);
             }
         });
-        wightedData.put("B", new HashMap<String, Integer>() {
+        cyclicPathGraph.put("B", new HashMap<String, Integer>() {
             {
-                put("A", 7);
-                put("C", 1);
-                put("E", 8);
+                put("A", 5);
+                put("C", 8);
+                put("E", 12);
             }
         });
-        wightedData.put("C", new HashMap<String, Integer>() {
+        cyclicPathGraph.put("C", new HashMap<String, Integer>() {
             {
-                put("B", 2);
-                put("D", 9);
+                put("B", 8);
+                put("D", 3);
             }
         });
-        wightedData.put("D", new HashMap<String, Integer>() {
+        cyclicPathGraph.put("D", new HashMap<String, Integer>() {
             {
-                put("C", 4);
-                put("E", 6);
+                put("C", 3);
+                put("E", 11);
             }
         });
-        wightedData.put("E", new HashMap<String, Integer>() {
+        cyclicPathGraph.put("E", new HashMap<String, Integer>() {
             {
-                put("A", 8);
-                put("B", 1);
-                put("D", 9);
+                put("A", 12);
+                put("B", 12);
+                put("D", 11);
             }
         });
-        WeightedGraph<String> graph = new WeightedGraph<>();
-        for (Map.Entry<String, HashMap<String, Integer>> entry : wightedData.entrySet()) {
+        CyclicPathGraph<String> graph = new CyclicPathGraph<>();
+        for (Map.Entry<String, HashMap<String, Integer>> entry : cyclicPathGraph.entrySet()) {
             graph.createGraph(entry.getKey(), entry.getValue());
         }
         graph.displayTree();
-        graph.displayTreeWithQueue();
+        graph.calculatePathBetweenAllNodes("A");
+        graph.calculatePathBetweenNodes("A","D");
     }
 
-    public static void biDirectionOperation(Map<String, List<String>> data) {
-        BiDirectionalGraph<String> graph = new BiDirectionalGraph<>();
-        for (Map.Entry<String, List<String>> entry : data.entrySet()) {
-            graph.createTree(entry.getKey(), entry.getValue());
-        }
-        //graph.displayTree();
-        graph.displayTreeWithQueue();
-    }
-
-    public static void uniDirectionOperation(Map<String, List<String>> data) {
-        UniDirectionalGraph<String> graph = new UniDirectionalGraph<>();
-        for (Map.Entry<String, List<String>> entry : data.entrySet()) {
-            graph.createTree(entry.getKey(), entry.getValue());
-        }
-        //graph.displayTree();
-        graph.displayTreeWithQueue();
-    }
 }
