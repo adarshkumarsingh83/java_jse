@@ -300,11 +300,59 @@ then push to the queue and repeate it agian
 ```
 ### graph creating
 ``` 
+firt check the key exist in the graph collection 
+ Map<T, PathWeightedGraph.Node<T>> graphNode = new LinkedHashMap<>();
+ if key exist then return the existing one otherwise create new  with node weight and return  
+ add the order for every node which is created new and assigned back to that node 
+ then iterate on adjecent list and do the above for same and add them to the main node adjecent list 
+  then save the main node to the graph collection 
 ```
 
 ### printing the graph
 ```
+take the first value of the graph collection 
+and add into the queue 
+then check queue is not empty then 
+then take first value from queue then then check for the visited 
+if not visited then 
+then mark as visited and print that value 
+then find the adjecents of that 
+check that it must be not be marked as visited and it must not contains in queue 
+if it is then add that also in the queue 
+and do for other once adjecent list is finished then 
+again take from queue 
+```
 
+### calculating shorted path
+``` 
+take input of start and end node in the graph 
+set the shorted  path value to 0 
+and get the order of the node for start and end 
+then add into the queue 
+then loop till the queue is empty 
+then pull the data from queue and get the adjecent list 
+get the shortpath  path of the adjecent add with the node we pulled out from queue and 
+check if the current computed short path is shorter then the 
+current adjecent node short path and assigned based on the check 
+and finaly check that node is with in the order boundry of start and end node 
+then push to the queue and repeate it agian 
+
+```
+
+### calculating longest path
+``` 
+
+take input of start and end node in the graph 
+set the  longest path value to 0 
+and get the order of the node for start and end 
+then add into the queue 
+then loop till the queue is empty 
+then pull the data from queue and get the adjecent list 
+get the  long path of the adjecent add with the node we pulled out from queue and 
+check if the current computed long paht  path is greater  then the 
+current adjecent node long path and short path and assigned based on the check 
+and finaly check that node is with in the order boundry of start and end node 
+then push to the queue and repeate it agian 
 ```
 
 ---
