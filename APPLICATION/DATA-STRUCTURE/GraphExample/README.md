@@ -236,6 +236,43 @@ again take from queue
 
 # CyclicPathGraph
 ![img](./image/graph4.png)
+
+### graph input data
+```
+ Map<String, HashMap<String, Integer>> cyclicPathGraph = new LinkedHashMap();
+        cyclicPathGraph.put("A", new HashMap<String, Integer>() {
+            {
+                put("B", 5);
+                put("E", 12);
+            }
+        });
+        cyclicPathGraph.put("B", new HashMap<String, Integer>() {
+            {
+                put("A", 5);
+                put("C", 8);
+                put("E", 12);
+            }
+        });
+        cyclicPathGraph.put("C", new HashMap<String, Integer>() {
+            {
+                put("B", 8);
+                put("D", 3);
+            }
+        });
+        cyclicPathGraph.put("D", new HashMap<String, Integer>() {
+            {
+                put("C", 3);
+                put("E", 11);
+            }
+        });
+        cyclicPathGraph.put("E", new HashMap<String, Integer>() {
+            {
+                put("A", 12);
+                put("B", 12);
+                put("D", 11);
+            }
+        }); 
+```
 ### graph creating
 ``` 
 ```
