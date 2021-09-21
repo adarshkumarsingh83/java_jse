@@ -89,7 +89,7 @@ again take from queue
 
 ---
 # WeightedGraph
-![img](./image/graph2.png)
+![img](./image/graph3.png)
 ```
 every node is having value then weight of node and the list of adjecent nodes  
 ```
@@ -107,6 +107,25 @@ every node is having value then weight of node and the list of adjecent nodes
                 put("A", 7);
                 put("C", 1);
                 put("E", 8);
+            }
+        });
+        wightedData.put("C", new HashMap<String, Integer>() {
+            {
+                put("B", 2);
+                put("D", 9);
+            }
+        });
+        wightedData.put("D", new HashMap<String, Integer>() {
+            {
+                put("C", 4);
+                put("E", 6);
+            }
+        });
+        wightedData.put("E", new HashMap<String, Integer>() {
+            {
+                put("A", 8);
+                put("B", 1);
+                put("D", 9);
             }
         });
      above is the input for the graph    
@@ -137,25 +156,43 @@ again take from queue
 
 ---
 # PathWeightedGraph
-![img](./image/graph3.png)
+![img](./image/graph2.png)
 ```
 every node is having value then weight of node and the list of adjecent nodes  
 ```
 ### graph input data
 ``` 
-    Map<String, HashMap<String, Integer>> wightedData = new LinkedHashMap();
-        wightedData.put("A", new HashMap<String, Integer>() {
+    Map<String, HashMap<String, Integer>> wightedPathData = new LinkedHashMap();
+        wightedPathData.put("A", new HashMap<String, Integer>() {
             {
                 put("B", 5);
-                put("E", 3);
+                put("C", 12);
             }
         });
-        wightedData.put("B", new HashMap<String, Integer>() {
+        wightedPathData.put("B", new HashMap<String, Integer>() {
             {
-                put("A", 7);
-                put("C", 1);
-                put("E", 8);
+                put("C", 3);
+                put("E", 10);
             }
+        });
+        wightedPathData.put("C", new HashMap<String, Integer>() {
+            {
+                put("D", 2);
+                put("F", 6);
+            }
+        });
+        wightedPathData.put("D", new HashMap<String, Integer>() {
+            {
+                put("E", 7);
+                put("F", 1);
+            }
+        });
+        wightedPathData.put("E", new HashMap<String, Integer>() {
+            {
+                put("F", 3);
+            }
+        });
+        wightedPathData.put("F", new HashMap<String, Integer>() {
         });
      above is the input for the graph    
 ```
