@@ -222,16 +222,40 @@ again take from queue
 
 ### calculating shorted path 
 ``` 
+take input of start and end node in the graph 
+set the shorted  path value to 0 
+and get the order of the node for start and end 
+then add into the queue 
+then loop till the queue is empty 
+then pull the data from queue and get the adjecent list 
+get the shortpath  path of the adjecent add with the node we pulled out from queue and 
+check if the current computed short path is shorter then the 
+current adjecent node short path and assigned based on the check 
+and finaly check that node is with in the order boundry of start and end node 
+then push to the queue and repeate it agian 
+
 ```
 
 ### calculating longest path
 ``` 
+
+take input of start and end node in the graph 
+set the  longest path value to 0 
+and get the order of the node for start and end 
+then add into the queue 
+then loop till the queue is empty 
+then pull the data from queue and get the adjecent list 
+get the  long path of the adjecent add with the node we pulled out from queue and 
+check if the current computed long paht  path is greater  then the 
+current adjecent node long path and short path and assigned based on the check 
+and finaly check that node is with in the order boundry of start and end node 
+then push to the queue and repeate it agian 
 ```
 
 ### calculating path between nodes 
-``` 
 ```
-
+ 
+```
 ---
 
 # CyclicPathGraph
