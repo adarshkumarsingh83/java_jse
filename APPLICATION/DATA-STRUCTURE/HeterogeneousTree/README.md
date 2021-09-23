@@ -15,7 +15,7 @@
   "deptId": 101,
   "deptName": "management",
   "parentDeptId": 0,
-  "employeeBean": [
+  "employees": [
     {
       "id": 10,
       "name": "radha",
@@ -29,7 +29,7 @@
       "deptId": 3333,
       "deptName": "finance",
       "parentDeptId": 101,
-      "employeeBean": [
+      "employees": [
         {
           "id": 200,
           "name": "amit",
@@ -59,7 +59,7 @@
       "deptId": 1111,
       "deptName": "it",
       "parentDeptId": 101,
-      "employeeBean": [
+      "employees": [
         {
           "id": 100,
           "name": "adarsh",
@@ -133,7 +133,7 @@
       "deptId": 4444,
       "deptName": "operations",
       "parentDeptId": 101,
-      "employeeBean": [
+      "employees": [
         {
           "id": 1000,
           "name": "op-1",
@@ -163,7 +163,7 @@
       "deptId": 2222,
       "deptName": "hr",
       "parentDeptId": 101,
-      "employeeBean": [
+      "employees": [
         {
           "id": 500,
           "name": "hr-1",

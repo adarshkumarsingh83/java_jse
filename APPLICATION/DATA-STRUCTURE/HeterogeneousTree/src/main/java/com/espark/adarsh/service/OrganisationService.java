@@ -50,7 +50,7 @@ public class OrganisationService {
             DepartmentBean dept = iterator.next().getValue();
             if (dept.getParentDeptId().equals(orgTree.getDeptId())) {
                 orgTree.setSubDepartments(dept);
-                setHierarchy(dept, dept.getEmployeeBean());
+                setHierarchy(dept, dept.getEmployees());
                 iterator.remove();
                 getDepartmentHierarchy(department, dept);
             }
@@ -66,8 +66,8 @@ public class OrganisationService {
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         getEmployeeHierarchy(group, manager);
-        departmentBean.getEmployeeBean().clear();
-        departmentBean.getEmployeeBean().add(manager);
+        departmentBean.getEmployees().clear();
+        departmentBean.getEmployees().add(manager);
     }
 
     public static void getEmployeeHierarchy(LinkedHashMap<Integer, List<EmployeeBean>> employees, EmployeeBean empTree) {

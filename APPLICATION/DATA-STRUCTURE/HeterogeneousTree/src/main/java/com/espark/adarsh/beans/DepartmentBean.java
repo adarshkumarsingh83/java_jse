@@ -11,7 +11,7 @@ public class DepartmentBean {
     private Integer deptId;
     private String deptName;
     Integer parentDeptId;
-    private List<EmployeeBean> employeeBean;
+    private List<EmployeeBean> employees;
     private List<DepartmentBean> subDepartments;
 
     public DepartmentBean() {
@@ -44,19 +44,19 @@ public class DepartmentBean {
         this.deptName = deptName;
     }
 
-    public List<EmployeeBean> getEmployeeBean() {
-        return employeeBean;
+    public List<EmployeeBean> getEmployees() {
+        return employees;
     }
 
-    public void setEmployeeBean(EmployeeBean employee) {
-        if (this.employeeBean == null) {
-            this.employeeBean = new LinkedList<>();
+    public void setEmployees(EmployeeBean employee) {
+        if (this.employees == null) {
+            this.employees = new LinkedList<>();
         }
-        this.employeeBean.add(employee);
+        this.employees.add(employee);
     }
 
     public void setEmployeeBean(List<EmployeeBean> employeeBean) {
-        this.employeeBean = employeeBean;
+        this.employees = employeeBean;
     }
 
     public void setSubDepartments(List<DepartmentBean> subDepartments) {
