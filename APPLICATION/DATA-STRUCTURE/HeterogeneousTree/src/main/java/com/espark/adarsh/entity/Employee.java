@@ -1,23 +1,21 @@
-package com.adarshtree.hetrogenios;
+package com.espark.adarsh.entity;
 
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by Radha Singh on 2/28/2018.
- */
+
 public class Employee {
-    private String id;
+    private Integer id;
     private String name;
     private String designation;
-    private String managerId;
-    private String deptId;
+    private Integer managerId;
+    private Integer deptId;
     private List<Employee> reporters =new LinkedList<>();
 
     public Employee() {
     }
 
-    public Employee(String id, String name, String designation, String managerId,String deptId) {
+    public Employee(Integer id, String name, String designation, Integer managerId,Integer deptId) {
         this.id = id;
         this.name = name;
         this.designation = designation;
@@ -25,11 +23,11 @@ public class Employee {
         this.deptId=deptId;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -49,11 +47,11 @@ public class Employee {
         this.designation = designation;
     }
 
-    public String getManagerId() {
+    public Integer getManagerId() {
         return managerId;
     }
 
-    public void setManagerId(String managerId) {
+    public void setManagerId(Integer managerId) {
         this.managerId = managerId;
     }
 
@@ -65,11 +63,11 @@ public class Employee {
         this.reporters = reporters;
     }
 
-    public String getDeptId() {
+    public Integer getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
 

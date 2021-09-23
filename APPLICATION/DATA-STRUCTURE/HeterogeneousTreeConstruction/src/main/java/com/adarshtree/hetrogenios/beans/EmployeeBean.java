@@ -1,16 +1,18 @@
-package com.adarshtree.hetrogenios;
+package com.adarshtree.hetrogenios.beans;
+
+import com.adarshtree.hetrogenios.entity.Employee;
 
 import java.util.List;
 
 /**
  * Created by Radha Singh on 3/2/2018.
  */
-public class EmployeeBean extends Organization{
-    private String id;
+public class EmployeeBean extends Organization {
+    private Integer id;
     private String name;
     private String designation;
-    private String managerId;
-    private String deptId;
+    private Integer managerId;
+    private Integer deptId;
 
     public EmployeeBean() {
     }
@@ -23,8 +25,8 @@ public class EmployeeBean extends Organization{
         this.deptId = employee.getDeptId();
     }
 
-    public EmployeeBean(String id, String name, String designation
-            , String managerId, String deptId) {
+    public EmployeeBean(Integer id, String name, String designation
+            , Integer managerId, Integer deptId) {
         this.id = id;
         this.name = name;
         this.designation = designation;
@@ -32,11 +34,11 @@ public class EmployeeBean extends Organization{
         this.deptId = deptId;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -56,19 +58,19 @@ public class EmployeeBean extends Organization{
         this.designation = designation;
     }
 
-    public String getManagerId() {
+    public Integer getManagerId() {
         return managerId;
     }
 
-    public void setManagerId(String managerId) {
+    public void setManagerId(Integer managerId) {
         this.managerId = managerId;
     }
 
-    public String getDeptId() {
+    public Integer getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
 

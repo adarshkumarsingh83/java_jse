@@ -1,13 +1,15 @@
-package com.adarshtree.hetrogenios;
+package com.adarshtree.hetrogenios.beans;
+
+import com.adarshtree.hetrogenios.entity.Department;
 
 import java.util.List;
 
 /**
  * Created by Radha Singh on 3/2/2018.
  */
-public class DepartmentBean extends Organization{
+public class DepartmentBean extends Organization {
 
-    private String deptId;
+    private Integer deptId;
     private String deptName;
 
     public DepartmentBean() {
@@ -18,16 +20,16 @@ public class DepartmentBean extends Organization{
         this.deptName = department.getDeptName();
     }
 
-    public DepartmentBean(String deptId, String deptName) {
+    public DepartmentBean(Integer deptId, String deptName) {
         this.deptId = deptId;
         this.deptName = deptName;
     }
 
-    public String getDeptId() {
+    public Integer getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
 

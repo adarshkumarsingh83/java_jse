@@ -1,26 +1,26 @@
-package com.adarshtree.hetrogenios;
+package com.adarshtree.hetrogenios.entity;
 
 /**
  * Created by Radha Singh on 3/1/2018.
  */
 public class Department {
 
-    String deptId;
+    Integer deptId;
     String deptName;
 
     public Department() {
     }
 
-    public Department(String deptId, String deptName) {
+    public Department(Integer deptId, String deptName) {
         this.deptId = deptId;
         this.deptName = deptName;
     }
 
-    public String getDeptId() {
+    public Integer getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
 
