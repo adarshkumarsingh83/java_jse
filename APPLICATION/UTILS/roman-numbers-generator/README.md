@@ -18,13 +18,13 @@
         romanNumbersStore.put("IV", 4);
         romanNumbersStore.put("I", 1);
 ````
-> pass the number to check generate the roman number 
-> iterate on the store and divide the input number with the stored value of the map 
-> then call the method and iterate on number of the times of the result of the previous division 
-> and appends the passed stored key of the roman map to itself 
-> then return the result and add with the result value
-> then take the modulus of the inputnumber with the value of the stored map which we have retrived earlier 
-> then again to the divvision like before 
+> pass the number to check generate the roman number\
+> iterate on the store and divide the input number with the stored value of the map\
+> then call the method and iterate on number of the times of the result of the previous division\
+> and appends the passed stored key of the roman map to itself\
+> then return the result and add with the result value\
+> then take the modulus of the input number with the value of the stored map which we have retrived earlier\
+> then again to the division like before\
 > at the end of this we will get the number 
 ````
  for (Map.Entry<String, Integer> entry : romanNumbersStore.entrySet()) {
