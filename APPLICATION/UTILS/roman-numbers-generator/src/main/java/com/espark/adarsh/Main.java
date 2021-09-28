@@ -5,42 +5,42 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1;i<256;i++) {
-            System.out.println("i="+i+" -> "+RomanNumerals(i));
+        for (int i = 1;i<=1000;i++) {
+            System.out.println("i="+i+" -> "+ romanNumerals(i));
         }
     }
 
-    public static String RomanNumerals(int Int) {
-        LinkedHashMap<String, Integer> roman_numerals = new LinkedHashMap<String, Integer>();
-        roman_numerals.put("M", 1000);
-        roman_numerals.put("CM", 900);
-        roman_numerals.put("D", 500);
-        roman_numerals.put("CD", 400);
-        roman_numerals.put("C", 100);
-        roman_numerals.put("XC", 90);
-        roman_numerals.put("L", 50);
-        roman_numerals.put("XL", 40);
-        roman_numerals.put("X", 10);
-        roman_numerals.put("IX", 9);
-        roman_numerals.put("V", 5);
-        roman_numerals.put("IV", 4);
-        roman_numerals.put("I", 1);
+    public static String romanNumerals(int inputValue) {
+        LinkedHashMap<String, Integer> romanNumbersStore = new LinkedHashMap<String, Integer>();
+        romanNumbersStore.put("M", 1000);
+        romanNumbersStore.put("CM", 900);
+        romanNumbersStore.put("D", 500);
+        romanNumbersStore.put("CD", 400);
+        romanNumbersStore.put("C", 100);
+        romanNumbersStore.put("XC", 90);
+        romanNumbersStore.put("L", 50);
+        romanNumbersStore.put("XL", 40);
+        romanNumbersStore.put("X", 10);
+        romanNumbersStore.put("IX", 9);
+        romanNumbersStore.put("V", 5);
+        romanNumbersStore.put("IV", 4);
+        romanNumbersStore.put("I", 1);
         String res = "";
-        for(Map.Entry<String, Integer> entry : roman_numerals.entrySet()){
-            int matches = Int/entry.getValue();
+        for(Map.Entry<String, Integer> entry : romanNumbersStore.entrySet()){
+            int matches = inputValue/entry.getValue();
             res += repeat(entry.getKey(), matches);
-            Int = Int % entry.getValue();
+            inputValue = inputValue % entry.getValue();
         }
         return res;
     }
-    public static String repeat(String s, int n) {
-        if(s == null) {
+    public static String repeat(String romanNumbersStoreValue, int matches) {
+        if(romanNumbersStoreValue == null) {
             return null;
         }
-        final StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < n; i++) {
-            sb.append(s);
+        final StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0; i < matches; i++) {
+            stringBuilder.append(romanNumbersStoreValue);
         }
-        return sb.toString();
+        return stringBuilder.toString();
     }
 }
