@@ -27,6 +27,7 @@
 > then again to the division like before\
 > at the end of this we will get the number 
 ````
+String res = "";
  for (Map.Entry<String, Integer> entry : romanNumbersStore.entrySet()) {
             int matches = inputValue / entry.getValue();
             res += repeat(entry.getKey(), matches);
