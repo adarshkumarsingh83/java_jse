@@ -40,6 +40,7 @@ public class UniDirectionalGraph<T> {
     }
 
     public void displayTreeWithQueue() {
+        this.reset();
         Node<T> root = graphNode.get("A");
         Queue<Node<T>> queue = new LinkedList();
         if (queue.isEmpty()) {
@@ -57,6 +58,12 @@ public class UniDirectionalGraph<T> {
             });
             System.out.println();
         }
+    }
+
+    void reset(){
+        graphNode.entrySet()
+                .stream()
+                .forEach(tNodeEntry -> tNodeEntry.getValue().setVisited(false));
     }
 
     public static class Node<T> {

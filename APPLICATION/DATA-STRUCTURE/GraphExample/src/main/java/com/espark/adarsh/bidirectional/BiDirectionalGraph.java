@@ -1,7 +1,5 @@
 package com.espark.adarsh.bidirectional;
 
-import com.espark.adarsh.unitdirectioanl.UniDirectionalGraph;
-
 import java.util.*;
 
 public class BiDirectionalGraph<T> {
@@ -52,6 +50,7 @@ public class BiDirectionalGraph<T> {
     }
 
     public void displayTreeWithQueue() {
+        this.reset();
         BiDirectionalGraph.Node<T> root = graphNode.get("A");
         Queue<BiDirectionalGraph.Node<T>> queue = new LinkedList();
         if (queue.isEmpty()) {
@@ -69,6 +68,12 @@ public class BiDirectionalGraph<T> {
             });
             System.out.println();
         }
+    }
+
+    void reset(){
+        graphNode.entrySet()
+                .stream()
+                .forEach(tNodeEntry -> tNodeEntry.getValue().setVisited(false));
     }
 
     static public class Node<T> {

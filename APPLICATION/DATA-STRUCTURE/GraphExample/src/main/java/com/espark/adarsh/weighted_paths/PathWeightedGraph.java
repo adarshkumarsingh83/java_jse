@@ -80,6 +80,7 @@ public class PathWeightedGraph<T> {
     }
 
     public void displayTreeWithQueue() {
+        this.reset();
         System.out.println();
         PathWeightedGraph.Node<T> root = graphNode.get("A");
         Queue<PathWeightedGraph.Node<T>> queue = new LinkedList();
@@ -137,6 +138,12 @@ public class PathWeightedGraph<T> {
         System.out.println("\n");
     }
 
+
+    void reset(){
+        graphNode.entrySet()
+                .stream()
+                .forEach(tNodeEntry -> tNodeEntry.getValue().setVisited(false));
+    }
 
     static class Node<T> {
 

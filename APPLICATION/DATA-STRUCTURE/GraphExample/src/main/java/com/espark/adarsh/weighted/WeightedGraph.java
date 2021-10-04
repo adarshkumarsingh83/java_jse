@@ -1,8 +1,5 @@
 package com.espark.adarsh.weighted;
 
-
-import com.espark.adarsh.unitdirectioanl.UniDirectionalGraph;
-
 import java.util.*;
 
 public class WeightedGraph<T> {
@@ -44,6 +41,7 @@ public class WeightedGraph<T> {
     }
 
     public void displayTreeWithQueue() {
+        this.reset();
         System.out.println();
         WeightedGraph.Node<T> root = graphNode.get("A");
         Queue<WeightedGraph.Node<T>> queue = new LinkedList();
@@ -63,6 +61,14 @@ public class WeightedGraph<T> {
             System.out.println();
         }
     }
+
+
+    void reset(){
+        graphNode.entrySet()
+                .stream()
+                .forEach(tNodeEntry -> tNodeEntry.getValue().setVisited(false));
+    }
+
 
     static class Node<T> {
         private T data;
