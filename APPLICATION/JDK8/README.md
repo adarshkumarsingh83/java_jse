@@ -1,4 +1,11 @@
 ### Intermediate operation
+```
+They return stream.
+They can be chained together to form a pipeline of operations.
+Pipeline of operations may contain any number of intermediate operations.
+Intermediate operations are lazily loaded.
+They don’t produce end result.
+```
 * 1.filter()
 * 2.map()
 * 3.flatMap()
@@ -9,6 +16,13 @@
 * 8.skip()
 
 ### Terminal operation
+```
+They return non-stream values.
+They can’t be chained together.
+Pipeline of operations can have maximum one terminal operation, that too at the end.
+Terminal operations are eagerly loaded.
+They produce end result.
+```
 * 1.count()
 * 2.toArray()
 * 3.reduce()
