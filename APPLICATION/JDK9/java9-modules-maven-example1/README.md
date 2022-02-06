@@ -1,4 +1,4 @@
-# java9-module-mnaven-example1
+# java9-module-maven-example1
 
 ---
 
