@@ -1,10 +1,148 @@
 JEP java enhancement proposal 
 
+
+## java 7 based on the imperative style of proggramming 
+	* try -with-resource 
+
+```
+public class Resource implements AutoCloseable{
+
+   public void operation(){
+   	sout("operation");
+   }
+
+	public void close(){
+		sout("clean up ");
+	}
+}
+
+try(Resource res= new Resource()){
+	res.operation();
+}
+
+```
+
+---
+
+## java 8 based in functional programming 
+	* interface 
+		* public default method 
+		* public static method 
+	* signle underscore as varname is warnning 
+	* streamObject.limit(Predicate)
+		* once predicate is true it will close for ever
+	* streamObject.skip(Predicate)
+		* once predicate is true it will open for ever
+	* IntStream.iterate()
+		* IntStream.range(0,5).forEach(System.out::println)
+		* IntStream.rangeClosed(0,5).forEach(System.out::println)
+---
+
 ## java 9 
+	* modeules 
+		* allowd to create small deployment jars what is really needed. 
+		* can't create same package with same class to break security 
+		* dependency graph can be used at compile time and run time what is really need for run the code 
+			* module graph is part of jar file so that ensure all dependency are avalable 
+			* java --list-modeules // to list them modules in the env  
+			* classpath 
+				* where classes are reside 				
+				* java -claasspath dir/jarfile.jar package.className
+			* modeul path 
+				* where the module is reside 
+				* module avaliable in class path is part of unamed module 
+				* java -p module-dir-path -m module-name/package.className
+		* unamed module 
+			* is part of class path and only one is allowed in one applicaion 
+			* when jar is put in class paht and run from their its a unamed module 		
+		* automatic module 
+			* when jar file is put in the modulepaht and run from their its a automatic module 
+			* create on the fly 
+		* explictly module 
+			* when the module info is provided in the module-info.java file inside the module 
+		* how to find the module name 
+			* jar -f path.jarfile.jar -d 
+
+	* collection.of() for unmodifyable collection 
+		* list.of()
+		* set.of()
+			* duplicate not allowd 
+		* map.of()
+			* without strict key and value type 
+		* map.<KT,VT>of()
+			* with strict key and value type 	
+
+	* Completable Future 
+		* deadlock wiating for resource 
+		* livelock wiating for resources which may never get 
+		* completeOnTimeout()
+			* stop the thread if time is out and provide subsitue value 
+		* orTimeOut()
+			* stop the thread if time is out and errors out and timeout exception 
+	* Optional stream
+		* get the steam of the optional 
+```
+list.stream()
+	.filter(e-> e>5)
+	.findFirst() //optional 
+	.stream()
+	.forEach(System.out::println);
+```
+	* Optional.ifPresentOrElse()
+```
+ Optional.ifPresentOrElse(()->{ sout("value present")},()->{ sout("value not present")})
+ ```	
+	* IntStream.iterate()
+		* IntStream.iterate(seedValue,function)
+```
+	IntStream.iterate(0,(int i)-> < 10, (i)-> i+1)
+		.takeWhile(i-> i<5)
+			.forEach(System.out::println);
+```
+		* IntStream.iterate(seedValue,[predicate],function)
+```
+	IntStream.iterate(0,(int i)-> < 10, (i)-> i+1)
+		.forEach(System.out::println);
+```
+	* streamObject.takeWhile(Predicate)
+		* once predicate is true it will close for ever
+	* streamObject.dropWhile(Predicate)
+		* once predicate is true it will open for ever
+	* single underscore as varname is error 
+	* deprecated finilized()
 	* List.of("xxx","xxx");
 		* return unmodifiable copy of the collection or map 
 ```
      List<String> unmodifiableList = List.of("xxxx","yyyy");
+```
+	* interface 
+		* private instance method 
+		* private static method 
+		* private defualt is not allowed 
+	* try-resources 
+		* variable is efffetively final or final when its as reference to method 
+		* resource can be accessable outside of the try block after the block excecutione and close() invocaton 
+```
+public class Resource implements AutoCloseable{
+
+   public void operation(){
+   	sout("operation");
+   }
+
+	public void close(){
+		sout("clean up ");
+	}
+}
+
+public void resourceOperation(final Resource res){
+   try(res{
+	res.operation();
+   }
+}
+
+psvm(){
+	resourceOperation(new Resource())
+}
 ```
 
 ---
