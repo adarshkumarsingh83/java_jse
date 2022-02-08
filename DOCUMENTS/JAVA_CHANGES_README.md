@@ -62,7 +62,14 @@ try(Resource res= new Resource()){
 			* when the module info is provided in the module-info.java file inside the module 
 		* how to find the module name 
 			* jar -f path.jarfile.jar -d 
-
+	* annonimus class with dimando operator 
+```
+new ClassName<>(){
+	{
+		method(xxx);
+	}
+};
+```		
 	* collection.of() for unmodifyable collection 
 		* list.of()
 		* set.of()
@@ -155,6 +162,9 @@ psvm(){
 		* toUnmodifiableMap();
 	* List,Set,Map xxx.copyOf();
 		* return unmodifiable copy of the collection or map 
+		* will return the same object if the original object is its self immutable 
+		* element can't be null in collections 
+		* collection should not be null 
 ```
  List<String> list = new ArrayList<String>();
   list.add("xxx");
@@ -183,6 +193,8 @@ final var topList = List.of(list1,list2);
 
 
 ## java 11
+	* var keyworld for the lambda 
+		* (var x) -> sout(x);
 	* IO 
 		* InputStream nullInputStream()
 		* OutputStream nullOutputStream()
