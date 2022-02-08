@@ -226,7 +226,9 @@ $ ./Wish adarsh
 		* print the data in seprarte lines where it find "\n" in string 
 ```
 "xxx\nxxx\nxxx\n".lines().forEach(System.out::print);
-```
+``` 
+	* String.repeat();
+		* to repeate the stirng 
 	* String.strip();
 		* remove the leading and trailing spaces 
 	* String.stripLeading();
