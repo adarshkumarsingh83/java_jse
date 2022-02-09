@@ -275,6 +275,11 @@ Files.writeString(path,"xxx content xxx ");
 
 ---
 
+## java 12
+	* swtich Expression preveiw 
+
+---
+
 ## java 14
 	* swtich expression 
 		* preview in 12 and 13 jdk 
