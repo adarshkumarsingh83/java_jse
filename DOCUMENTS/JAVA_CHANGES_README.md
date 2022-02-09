@@ -25,6 +25,11 @@ try(Resource res= new Resource()){
 ---
 
 ## java 8 based in functional programming 
+	* lambda  
+		* annonimus function is lambda 
+		* InvokeDynamic is used under the hood for lambda for bind runtime method with lambda its function pointer to avoid the annonimus classes for lambda 
+	* method reference 
+		* :: is used and when we want to replace the lambda with method reference 
 	* interface 
 		* public default method 
 		* public static method 
