@@ -32,6 +32,7 @@ try(Resource res= new Resource()){
 		* :: is used and when we want to replace the lambda with method reference 
 		* can be used for static and instance method  
 		* for multiparam order of param is important for calling other method using method ref 
+		* method ref can't be used when doing any data manupaluation 
 		* method ref must be non conflicted in caller class example{ same method with staic and instace in same class or through inherttiance }
 	* interface 
 		* public default method 
