@@ -277,6 +277,14 @@ Files.writeString(path,"xxx content xxx ");
 
 ## java 12
 	* swtich Expression preveiw 
+		* statement which will not return result earlier switch 
+		* expression which will return result new switch 
+```
+String msg = swtich("xxx"){
+	
+}
+
+```
 
 ---
 
