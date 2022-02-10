@@ -45,6 +45,10 @@ try(Resource res= new Resource()){
 	* IntStream.iterate()
 		* IntStream.range(0,5).forEach(System.out::println)
 		* IntStream.rangeClosed(0,5).forEach(System.out::println)
+	* streamObject.disinct()
+		* to make unique element stream 
+	* streamObject.sorted()
+		* to make sorted element stream 
 ---
 
 ## java 9 
