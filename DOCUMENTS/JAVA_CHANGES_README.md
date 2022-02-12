@@ -114,6 +114,9 @@ public class ApplicationMain {
             public void onNext(Integer item) {
                 System.out.println(item);
                 this.subscription.request(10);
+                if (item > 10) {
+                    this.subscription.cancel();
+                }
             }
 
             @Override
