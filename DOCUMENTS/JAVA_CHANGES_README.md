@@ -237,7 +237,24 @@ void display(List<String> ... list){
 }
 
 ```
+	* G1GC 
+		* Garbage First Garbage Collector is default GC 
+		* Other Type of GC 
+			* Generation Based GC 
+				* Young Generation 
+					* Edenspace 
+					* Survivor Space 
+					* Survior Space 2
+				* Old Gen 
+			* Serial Gc 
+			* Paraller GC 
+			* Concurrent Mark & Sweap GC 
 
+			* G1GC is not Generation Based GC 
+				* Total heap divided into multiple reasion then find out the reagion with more eligible object for gc and destroyed 
+
+	* Process Api 
+		* To communicate with Process of system 			
 ---
 
 ## java 10 
