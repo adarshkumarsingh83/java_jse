@@ -217,6 +217,26 @@ psvm(){
 	resourceOperation(new Resource())
 }
 ```
+	* @SafeVarArgs 
+		* to avoid the warrning of heap pollution 
+			* private method 
+			* constructor 
+			* static method 
+			* final method 
+```
+List<String> l1 = new ArrayList();
+List<String> l2 = new ArrayList();
+
+@SafeVarArgs
+void display(List<String> ... list){
+    list.forEach(l -> {
+    	    for(String d: l){
+    	    	System.out.println(d);
+    	    }
+    	})
+}
+
+```
 
 ---
 
