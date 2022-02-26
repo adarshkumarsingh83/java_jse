@@ -208,7 +208,7 @@ public class Resource implements AutoCloseable{
 }
 
 public void resourceOperation(final Resource res){
-   try(res{
+   try(res){
 	res.operation();
    }
 }
@@ -247,14 +247,16 @@ void display(List<String> ... list){
 					* Survior Space 2
 				* Old Gen 
 			* Serial Gc 
-			* Paraller GC 
+			* Paraller GC untill 1.8 default GC 
 			* Concurrent Mark & Sweap GC 
 
 			* G1GC is not Generation Based GC 
 				* Total heap divided into multiple reasion then find out the reagion with more eligible object for gc and destroyed 
 
 	* Process Api 
-		* To communicate with Process of system 			
+		* To communicate with Process of system 	
+	* Http2Client 
+		* for http request and response can be handle 		
 ---
 
 ## java 10 
