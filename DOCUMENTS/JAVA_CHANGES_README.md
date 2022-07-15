@@ -258,7 +258,9 @@ void display(List<String> ... list){
 	* Http2Client 
 		* for http request and response can be handle 	
 	* JShell 
-		* Repl for the coding and testing 	
+		* Repl for the coding and testing 
+	* Jlink 
+		* for creating custom JRE 	
 ---
 
 ## java 10 
