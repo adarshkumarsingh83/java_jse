@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Is-land-area-calculator</artifactId>
+    <artifactId>island-area-calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <project.name>Is-land-area-calculator</project.name>
+        <project.name>island-area-calculator</project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
