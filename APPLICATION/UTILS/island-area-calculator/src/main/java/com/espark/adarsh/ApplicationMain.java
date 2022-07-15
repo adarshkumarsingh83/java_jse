@@ -1,6 +1,7 @@
 package com.espark.adarsh;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ApplicationMain {
 
@@ -24,7 +25,6 @@ public class ApplicationMain {
     public static void main(String[] args) {
         int x = 0;
         int y = 0;
-        String positionMark = "";
         for (int i = 0; i < xSize; i++) {
             for (int j = 0; j < ySize; j++) {
                 x = i;
@@ -33,13 +33,14 @@ public class ApplicationMain {
                     calculateIsLandArea(x, y);
                     if (!stack.isEmpty()) {
                         int areaCount = 0;
+                        List<String> positionList = new LinkedList<>();
                         while (!stack.isEmpty()) {
                             int[] position = stack.pop();
-                            positionMark += position[0] + ":" + position[1] + " ,";
+                            positionList.add(position[0] + ":" + position[1]);
                             areaCount++;
                         }
-                        System.out.println("Area size " + areaCount + " Positions " + positionMark);
-                        positionMark = "";
+                        positionList = positionList.stream().sorted().collect(Collectors.toList());
+                        System.out.println("Area size " + areaCount + " Positions " + positionList);
                     }
                 }
             }
