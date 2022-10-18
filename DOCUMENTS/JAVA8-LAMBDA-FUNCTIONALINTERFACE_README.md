@@ -22,6 +22,7 @@
 * if abstract method is flowing from parent as part of inheritance and child also containes same abstact method its method overriding and child is fucntional interface 
 * parent and child can't contains the abstract method then child is not fucntional interface 
 * if parent is functional interface and child is non fucntional interface then both can contains two different abstract method
+* if interface contains more then one abstract method compliler is not able to map the type of the lambda with the abstract method.
 ---
 
 ## @FunctionalInterface 
