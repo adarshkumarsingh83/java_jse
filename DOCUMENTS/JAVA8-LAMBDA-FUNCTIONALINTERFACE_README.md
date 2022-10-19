@@ -150,7 +150,86 @@ Class ServiceDriver{
 }
 ```
 
+---
 
+## lambda with collection 
+* ArrayList Sorting 
+```
+ArrayList<Integer> list = new ArrayList<Integer>(){
+	{
+		add(10);
+		add(0);
+		add(40);
+		add(8);
+		add(99);
+		add(10);
+	}
+};
+sout(list);
+Collections.sort(list,(e1,e2) -> (e1>e2) ? 1 : (e1<e2) : -1 : 0);
+sout(list);
+```
+
+* Set Sorting 
+```
+TreeSet<Integer> set = new TreeSet<Integer>((e1,e2) -> (e1>e2) ? -1 : (e1<e2) : 1 : 0){
+	{
+		add(10);
+		add(0);
+		add(40);
+		add(8);
+		add(99);
+		add(10);
+	}
+};
+sout(set);
+```
+
+* Map Sorting 
+```
+TreeMap<Integer,String> map = new TreeMap<Integer,String>((e1,e2) -> (e1>e2) ? -1 : (e1<e2) : 1 : 0){
+	{
+       put(3,"aaa");
+       put(2,"zaa");
+       put(5,"daa");
+       put(1,"gaa");
+       put(0,"ba");
+	}
+};
+sout(map);
+
+```
+* Custom Object Sorting 
+```
+class Employee{
+	Integer empId;
+	String name;
+	public Emploiyee(Inteer empId,String name){
+		......
+	}
+	public String toString(){
+		.......
+	}
+}
+
+ArrayList<Employee> list = new ArrayList<Employee>(){
+	{
+		add(new Employee(10,"aaa");
+		add(new Employee(0,"aaa");
+		add(new Employee(40,"aaa");
+		add(new Employee(8,"aaa");
+		add(new Employee(99,"aaa");
+		add(new Employee(10,"aaa");
+	}
+};
+sout(list);
+Collections.sort(list,(e1,e2) -> (e1.empId > e2.empId) ? 1 : (e1.empId < e2.empId) : -1 : 0);
+sout(list);
+Collections.sort(list,(e1,e2) -> (e1.name.length() > e2.name.length()) ? 1 : (e1.name.length() < e2.name.length()) : -1 : 0);
+sout(list);
+```
+
+---
 
 
 
