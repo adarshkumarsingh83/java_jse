@@ -236,7 +236,7 @@ sout(list);
 * annonimus class can implement inteface 
 * annonimus class can extends abstract class 
 * annonimus class can extends concreat class 
-* only annonimus class which has only one mehod from interface or abstract class can be replaced with lambda 
+* only annonimus class which has only one mehod from interface can be replaced with lambda 
 * annonimus class which has mulitple method either by inheriatance or by its self can't be replce with lambda 
 
 * Annonimus class 
