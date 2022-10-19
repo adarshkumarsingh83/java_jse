@@ -313,6 +313,34 @@ class ServiceProvider{
 }
 ```
 
+### local variable effectilfy final 
+* localType var is final in the lambda and its value can't be modified 
+* instanceType var is not final its value can be modified in side lambda 
+```
+interface Service{
+	void doService();
+}
+
+class ServiceProvider{
+
+   int instanceType=10;
+  void performServide(){
+  	int localType = 20;
+     Service s = () -> {
+     	    sout(localType); //20
+     		sout(instanceType);  //10
+
+     	};
+
+     s.doService();
+  }
+
+  psv main(String ...args){
+      new ServiceProvider().performServide();
+  }
+}
+```
+
 ## dfference 
 ### Annonimus inner class 
 * class without name
