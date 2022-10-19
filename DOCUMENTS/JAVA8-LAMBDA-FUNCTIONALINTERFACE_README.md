@@ -231,6 +231,27 @@ sout(list);
 
 ---
 
+## Annonimus Class v/s Lambda 
 
+* annonimus class can implement inteface 
+* annonimus class can extends abstract class 
+* annonimus class can extends concreat class 
+* only annonimus class which has only one mehod can be replaced with lambda 
+* annonimus class which has mulitple method either by inheriatance or by its self can't be replce with lambda 
 
+* Annonimus class 
+```
+new Thread(
+       new Runnable(){
+       	   public void run(){
+       	   	   .......do somethings......
+       	   }
+       }
+	).start();
+```
+
+* Lambda
+```
+new Thread(()->{.......do somethings......}).start()
+```
 
