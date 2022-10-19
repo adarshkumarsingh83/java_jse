@@ -255,3 +255,60 @@ new Thread(
 new Thread(()->{.......do somethings......}).start()
 ```
 
+### Variable in Annoymus Inner Class v/s Lamda 
+
+* Annoymus Inner
+* this k/w always refers to innerclass instance
+* all var in annonimnus inner class is class leval var
+```
+interface Service{
+	void doService();
+}
+
+class ServiceProvider{
+
+   int type=10;
+  void performServide(){
+     Service s = new Service(){
+     	int type = 20;
+     	void doService(){
+     		sout(this.type) // 20
+     		sout(ServiceProvider.this.type)//10
+     	}
+     };
+     s.doService();
+  }
+
+  psv main(String ...args){
+      new ServiceProvider().performServide();
+  }
+}
+```
+
+* Lambda 
+* this k/w always refers to outerclass instance 
+* all var in lambda is local variable 
+```
+interface Service{
+	void doService();
+}
+
+class ServiceProvider{
+
+   int type=10;
+  void performServide(){
+     Service s = () -> {
+     	    int type = 20;  
+     	    sout(type); //20
+     		sout(this.type);  // 10
+     		
+     	};
+
+     s.doService();
+  }
+
+  psv main(String ...args){
+      new ServiceProvider().performServide();
+  }
+}
+```
