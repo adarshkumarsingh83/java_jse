@@ -23,6 +23,7 @@ System.out.println(bp.test(24,34));
 ```
 
 ---
+
 ## Function<T, R> 
 * T is method input parameter & R is return type
 
@@ -44,6 +45,7 @@ interface BiFunction<T, U, R> {
 BiFunction<Integer,Integer,Integer> bf = (i,j)->i+j; 
 System.out.println(bf.apply(24,4));
 ```
+
 ---
 
 ## Consumer<T> 
@@ -66,7 +68,9 @@ interface BiConsumer<T, U> {
 BiConsumer<String,String> bc = (s1, s2)->System.out.println(s1+s2); 
 bc.accept("Bi","Consumer"); 
 ```
+
 ---
+
 ## Supplier<R> 
 *  R is a return type
 ```
@@ -77,6 +81,32 @@ interface Supplier<R>{
 Supplier<String> otps = () -> { String val = "secret="+ (int) (Math.random() * 10); return val; }
 System.out.println(otps.get());
 System.out.println(otps.get());
+```
+
+---
+## UnaryOperator<T>
+* used as lambda expression to pass as an argument
+*  T denotes the input parameter type.
+```
+ interface UnaryOperator<T> extends Function<T, T> {
+  public static <T> java.util.function.UnaryOperator<T> identity();
+}
+
+UnaryOperator<Integer> unaryOpt = i->i*i; 
+sout(unaryOpt.apply(10))
+```
+
+## BinaryOperator<T>
+* accepts two operands of the same type and process it and then returns results of the same type as operands.
+*  T denotes the input parameter type.
+```
+ interface BinaryOperator<T> extends java.util.function.BiFunction<T, T, T> {
+  public static <T> java.util.function.BinaryOperator<T> minBy(java.util.Comparator<? super T>);
+  public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
+}
+
+BinaryOperator<String> binaryOpt = (s1,s2)-> s1+"-"+s2; 
+binaryOpt.apply(10,20)
 ```
 ---
 
@@ -157,3 +187,15 @@ default <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V> after)
 default BiConsumer<T, U> andThen(BiConsumer<? super T, ? super U> after)
 ```
 * Returns a composed BiConsumer that performs, in sequence, this operation followed by the after operation.
+
+
+## BinaryOperator<T>
+```
+ public static <T> java.util.function.BinaryOperator<T> minBy(java.util.Comparator<? super T>);
+```
+* accepts a Compotator and returns BinaryOperator which will return min between two elements
+
+```
+  public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
+```
+* accepts a Compotator and returns BinaryOperator which will return maximum between two elements
