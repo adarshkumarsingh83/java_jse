@@ -199,3 +199,36 @@ default BiConsumer<T, U> andThen(BiConsumer<? super T, ? super U> after)
   public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
 ```
 * accepts a Compotator and returns BinaryOperator which will return maximum between two elements
+
+* example 
+```
+class Student{
+	int age;
+	String name;
+	String class;
+}
+
+List<Student> list = new ArrayList(){
+	{
+       add(new Student(22,"aaa1",A))
+       add(new Student(20,"bbb1",A))
+       add(new Student(22,"aaa2",B))
+       add(new Student(20,"bbb3",B))
+	}
+};
+
+	//Using BinaryOperator.maxBy        
+      Map<String, Optional<Student>> eldestByClass = list.stream().collect(Collectors.groupingBy(Student::getClassName, 
+                Collectors.reducing(BinaryOperator.maxBy(ageComparator))));
+        eldestByClass.forEach((k,v)->System.out.println("Class:"+k+" Age:"+
+                ((Optional<Student>)v).get().getAge()+" Name:"+((Optional<Student>)v).get().getName()));
+        
+
+     //Using BinaryOperator.minBy        
+        System.out.println("---BinaryOperator.minBy---");
+        Map<String, Optional<Student>> youngestByClass = list.stream().collect(Collectors.groupingBy(Student::getClassName, 
+                Collectors.reducing(BinaryOperator.minBy(ageComparator))));
+        youngestByClass.forEach((k,v)->System.out.println("Class:"+k+" Age:"+
+                ((Optional<Student>)v).get().getAge()+" Name:"+((Optional<Student>)v).get().getName()));
+    
+```
