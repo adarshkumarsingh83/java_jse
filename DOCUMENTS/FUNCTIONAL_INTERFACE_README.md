@@ -2,7 +2,8 @@
 
 ---
 ## Predicate<T>
-* for testing any condition and return boolean 
+* for testing any condition and return boolean
+* take one input param 
 *  T denotes the input parameter type.
 ```
 public interface Predicate<T> {
@@ -21,25 +22,29 @@ default Predicate<T> and(Predicate<? super T> other)
 ```
 * Returns a composed predicate that represents a short-circuiting logical AND of this predicate and another.
 
+
 ```
 static <T> Predicate<T> isEqual(Object targetRef)
 ```
 * Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, Object).
+
 
 ```
 default Predicate<T> negate()
 ```
 * Returns a predicate that represents the logical negation of this predicate.
 
+
 ```
 default Predicate<T> or(Predicate<? super T> other)
 ```
 * Returns a composed predicate that represents a short-circuiting logical OR of this predicate and another.
 
+
 ```
 default Predicate<T> not(Predicate<? super T> other)
 ```
-* to 
+* to negative 
 ----
 
 
@@ -62,10 +67,12 @@ default BiPredicate<T, U> and(BiPredicate<? super T, ? super U> other)
 ```
 * Returns a composed predicate that represents a short-circuiting logical AND of this predicate and another.
 
+
 ```
 default BiPredicate<T, U> negate()
 ```
 * Returns a predicate that represents the logical negation of this predicate.
+
 
 ```
 default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other)
@@ -77,6 +84,7 @@ default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other)
 
 ## Function<T, R> 
 * function is for performing any opration and return any type 
+* take input and return type 
 * T is method input parameter & R is return type
 
 ```
@@ -84,7 +92,7 @@ interface Function<T,R> {
     R apply(T t);
 }
 
-Function<String, Integer> f = s -> s.length(); 
+Function<String, Integer> f = s -> s.length();
 System.out.println(f.apply("I am happy now")); 
 ```
 
@@ -95,11 +103,15 @@ System.out.println(f.apply("I am happy now"));
 default <V> Function<T, V> andThen(Function<? super R, ? extends V> after)
 ```
 * Returns a composed function that first applies this function to its input, and then applies the after function to the result.
+* f1.andThen(f2).apply("xxxxx") first apply f1 and then apply f2 
+
 
 ```
 default <V> Function<V, R> compose(Function<? super V, ? extends T> before)
 ```
 * Returns a composed function that first applies the before function to its input, and then applies this function to the result.
+* f1.compose(f2).apply("xxxxx") first apply f2 and then apply f1 
+
 
 ```
 static <T> Function<T, T> identlity()
