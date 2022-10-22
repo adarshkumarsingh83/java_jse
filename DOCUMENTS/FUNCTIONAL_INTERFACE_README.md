@@ -2,12 +2,12 @@
 
 ---
 ## Predicate<T>
+* for testing any condition and return boolean 
 *  T denotes the input parameter type.
 ```
 public interface Predicate<T> {
     boolean test(T t);
 }
-
 
 Predicate<Integer> p = (i) -> (i > -10) && (i < 10);
 System.out.println(p.test(9));
@@ -36,6 +36,10 @@ default Predicate<T> or(Predicate<? super T> other)
 ```
 * Returns a composed predicate that represents a short-circuiting logical OR of this predicate and another.
 
+```
+default Predicate<T> not(Predicate<? super T> other)
+```
+* to 
 ----
 
 
@@ -72,6 +76,7 @@ default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other)
 ---
 
 ## Function<T, R> 
+* function is for performing any opration and return any type 
 * T is method input parameter & R is return type
 
 ```
@@ -221,7 +226,6 @@ binaryOpt.apply(10,20)
   public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
 ```
 * accepts a Compotator and returns BinaryOperator which will return maximum between two elements
-
 * example 
 ```
 class Student{
