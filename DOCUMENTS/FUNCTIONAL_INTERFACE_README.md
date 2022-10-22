@@ -110,7 +110,9 @@ default <V> Function<T, V> andThen(Function<? super R, ? extends V> after)
 default <V> Function<V, R> compose(Function<? super V, ? extends T> before)
 ```
 * Returns a composed function that first applies the before function to its input, and then applies this function to the result.
+* return the same value as input identical value of the input 
 * f1.compose(f2).apply("xxxxx") first apply f2 and then apply f1 
+
 
 
 ```
