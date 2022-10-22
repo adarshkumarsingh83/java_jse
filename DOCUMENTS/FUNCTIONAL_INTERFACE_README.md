@@ -117,6 +117,7 @@ default <V> Function<V, R> compose(Function<? super V, ? extends T> before)
 static <T> Function<T, T> identlity()
 ```
 * Returns a function that always returns its input argument.
+* Function<String,String> f = Function.identity(); sout(f.apply("radha")); // radha is o/p
 
 ---
 
