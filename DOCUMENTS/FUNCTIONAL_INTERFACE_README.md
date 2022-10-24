@@ -145,6 +145,7 @@ default <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V> after)
 ---
 
 ## Consumer<T> 
+* accept one input peform operation but don't return anythings  
 *  T denotes the input parameter type.
 ```
 interface Consumer<T> {
