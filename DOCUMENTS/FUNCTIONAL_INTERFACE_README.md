@@ -99,6 +99,7 @@ System.out.println(f.apply("I am happy now"));
 ### default & static methods 
 
 ## Function<T,R>
+* To take input perform operationa and must reuturn 
 ```
 default <V> Function<T, V> andThen(Function<? super R, ? extends V> after)
 ```
@@ -188,6 +189,7 @@ default BiConsumer<T, U> andThen(BiConsumer<? super T, ? super U> after)
 ---
 
 ## Supplier<R> 
+* to supply some value 
 *  R is a return type
 ```
 interface Supplier<R>{
