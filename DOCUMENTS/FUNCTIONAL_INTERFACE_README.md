@@ -500,3 +500,35 @@ public interface java.util.function.ToDoubleBiFunction<T, U> {
   public abstract double applyAsDouble(T, U);
 }
 ```
+
+---
+
+# Premitive Consumer
+* premitive consumer for consuming premitive type value int, long, double 
+
+## IntConsumer 
+* when we have to consume premetive int value 
+```
+public interface java.util.function.IntConsumer {
+  public abstract void accept(int);
+  public default java.util.function.IntConsumer andThen(java.util.function.IntConsumer);
+}
+```
+
+## LongConsumer 
+* when we have to consume premetive long value 
+```
+public interface java.util.function.LongConsumer {
+  public abstract void accept(long);
+  public default java.util.function.LongConsumer andThen(java.util.function.LongConsumer);
+}
+```
+
+## DoubleConsumer 
+* when we have to consume premetive double value 
+```
+public interface java.util.function.DoubleConsumer {
+  public abstract void accept(double);
+  public default java.util.function.DoubleConsumer andThen(java.util.function.DoubleConsumer);
+}
+```
