@@ -282,6 +282,7 @@ List<Student> list = new ArrayList(){
 ---
 
 # Premitive Type Functional Iterface 
+* Premitive Funcatl interface help to improve performae by avoiding autoboxing and autounboxing 
 
 ### Autoboxing 
 * automatic type convertion from premitive to object by compiler release in 1.5 verion 
