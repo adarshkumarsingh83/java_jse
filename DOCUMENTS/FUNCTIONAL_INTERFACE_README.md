@@ -600,7 +600,8 @@ public interface java.util.function.BooleanSupplier {
 
 ### Operators 
 
-## UnaryOperator 
+### for object type 
+### UnaryOperator 
 * if the input type and return type is same type then we have to use UnaryOperator
 * its child of function interface so via inheritancee we get the sam of function apply()
 ```
@@ -609,12 +610,67 @@ public interface java.util.function.UnaryOperator<T> extends java.util.function.
 }
 ```
 
-## BinaryOperator 
+### for premitive type 
+## IntUnaryOperator 
+```
+public interface java.util.function.IntUnaryOperator {
+  public abstract int applyAsInt(int);
+  public default java.util.function.IntUnaryOperator compose(java.util.function.IntUnaryOperator);
+  public default java.util.function.IntUnaryOperator andThen(java.util.function.IntUnaryOperator);
+  public static java.util.function.IntUnaryOperator identity();
+}
+```
+## LongUnaryOperator
+```
+public interface java.util.function.LongUnaryOperator {
+  public abstract long applyAsLong(long);
+  public default java.util.function.LongUnaryOperator compose(java.util.function.LongUnaryOperator);
+  public default java.util.function.LongUnaryOperator andThen(java.util.function.LongUnaryOperator);
+  public static java.util.function.LongUnaryOperator identity();
+}
+```
+## DoubleUnaryOperator 
+```
+public interface java.util.function.DoubleUnaryOperator {
+  public abstract double applyAsDouble(double);
+  public default java.util.function.DoubleUnaryOperator compose(java.util.function.DoubleUnaryOperator);
+  public default java.util.function.DoubleUnaryOperator andThen(java.util.function.DoubleUnaryOperator);
+  public static java.util.function.DoubleUnaryOperator identity();
+}
+```
+
+---
+
+### for object type 
+
+### BinaryOperator 
 * if the 2 input type and return type is same type then we have to use BinaryOperator
 * its child of bifunction interface so via inheritancee we get the sam apply()
 ```
 public interface java.util.function.BinaryOperator<T> extends java.util.function.BiFunction<T, T, T> {
   public static <T> java.util.function.BinaryOperator<T> minBy(java.util.Comparator<? super T>);
   public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
+}
+```
+
+### for premitive type 
+## IntBinaryOperator 
+```
+public interface java.util.function.IntBinaryOperator {
+  public abstract int applyAsInt(int, int);
+}
+```
+
+## LongBinaryOperator 
+```
+public interface java.util.function.LongBinaryOperator {
+  public abstract long applyAsLong(long, long);
+}
+```
+
+## DoubleBinaryOperator
+```
+public interface java.util.function.DoubleBinaryOperator {
+  public abstract double applyAsDouble(double, double);
 }
 ```
