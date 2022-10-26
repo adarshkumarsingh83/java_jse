@@ -561,3 +561,30 @@ public interface java.util.function.ObjDoubleConsumer<T> {
   public abstract void accept(T, double);
 }
 ```
+
+### Premitive Supplier 
+* when we have to only return value without taking input 
+
+## IntSupplier
+* only return int value 
+```
+public interface java.util.function.IntSupplier {
+  public abstract int getAsInt();
+}
+```
+
+## LongSupplier
+* only return long premitive value 
+```
+public interface java.util.function.LongSupplier {
+  public abstract long getAsLong();
+}
+```
+
+## DoubleSupplier
+* only return double premitive value 
+```
+public interface java.util.function.DoubleSupplier {
+  public abstract double getAsDouble();
+}
+```
