@@ -588,3 +588,13 @@ public interface java.util.function.DoubleSupplier {
   public abstract double getAsDouble();
 }
 ```
+
+## BooleanSupplier
+* only return boolean premitive value 
+```
+public interface java.util.function.BooleanSupplier {
+  public abstract boolean getAsBoolean();
+}
+```
+---
+
