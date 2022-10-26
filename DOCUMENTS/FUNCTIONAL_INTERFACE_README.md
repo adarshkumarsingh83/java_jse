@@ -598,3 +598,23 @@ public interface java.util.function.BooleanSupplier {
 ```
 ---
 
+### Operators 
+
+## UnaryOperator 
+* if the input type and return type is same type then we have to use UnaryOperator
+* its child of function interface so via inheritancee we get the sam of function apply()
+```
+public interface java.util.function.UnaryOperator<T> extends java.util.function.Function<T, T> {
+  public static <T> java.util.function.UnaryOperator<T> identity();
+}
+```
+
+## BinaryOperator 
+* if the 2 input type and return type is same type then we have to use BinaryOperator
+* its child of bifunction interface so via inheritancee we get the sam apply()
+```
+public interface java.util.function.BinaryOperator<T> extends java.util.function.BiFunction<T, T, T> {
+  public static <T> java.util.function.BinaryOperator<T> minBy(java.util.Comparator<? super T>);
+  public static <T> java.util.function.BinaryOperator<T> maxBy(java.util.Comparator<? super T>);
+}
+```
