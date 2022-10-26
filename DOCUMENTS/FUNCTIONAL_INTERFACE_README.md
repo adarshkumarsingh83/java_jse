@@ -1,5 +1,7 @@
 # java.util.function.*
 
+# Object Type Functional Interface 
+
 ---
 ## Predicate<T>
 * for testing any condition and return boolean
@@ -278,3 +280,178 @@ List<Student> list = new ArrayList(){
 ```
 
 ---
+
+# Premitive Type Functional Iterface 
+
+### Autoboxing 
+* automatic type convertion from premitive to object by compiler release in 1.5 verion 
+```
+Integer i = 10;
+javac -source 1.4 ClassName.java 
+```
+
+### AutoUnboxing 
+* automaic type convertion from object to the premitive by compiler release in 1.5 version 
+```
+Integer i = new Integer(10);
+int x = i; 
+javac -source 1.4 ClassName.java 
+```
+
+### Generic Type 
+* applicable to the object type 
+
+---
+
+### Premitive Predicate 
+
+## IntPredicate 
+* specificaly for premitive int 
+```
+ IntPredicate intP = i -> i % 2 == 0;
+  sout(intP.test(10));
+```
+* interface signature 
+```
+interface java.util.function.IntPredicate {
+  public abstract boolean test(int);
+  public default java.util.function.IntPredicate and(java.util.function.IntPredicate);
+  public default java.util.function.IntPredicate negate();
+  public default java.util.function.IntPredicate or(java.util.function.IntPredicate);
+}
+```
+
+## LongPredicate 
+* speciflly for long premetive 
+```
+ LongPredicate longP = i -> i % 2 == 0;
+  sout(longP.test(10));
+```
+
+* interface signature 
+```
+public interface java.util.function.LongPredicate {
+  public abstract boolean test(long);
+  public default java.util.function.LongPredicate and(java.util.function.LongPredicate);
+  public default java.util.function.LongPredicate negate();
+  public default java.util.function.LongPredicate or(java.util.function.LongPredicate);
+}
+```
+
+## DoublePredicate 
+* speciflly for double premetive 
+```
+ DoublePredicate doubleP = i -> i % 2 == 0;
+  sout(doubleP.test(10));
+```
+* interface signature 
+```
+public interface java.util.function.DoublePredicate {
+  public abstract boolean test(double);
+  public default java.util.function.DoublePredicate and(java.util.function.DoublePredicate);
+  public default java.util.function.DoublePredicate negate();
+  public default java.util.function.DoublePredicate or(java.util.function.DoublePredicate);
+}
+```
+
+---
+
+### Premitive Function 
+* it has only R as return Type 
+
+## IntFunction 
+* interface signature 
+```
+IntFunction<String> intFunction = i -> (i % 2 == 0) ? "even no":"odd no";
+sout(intFunction.apply(10));
+```
+* interface signagure 
+```
+public interface java.util.function.IntFunction<R> {
+  public abstract R apply(int);
+}
+```
+
+## LongFunction 
+```
+LongFunction<String> longFunction = i -> // logic to convert the milisecound to the string date and return ;
+sout(longFunction.apply(System.getMilisecound));
+```
+* interface signature 
+```
+public interface java.util.function.LongFunction<R> {
+  public abstract R apply(long);
+}
+```
+
+## DoubleFunction 
+
+* interface signature 
+```
+public interface java.util.function.DoubleFunction<R> {
+  public abstract R apply(double);
+}
+```
+
+## ToIntFucntion 
+```
+public interface java.util.function.ToIntFunction<T> {
+  public abstract int applyAsInt(T);
+}
+```
+
+## ToLongFunction
+```
+public interface java.util.function.ToLongFunction<T> {
+  public abstract long applyAsLong(T);
+}
+```
+
+## ToDoubleFunction 
+```
+public interface java.util.function.ToDoubleFunction<T> {
+  public abstract double applyAsDouble(T);
+}
+```
+
+## IntToLongFunction
+```
+public interface java.util.function.IntToLongFunction {
+  public abstract long applyAsLong(int);
+}
+```
+
+## IntToDoubleFunction
+```
+public interface java.util.function.IntToDoubleFunction {
+  public abstract double applyAsDouble(int);
+}
+```
+
+## LongToIntFunction
+```
+public interface java.util.function.LongToIntFunction {
+  public abstract int applyAsInt(long);
+}
+```
+
+## LongToDoubleFunction
+```
+public interface java.util.function.LongToDoubleFunction {
+  public abstract double applyAsDouble(long);
+}
+```
+
+## DoubleToIntFunction
+```
+public interface java.util.function.DoubleToIntFunction {
+  public abstract int applyAsInt(double);
+}
+```
+
+## DoubleToLongFunction
+```
+public interface java.util.function.DoubleToLongFunction {
+  public abstract long applyAsLong(double);
+}
+```
