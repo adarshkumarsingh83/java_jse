@@ -360,6 +360,7 @@ public interface java.util.function.DoublePredicate {
 * it has only R as return Type 
 
 ## IntFunction 
+* input is always int type but return type can be anythings 
 * interface signature 
 ```
 IntFunction<String> intFunction = i -> (i % 2 == 0) ? "even no":"odd no";
@@ -373,6 +374,7 @@ public interface java.util.function.IntFunction<R> {
 ```
 
 ## LongFunction 
+* input is always long type but return type can be anythings 
 ```
 LongFunction<String> longFunction = i -> // logic to convert the milisecound to the string date and return ;
 sout(longFunction.apply(System.getMilisecound));
@@ -385,7 +387,7 @@ public interface java.util.function.LongFunction<R> {
 ```
 
 ## DoubleFunction 
-
+* input is always double type but return type can be anythings 
 * interface signature 
 ```
 public interface java.util.function.DoubleFunction<R> {
@@ -393,7 +395,10 @@ public interface java.util.function.DoubleFunction<R> {
 }
 ```
 
+----
+
 ## ToIntFucntion 
+* input is any type but return type is int type 
 ```
 public interface java.util.function.ToIntFunction<T> {
   public abstract int applyAsInt(T);
@@ -401,6 +406,7 @@ public interface java.util.function.ToIntFunction<T> {
 ```
 
 ## ToLongFunction
+* input is any type but return type is long type 
 ```
 public interface java.util.function.ToLongFunction<T> {
   public abstract long applyAsLong(T);
@@ -408,13 +414,17 @@ public interface java.util.function.ToLongFunction<T> {
 ```
 
 ## ToDoubleFunction 
+* input is any type but return type is double type 
 ```
 public interface java.util.function.ToDoubleFunction<T> {
   public abstract double applyAsDouble(T);
 }
 ```
 
+----
+
 ## IntToLongFunction
+*  input will be int return will be long type 
 ```
 public interface java.util.function.IntToLongFunction {
   public abstract long applyAsLong(int);
@@ -422,13 +432,17 @@ public interface java.util.function.IntToLongFunction {
 ```
 
 ## IntToDoubleFunction
+*  input will be int return will be double type 
 ```
 public interface java.util.function.IntToDoubleFunction {
   public abstract double applyAsDouble(int);
 }
 ```
 
+---
+
 ## LongToIntFunction
+* input will be long but return type is int type 
 ```
 public interface java.util.function.LongToIntFunction {
   public abstract int applyAsInt(long);
@@ -436,13 +450,17 @@ public interface java.util.function.LongToIntFunction {
 ```
 
 ## LongToDoubleFunction
+* input will be long but return type is double type 
 ```
 public interface java.util.function.LongToDoubleFunction {
   public abstract double applyAsDouble(long);
 }
 ```
 
+---
+
 ## DoubleToIntFunction
+* input type will be double type and return type will be always int 
 ```
 public interface java.util.function.DoubleToIntFunction {
   public abstract int applyAsInt(double);
@@ -450,8 +468,35 @@ public interface java.util.function.DoubleToIntFunction {
 ```
 
 ## DoubleToLongFunction
+* input type will be double type and return type will be always long 
 ```
 public interface java.util.function.DoubleToLongFunction {
   public abstract long applyAsLong(double);
+}
+```
+
+---
+
+## ToIntBiFunction
+* 2 input type can be anythings but return type will be int type 
+```
+public interface java.util.function.ToIntBiFunction<T, U> {
+  public abstract int applyAsInt(T, U);
+}
+```
+
+## ToLongBiFunction
+* 2 input type can be anythings but return type will be long type 
+```
+public interface java.util.function.ToLongBiFunction<T, U> {
+  public abstract long applyAsLong(T, U);
+}
+```
+
+## ToDoubleBiFunction
+* 2 input type can be anythings but return type will be double type 
+```
+public interface java.util.function.ToDoubleBiFunction<T, U> {
+  public abstract double applyAsDouble(T, U);
 }
 ```
