@@ -532,3 +532,31 @@ public interface java.util.function.DoubleConsumer {
   public default java.util.function.DoubleConsumer andThen(java.util.function.DoubleConsumer);
 }
 ```
+
+---
+# ObjXXXConsmer 
+* accept one args as object and other as xxx premite type for operation 
+
+## ObjIntConsumer
+* accept args as object aand other as premitive int 
+```
+public interface java.util.function.ObjIntConsumer<T> {
+  public abstract void accept(T, int);
+}
+```
+
+## ObjLongConsumer
+* accept args as object aand other as premitive long 
+```
+public interface java.util.function.ObjLongConsumer<T> {
+  public abstract void accept(T, long);
+}
+```
+
+## ObjDoubleConsumer 
+* accept args as object aand other as premitive double 
+```
+public interface java.util.function.ObjDoubleConsumer<T> {
+  public abstract void accept(T, double);
+}
+```
