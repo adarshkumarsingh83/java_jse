@@ -18,6 +18,8 @@
 	* instace method refrence 
 * constructor refrence 
 
+### NOTE only args must match for refrence 
+
 ---
 
 ## mthod reference 
@@ -93,3 +95,40 @@ class App{
 ```
 
 ### constructor reference 
+
+```
+when ever the function inteface getTool method will be invoke then 
+due to constructor refreence of the Tool class construcot will be invoke and get the new object of Tool class
+
+class Tool{
+	Tool(){
+		sout("tool construcotr");
+	}
+	void performJob(){
+		sout("doing job");
+	}
+}
+
+inteface Job{
+	Tool getTool();
+}
+
+// with lambda 
+class App{
+	psvmain(String args[]){
+		Job job = () -> new Tool();
+		Tool tool = job.getTool();
+        tool.performJob();
+	}
+}
+
+// with constructor refrence 
+class App{
+	psvmain(String args[]){
+		Job job = () -> Tool:: new;
+		Tool tool = job.getTool();
+        tool.performJob();
+	}
+}
+```
+
