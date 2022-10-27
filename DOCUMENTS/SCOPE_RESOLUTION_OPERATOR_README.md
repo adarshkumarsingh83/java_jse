@@ -1,4 +1,5 @@
-## scope resolution 
+
+### Functional inteface 
 
 * functional inteface can refer lambda express 
 	* FuncationalIntefaceName variable = (variabls) -> {.....};
@@ -10,6 +11,13 @@
 	* instacde mehod reference 
 		* FuncationalIntefaceName variable = classObject::methodName;
 	  		* variable.functionalInfaceMethod();
+
+## scope resolution 
+* method refrence 
+	* static method refernce 
+	* instace method refrence 
+* constructor refrence 
+
 ---
 
 ## mthod reference 
