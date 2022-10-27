@@ -8,6 +8,11 @@
 * Collection: group of objects is collection 
 * Streams: process object from collection then stresm is used 
 
+### stream
+* Stream is interface in java.util.stream pkg 
+* stream() defualt method in Collection interface 
+* collectionObject.stream() 
+
 
 ### filter 
 * filter the element in streams 
