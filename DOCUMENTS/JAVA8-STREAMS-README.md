@@ -16,6 +16,7 @@
 
 ### filter 
 * filter the element in streams 
+* filter() accept predicate interface 
 ```
 collectionObject.stream()
 	.filter(e -> { predicate condition })
@@ -24,6 +25,7 @@ collectionObject.stream()
 
 ### map 
 * convert the element state 
+* map() accept function interface
 ```
 collectionObject.stream()
 	.map(e -> { function })
