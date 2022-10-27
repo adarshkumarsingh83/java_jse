@@ -55,7 +55,7 @@ class App{
 	}
 }
 ```
-### instace method refrence example 
+### instance method refrence example 
 ```
 interface Service{
 
