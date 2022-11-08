@@ -202,10 +202,10 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.List<E> of(E...);
 ```
-* none of the element should be null otherwase NPE 
+* none of the element shoudln't be null otherwase NPE 
 * Duplicate element are allowed 
 * of() are with 10 element and one witth var args for more then 10 element 
-* UnsupportedOperationException if tried to modified the unmodifiable connection 
+* UnsupportedOperationException if tried to modified add/remove/update the unmodifiable connection 
 
 ### Set 
 * Set.of(x,x,....N)
@@ -223,10 +223,10 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.Set<E> of(E...);
 ```
-* none of the element shoudl be null otherwase NPE 
+* none of the element shoudln't be null otherwase NPE 
 * all element must be unique otherwiase IllegalArgumentExcpetion 
 * of() are with 10 element and one witth var args for more then 10 element 
-* UnsupportedOperationException if tried to modified the unmodifiable connection 
+* UnsupportedOperationException if tried to modified add/remove/update  the unmodifiable connection 
 
 
 ### Map 
@@ -245,6 +245,9 @@ public class Resource implements AutoCloseable{
   public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V);
   public static <K, V> java.util.Map<K, V> ofEntries(java.util.Map$Entry<? extends K, ? extends V>...);
 ```
+* none of the  key or value shoudln't be null otherwase NPE 
+* of() are with 10 element and one witth var args for more then 10 element 
+* UnsupportedOperationException if tried to modified add/remove/update the unmodifiable connection 
 ---
 ## stream api enhancement 
 
