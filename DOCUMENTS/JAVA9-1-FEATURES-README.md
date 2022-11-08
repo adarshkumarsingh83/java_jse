@@ -194,10 +194,28 @@ public class Resource implements AutoCloseable{
 ## diomanod operator enhancment 
 * into in jdk 1.7 
 * generic into in 1.5 to resolve type casting and provide type safty 
-* diomand operator is for skipping type param while construcotr call but at the time of diclaration its mandatory 
+* diamond operator is applicable for normal classes not for annonimus classes 
+* diomand operator is for skipping type param while construcotr call which is type inference but at the time of diclaration its mandatory 
 	* List<String> list = new ArrayList<>();
 	* to provide the improved readablity of the code 
 * enhancemnt in jdk 1.9 (java enchancement proposal 213)
+* from jdk 1.9 its applicable for annonimus inner class also 
+* class without name is annonins class 
+```
+interface Service<T>{
+	void operation(T d);
+}
+
+psv main(String ...args){
+
+	Service<String> s = new Service<>(){
+   
+       void operation(T d){
+       	 ........
+       }
+	};
+}
+```
 
 ---
 
