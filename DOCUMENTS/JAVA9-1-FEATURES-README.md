@@ -194,6 +194,9 @@ public class Resource implements AutoCloseable{
 ## diomanod operator enhancment 
 * into in jdk 1.7 
 * generic into in 1.5 to resolve type casting and provide type safty 
+* diomand operator is for skipping type param while construcotr call but at the time of diclaration its mandatory 
+	* List<String> list = new ArrayList<>();
+	* to provide the improved readablity of the code 
 * enhancemnt in jdk 1.9 (java enchancement proposal 213)
 
 ---
