@@ -128,6 +128,18 @@ interface Service {
 * resources reference variable is final and can't be reassignement to resouerce reference variable 
 * resource reference variable must be local to try block 
 ```
+public class Resource implements AutoCloseable{
+
+   public void operation(){
+   	sout("operation");
+   }
+
+	public void close(){
+		sout("clean up ");
+	}
+}
+
+
     try(Resouxe r = new Resouse("resource-name")){
 
        	......
@@ -149,6 +161,19 @@ interface Service {
 * enhancement 1.9
 * resource created outside of try can be used direclty 
 ```
+
+public class Resource implements AutoCloseable{
+
+   public void operation(){
+   	sout("operation");
+   }
+
+	public void close(){
+		sout("clean up ");
+	}
+}
+
+
   	Resouxe r = new Resouse("resource-name")
   	 try(r){
 
