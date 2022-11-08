@@ -202,8 +202,10 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.List<E> of(E...);
 ```
-* none of the element shoudl be null otherwase NPE 
+* none of the element should be null otherwase NPE 
+* Duplicate element are allowed 
 * of() are with 10 element and one witth var args for more then 10 element 
+* UnsupportedOperationException if tried to modified the unmodifiable connection 
 
 ### Set 
 * Set.of(x,x,....N)
@@ -221,6 +223,11 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.Set<E> of(E...);
 ```
+* none of the element shoudl be null otherwase NPE 
+* all element must be unique otherwiase IllegalArgumentExcpetion 
+* of() are with 10 element and one witth var args for more then 10 element 
+* UnsupportedOperationException if tried to modified the unmodifiable connection 
+
 
 ### Map 
 * Map.of(K,V....N)
