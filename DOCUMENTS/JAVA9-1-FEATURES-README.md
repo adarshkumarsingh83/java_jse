@@ -221,6 +221,7 @@ psv main(String ...args){
 
 ## @Safewareargs Enhancment 
 * into in jdk 1.7 
+* to suppress the compiler warnning for varargs 
 * applicable for static method, final method & constructors & private method 
 * variable number of argument which is vargs in jdk 1.5 with eg returnType methodName(ArgsTpye... variableName)
 * type of memoary 
