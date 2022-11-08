@@ -192,7 +192,11 @@ public class Resource implements AutoCloseable{
 
 ---
 ## diomanod operator enhancment 
+* into in jdk 1.7 
+* generic into in 1.5 to resolve type casting and provide type safty 
+* enhancemnt in jdk 1.9 (java enchancement proposal 213)
 
+---
 
 ## @Safewareargs 
 * static method
@@ -200,6 +204,7 @@ public class Resource implements AutoCloseable{
 * constructors 
 * private method 
 
+---
 
 ## G1Gc 
 * Serial 
