@@ -202,6 +202,7 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.List<E> of(E...);
 ```
+* for empty list no args of() has to be used 
 * none of the element shoudln't be null otherwase NPE 
 * Duplicate element are allowed otherwise IllegalArugment Excpetion 
 * of() are with 10 element and one witth var args for more then 10 element 
@@ -223,6 +224,7 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E, E);
   public static <E> java.util.Set<E> of(E...);
 ```
+* for empty set no args of() has to be used 
 * none of the element shoudln't be null otherwase NPE 
 * all element must be unique otherwiase IllegalArgumentExcpetion 
 * of() are with 10 element and one witth var args for more then 10 element 
@@ -245,6 +247,7 @@ public class Resource implements AutoCloseable{
   public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V);
   public static <K, V> java.util.Map<K, V> ofEntries(java.util.Map$Entry<? extends K, ? extends V>...);
 ```
+* for empty map no args of() has to be used 
 * none of the  key or value shoudln't be null otherwase NPE 
 * duplicate key is not allowed otherwise IllegalArugment Excpetion value can be duplicate 
 * of() are with 10 element and for more then 10 element then ofEntries() has to be used 
