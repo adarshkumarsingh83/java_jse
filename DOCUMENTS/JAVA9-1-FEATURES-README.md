@@ -219,11 +219,41 @@ psv main(String ...args){
 
 ---
 
-## @Safewareargs 
-* static method
-* final method 
-* constructors 
-* private method 
+## @Safewareargs Enhancment 
+* into in jdk 1.7 
+* applicable for static method, final method & constructors & private method 
+* variable number of argument which is vargs in jdk 1.5 with eg returnType methodName(ArgsTpye... variableName)
+* type of memoary 
+	* heap memo
+	* stack 
+	* pc register 
+	* method area 
+	* native method stack 
+* heap pollution problem 
+ * when one type of variable is pointing to other type object at runtime which is not compatable it cause class cast exception and heap polution 
+ ```
+   psv main(String ...args){
+   	display(Arrays.asList("a","b"),Arrays.asList("c","d"))
+   }
+   psv display(List<String> l){
+   	 Ojbect[] a =l;
+   	 a[0]=Arrays.asList(10,20);
+   	 String name =(String)l[0].get(0);
+   	 Sop(name);
+   }
+ ```
+* when ever var-args is used with generic compiler will raise warnning even though reassigment is not their with generic to resolve this @Safevargs is used 
+ ```
+   psv main(String ...args){
+   	display(Arrays.asList("a","b"),Arrays.asList("c","d"))
+   }
+   @SafeVargs
+   psv display(List<String> l){
+   	sout(l);
+   }
+ ```
+* enhancment came in jdk 1.9 
+*  
 
 ---
 
@@ -235,4 +265,5 @@ psv main(String ...args){
 * To find the current GC running 
 	* java -XX:+PrintCommandLineFlags -version
 ---
+
 
