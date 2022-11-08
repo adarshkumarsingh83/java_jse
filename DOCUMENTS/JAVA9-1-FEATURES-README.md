@@ -247,8 +247,17 @@ public class Resource implements AutoCloseable{
 ```
 * none of the  key or value shoudln't be null otherwase NPE 
 * duplicate key is not allowed otherwise IllegalArugment Excpetion value can be duplicate 
-* of() are with 10 element and one witth var args for more then 10 element 
+* of() are with 10 element and for more then 10 element then ofEntries() has to be used 
 * UnsupportedOperationException if tried to modified add/remove/update the unmodifiable connection 
+```
+Map.Entiry<KType,VType> entry1 = Map.entry(key,value);
+Map.Entiry<KType,VType> entry2 = Map.entry(key,value);
+
+Map.Entiry<KType,VType> entryN = Map.entry(key,value);
+
+Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
+
+```
 ---
 
 ## stream api enhancement 
