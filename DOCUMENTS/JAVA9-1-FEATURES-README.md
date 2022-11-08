@@ -203,7 +203,7 @@ public class Resource implements AutoCloseable{
   public static <E> java.util.List<E> of(E...);
 ```
 * none of the element shoudln't be null otherwase NPE 
-* Duplicate element are allowed 
+* Duplicate element are allowed otherwise IllegalArugment Excpetion 
 * of() are with 10 element and one witth var args for more then 10 element 
 * UnsupportedOperationException if tried to modified add/remove/update the unmodifiable connection 
 
@@ -246,9 +246,11 @@ public class Resource implements AutoCloseable{
   public static <K, V> java.util.Map<K, V> ofEntries(java.util.Map$Entry<? extends K, ? extends V>...);
 ```
 * none of the  key or value shoudln't be null otherwase NPE 
+* duplicate key is not allowed otherwise IllegalArugment Excpetion value can be duplicate 
 * of() are with 10 element and one witth var args for more then 10 element 
 * UnsupportedOperationException if tried to modified add/remove/update the unmodifiable connection 
 ---
+
 ## stream api enhancement 
 
 ---
