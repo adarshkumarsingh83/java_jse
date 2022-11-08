@@ -186,7 +186,58 @@ public class Resource implements AutoCloseable{
 
 ---
 ## factory method for unmodificable collection 
+### List 
+* List.of(x,x,...N)
+```
+  public static <E> java.util.List<E> of();
+  public static <E> java.util.List<E> of(E);
+  public static <E> java.util.List<E> of(E, E);
+  public static <E> java.util.List<E> of(E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.List<E> of(E...);
+```
+* none of the element shoudl be null otherwase NPE 
+* of() are with 10 element and one witth var args for more then 10 element 
 
+### Set 
+* Set.of(x,x,....N)
+```
+  public static <E> java.util.Set<E> of();
+  public static <E> java.util.Set<E> of(E);
+  public static <E> java.util.Set<E> of(E, E);
+  public static <E> java.util.Set<E> of(E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E...);
+```
+
+### Map 
+* Map.of(K,V....N)
+```
+  public static <K, V> java.util.Map<K, V> of();
+  public static <K, V> java.util.Map<K, V> of(K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V);
+  public static <K, V> java.util.Map<K, V> ofEntries(java.util.Map$Entry<? extends K, ? extends V>...);
+```
 ---
 ## stream api enhancement 
 
