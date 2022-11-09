@@ -1,8 +1,10 @@
-## JAVA9 NEW FEATURES 21 sept 2017 
+## JAVA9 NEW FEATURES (21 sept 2017 )
+
 ---
 
 ## jshell 
-* to start 
+
+### to start 
 ```
 $ jshell 
 |  Welcome to JShell -- Version 17.0.2
@@ -14,11 +16,27 @@ jshell>
 jshell> System.out.println("welcome to espark");
 welcome to espark
 ```
-* To exit 
+### To exit 
 ```
 jshell> /exit
 |  Goodbye
 ```
+
+### To list active snippet 
+* package statement is not allowed other then all java valid statement is allowed 
+* /list 
+
+### Variable in Jshell 
+* explict & implicit variable 
+* variable overriding in jshell is exisits 
+* any java valid java variable creation statement is allowed 
+* List<String> list = List.of("adarsh","radha");
+  * list.stream().forEach(System.out::println);
+* To view the active variable 
+  * /vars --all
+
+
+
 
 ---
 
