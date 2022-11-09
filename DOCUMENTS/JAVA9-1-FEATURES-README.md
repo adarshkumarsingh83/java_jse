@@ -3,6 +3,7 @@
 ---
 
 ## jshell 
+* java REPL = read,evaluate,print,loop 
 
 ### TO Get jshll help 
 ```
@@ -292,6 +293,9 @@ jshell> System.out.println(msg);
 welcome to espark
 
 ```
+
+
+
 
 ---
 
