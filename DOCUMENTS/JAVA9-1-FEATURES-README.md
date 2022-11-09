@@ -27,6 +27,7 @@ jshell> /exit
 ### To list active snippet 
 * package statement is not allowed other then all java valid statement is allowed 
 * /list 
+* it will list all the type variable import class interface and mehods method call 
 
 ### setting up the custom editor with jshell 
 * /set editor "path of the editor" // for only session 
