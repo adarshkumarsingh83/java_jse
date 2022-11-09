@@ -264,6 +264,24 @@ Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
 ---
 
 ## stream api enhancement 
+* Collection: group of object stored in speicifc type of structure as the single eneity 
+* Stream: to process the group of object stored in the collections 
+* java.util.stream.* is the base package for streams 
+* filter(),map(),flatMap() 
+* jdk 1.9 enhancement 
+* streamObject.takeWhile(Predicate)
+  * default methods 
+  * predicate is the argument for this method 
+  * once predicate is false it will stream will be close for ever and rest of the element will be discarded 
+* streamObject.dropWhile(Predicate)
+  * default methods 
+  * predicate is the argument for this method 
+  * once predicate is true it will open for ever
+* Stream.iterate()
+  * static methods 
+* Stream.ofNullable()
+  * static methods 
+
 
 ---
 ## diomanod operator enhancment 
