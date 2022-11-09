@@ -33,6 +33,15 @@ collectionObject.stream()
 	.collect(Collectors.toList());
 ```
 
+### flatMap
+* for every element in the stream which can be further broken into multiple value and for those value stream can be generated 
+* when every element is itself a group of values or object containing multiple value which can be converted into streams 
+```
+collectionObject.stream()
+  .flatMap(e -> Arrays.asList(x+1,x+2,x+3...x+N).stream())
+  .collect(Collectors.toList());
+```
+
 ### collect()
 * collect() is stream instance mthod 
 * it accetps Collectors instance Collectors.toList(),Collectors.toSet(),
