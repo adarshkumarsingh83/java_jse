@@ -293,6 +293,7 @@ Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
   * Stream.ofNullable(object)
   * if args is null then empty stream will be return if element is not null then stream of args object 
   * mnostly used with flatMap()
+  * listObject.stream().flatMap(e -> Stream.ofNullable(x)).collect(Collectors.toList()); // null element will be skip in the stream 
 
 ---
 ## diomanod operator enhancment 
