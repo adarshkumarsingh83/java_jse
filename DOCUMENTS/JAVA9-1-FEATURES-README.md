@@ -272,16 +272,22 @@ Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
 * streamObject.takeWhile(Predicate)
   * default methods 
   * predicate is the argument for this method 
-  * once predicate is false it will stream will be close for ever and rest of the element will be discarded 
+  * consider the stream elements untill predicate is true, once predicate is false it will stream will be close for ever and rest of the element will be discarded 
 * streamObject.dropWhile(Predicate)
   * default methods 
   * predicate is the argument for this method 
-  * once predicate is true it will open for ever
+  * once predicate is true it will discard the stream element once its false it will open for ever and return all the element of the stream 
 * Stream.iterate()
   * static methods 
+  * iterate(2 args) intro in jdk 1.8
+    * iteratre(T initValue, UnarayOpeator operator)
+    * initvalue to iterate , operator for generate next value 
+    * Stream.iterate(1,x->x+1).forEach(System.out::print)
+  * iterate(3 args) intro in jdk 1.9
+    * 
 * Stream.ofNullable()
   * static methods 
-
+  * 
 
 ---
 ## diomanod operator enhancment 
