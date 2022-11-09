@@ -57,14 +57,26 @@ jshell> import java.util.stream.Stream;
 ```
 jshell> public class Service{
    ...>     public static void main(String ...args){
-   ...>         System.out.println("welcome to espark");
+   ...>         System.out.println("welcome to espark "+Arrays.asList(args));
    ...>     }
    ...> }
 |  created class Service
 
 jshell> Service.main("adarsh","radha");
-welcome to espark
+welcome to espark [adarsh, radha]
+```
 
+### inteface in jshell 
+```
+jshell> public interface Service{
+   ...>     public static void main(String ...args){
+   ...>         System.out.println("welcome to espark"+Arrays.asList(args));
+   ...>     }
+   ...> }
+|  replaced interface Service
+
+jshell> Service.main("adarsh","radha");
+welcome to espark[adarsh, radha]
 ```
 
 ### Variable in Jshell 
