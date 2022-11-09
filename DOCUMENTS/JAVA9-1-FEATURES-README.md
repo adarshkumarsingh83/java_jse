@@ -34,6 +34,8 @@ jshell> /exit
   * list.stream().forEach(System.out::println);
 * To view the active variable 
   * /vars --all
+* dropping variabe in jshell 
+  * /drop variable-name 
 
 
 
