@@ -205,6 +205,8 @@ welcome to espark
   * jshell -v --class-path location-of-jarfile1.jar;location-of-jarfile2.jar;location-of-jarfileN.jar;
 * existing jshell session 
   * jshell> /env --class-path location-of-jarfile1.jar;location-of-jarfile2.jar;location-of-jarfileN.jar;
+* add the jar file in the classpath variable in system env variable 
+
 
 ---
 
