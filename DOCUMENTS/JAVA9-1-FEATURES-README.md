@@ -26,7 +26,7 @@ jshell> /exit
 * package statement is not allowed other then all java valid statement is allowed 
 * /list 
 
-### method in jshell 
+### instance method in jshell 
 ```
 jshell> public void method(){
    ...>     System.out.println("welcome to espark");
@@ -37,9 +37,34 @@ jshell> method()
 welcome to espark
 ```
 
+### static method in jshell 
+```
+jshell> public static void method(){
+   ...>     System.out.println("welcome to espark");
+   ...> }
+|  modified method method()
+
+jshell> method();
+welcome to espark
+```
+
 ### import statement in jshell 
 ```
 jshell> import java.util.stream.Stream;
+```
+
+### class in jshell 
+```
+jshell> public class Service{
+   ...>     public static void main(String ...args){
+   ...>         System.out.println("welcome to espark");
+   ...>     }
+   ...> }
+|  created class Service
+
+jshell> Service.main("adarsh","radha");
+welcome to espark
+
 ```
 
 ### Variable in Jshell 
