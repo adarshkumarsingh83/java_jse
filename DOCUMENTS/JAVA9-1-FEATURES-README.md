@@ -232,7 +232,7 @@ jshell> /list -start
   * this will import all the default snippet in jshell 
 
 * jshell -v --startup JAVASE 
-  * this will import all the java se import all 170 package statement in jshell 
+  * this will import all the java se import all 173 package statement in jshell 
 
 * define own snippet in the file and save it as .jsh file 
 * jshell -v --startup DEFAULT startup-snippet.jsh 
