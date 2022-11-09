@@ -202,9 +202,9 @@ welcome to espark
 
 ### To set the jar files in the jshell 
 * new jshell session 
-  * jshell -v --class-path location-of-jarfile.jar
+  * jshell -v --class-path location-of-jarfile1.jar;location-of-jarfile2.jar;location-of-jarfileN.jar;
 * existing jshell session 
-  * jshell> /env --class-path location-of-jarfile.jar
+  * jshell> /env --class-path location-of-jarfile1.jar;location-of-jarfile2.jar;location-of-jarfileN.jar;
 
 ---
 
