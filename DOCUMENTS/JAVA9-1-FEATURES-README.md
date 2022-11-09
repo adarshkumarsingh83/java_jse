@@ -227,6 +227,13 @@ jshell> /list -start
  s10 : import java.util.stream.*;
 ```
 
+
+* jshell -v --startup DEFAULT
+  * this will import all the default snippet in jshell 
+
+* jshell -v --startup JAVASE 
+  * this will import all the java se import statement in jshell 
+
 * define own snippet in the file and save it as .jsh file 
 * jshell -v --startup DEFAULT startup-snippet.jsh 
 * DEFAULT is to ensuring that default snippet is also working with custom snippet 
