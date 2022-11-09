@@ -26,6 +26,16 @@ jshell> /exit
 * package statement is not allowed other then all java valid statement is allowed 
 * /list 
 
+### setting up the custom editor with jshell 
+* /set editor "path of the editor"
+* /set editor "c://programs/nodepad.exe"
+
+
+### editing code snippet in editor 
+* /edit 
+* it will open the active code snippet in the editor and we can edit the code click on accept and exit 
+* edited code will be avalibe in the jshell 
+
 ### instance method in jshell 
 ```
 jshell> public void method(){
