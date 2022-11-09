@@ -208,6 +208,47 @@ welcome to espark
 * add the jar file in the classpath variable in system env variable 
 
 
+### jshell startup snippet 
+* at the time of jshell start some default jshell startup snippet will be executed 
+* to list the startup snippt of the jshell 
+  * /list -start     
+```
+jshell> /list -start 
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+```
+
+* define own snippet in the file and save it as .jsh file 
+* jshell -v --startup startup-snippet.jsh 
+```
+$ cat > startup-snippet.jsh 
+String msg ="welcome to espark"
+^C 
+
+$ jshell -v --startup startup-snippet.jsh 
+welcome to espark
+|  Welcome to JShell -- Version 17.0.2
+|  For an introduction type: /help intro
+
+
+jshell> /list -start 
+
+  s1 : String msg ="welcome to espark";
+
+jshell> System.out.println(msg);
+welcome to espark
+
+```
+
 ---
 
 ## jpms(java platefomr modeul system)
