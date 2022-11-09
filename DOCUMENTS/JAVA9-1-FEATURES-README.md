@@ -284,7 +284,9 @@ Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
     * initvalue to iterate , operator for generate next value 
     * Stream.iterate(1,x->x+1).forEach(System.out::print)
   * iterate(3 args) intro in jdk 1.9
-    * 
+    * Stream.iterate(T initValue,Predicate p, UnarayOpeator operator)
+    * initvalue to iterate ,predicate for iteratation, operator for generate next value 
+    * Stream.iterate(1, x-> x<10 , x->x+1).forEach(System.out::print)
 * Stream.ofNullable()
   * static methods 
   * 
