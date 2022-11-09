@@ -228,13 +228,14 @@ jshell> /list -start
 ```
 
 * define own snippet in the file and save it as .jsh file 
-* jshell -v --startup startup-snippet.jsh 
+* jshell -v --startup DEFAULT startup-snippet.jsh 
+* DEFAULT is to ensuring that default snippet is also working with custom snippet 
 ```
 $ cat > startup-snippet.jsh 
 String msg ="welcome to espark"
 ^C 
 
-$ jshell -v --startup startup-snippet.jsh 
+$ jshell -v --startup DEFAULT startup-snippet.jsh 
 welcome to espark
 |  Welcome to JShell -- Version 17.0.2
 |  For an introduction type: /help intro
