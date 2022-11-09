@@ -232,6 +232,41 @@ jshell> /list -start
 * jshell -v --startup DEFAULT
   * this will import all the default snippet in jshell 
 
+
+* Printing option in jshell with PRINTING snippe 
+```
+$ jshell -v --startup PRINTING
+|  Welcome to JShell -- Version 17.0.2
+|  For an introduction type: /help intro
+
+jshell> /list -start 
+
+  s1 : void print(boolean b) { System.out.print(b); }
+  s2 : void print(char c) { System.out.print(c); }
+  s3 : void print(int i) { System.out.print(i); }
+  s4 : void print(long l) { System.out.print(l); }
+  s5 : void print(float f) { System.out.print(f); }
+  s6 : void print(double d) { System.out.print(d); }
+  s7 : void print(char s[]) { System.out.print(s); }
+  s8 : void print(String s) { System.out.print(s); }
+  s9 : void print(Object obj) { System.out.print(obj); }
+ s10 : void println() { System.out.println(); }
+ s11 : void println(boolean b) { System.out.println(b); }
+ s12 : void println(char c) { System.out.println(c); }
+ s13 : void println(int i) { System.out.println(i); }
+ s14 : void println(long l) { System.out.println(l); }
+ s15 : void println(float f) { System.out.println(f); }
+ s16 : void println(double d) { System.out.println(d); }
+ s17 : void println(char s[]) { System.out.println(s); }
+ s18 : void println(String s) { System.out.println(s); }
+ s19 : void println(Object obj) { System.out.println(obj); }
+ s20 : void printf(java.util.Locale l, String format, Object... args) { System.out.printf(l, format, args); }
+ s21 : void printf(String format, Object... args) { System.out.printf(format, args); }
+
+jshell> println("welcome to espark ")
+welcome to espark 
+```
+
 * jshell -v --startup JAVASE 
   * this will import all the java se import all 173 package statement in jshell 
 
