@@ -26,17 +26,47 @@ jshell> /exit
 * package statement is not allowed other then all java valid statement is allowed 
 * /list 
 
+### method in jshell 
+```
+jshell> public void method(){
+   ...>     System.out.println("welcome to espark");
+   ...> }
+|  created method method()
+
+jshell> method()
+welcome to espark
+```
+
+### import statement in jshell 
+```
+jshell> import java.util.stream.Stream;
+```
+
 ### Variable in Jshell 
 * explict & implicit variable 
 * variable overriding in jshell is exisits 
 * any java valid java variable creation statement is allowed 
-* List<String> list = List.of("adarsh","radha");
-  * list.stream().forEach(System.out::println);
+```
+jshell> List<String> list = List.of("adarsh","radha");
+list ==> [adarsh, radha]
+
+jshell> list.stream().forEach(System.out::println);
+adarsh
+radha
+```
 * To view the active variable 
   * /vars --all
+```
+jshell> /vars -all 
+|    List<String> list = (not-active)
+|    List<String> list = [adarsh, radha]
+```
 * dropping variabe in jshell 
   * /drop variable-name 
-
+```
+jshell> /drop list 
+|  dropped variable list
+```
 
 
 
