@@ -289,7 +289,10 @@ Map<KType,VType> map = Map<KType,VType>.ofEntires(entry1,entry2,...entryN);
     * Stream.iterate(1, x-> x<10 , x->x+1).forEach(System.out::print)
 * Stream.ofNullable()
   * static methods 
-  * 
+  * to prevent NPE in the stream 
+  * Stream.ofNullable(object)
+  * if args is null then empty stream will be return if element is not null then stream of args object 
+  * mnostly used with flatMap()
 
 ---
 ## diomanod operator enhancment 
