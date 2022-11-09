@@ -11,11 +11,13 @@ $ jshell
 |  For an introduction type: /help intro
 jshell>
 ```
-* to use 
+
+### to use 
 ```
 jshell> System.out.println("welcome to espark");
 welcome to espark
 ```
+
 ### To exit 
 ```
 jshell> /exit
@@ -27,7 +29,9 @@ jshell> /exit
 * /list 
 
 ### setting up the custom editor with jshell 
-* /set editor "path of the editor"
+* /set editor "path of the editor" // for only session 
+* /set editor --retain "path of the editor" // for permanent 
+* /set editor --default // default jshell editor to set for session use -retain for make it permanent 
 * /set editor "c://programs/nodepad.exe"
 
 
@@ -56,6 +60,12 @@ jshell> public static void method(){
 
 jshell> method();
 welcome to espark
+```
+
+### to list the active method sinippt 
+```
+ jshell> /methods -all
+|    void method()
 ```
 
 ### import statement in jshell 
