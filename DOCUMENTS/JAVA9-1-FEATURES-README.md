@@ -4,6 +4,11 @@
 
 ## jshell 
 
+### TO Get jshll help 
+```
+jshell> /help
+```
+
 ### to start 
 ```
 $ jshell 
@@ -72,6 +77,19 @@ welcome to espark
 ### import statement in jshell 
 ```
 jshell> import java.util.stream.Stream;
+
+jshell> /imports -all 
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+|    import java.util.stream.Stream
 ```
 
 ### class in jshell 
@@ -100,6 +118,27 @@ jshell> Service.main("adarsh","radha");
 welcome to espark[adarsh, radha]
 ```
 
+### to list inteface in shell 
+```
+jshell> /types
+|    interface Service
+```
+
+
+### enum in jshell 
+```
+jshell> public enum Days{
+   ...>     SUNDAY,
+   ...>     MONDAY,
+   ...>     TUESEDAY,
+   ...> }
+|  created enum 
+
+jshell> Days.SUNDAY
+$23 ==> SUNDAY
+```
+
+
 ### Variable in Jshell 
 * explict & implicit variable 
 * variable overriding in jshell is exisits 
@@ -127,6 +166,39 @@ jshell> /drop list
 ```
 
 
+### To Open java code from java file 
+* create a file .jsh extention 
+* go to the location where file is stored 
+* /open file.jsh
+* /list 
+
+### To set the jar files in the jshell 
+```
+
+$ cat > sample.jsh
+class Sample{
+    public void operation(){
+     System.out.println("welcome to espark");
+   }
+}
+^C
+
+* go to the location where sample.jsh file is created 
+* $ jshell -v 
+jshell> /open sample.jsh
+
+jshell> /list
+
+   1 : class Sample{
+       public void operation(){
+       System.out.println("welcome to espark");
+       }
+       }
+
+
+jshell> new Sample().operation();
+welcome to espark
+```
 
 ---
 
