@@ -227,7 +227,8 @@ jshell> /list -start
  s10 : import java.util.stream.*;
 ```
 
-
+* jshell -v
+* or 
 * jshell -v --startup DEFAULT
   * this will import all the default snippet in jshell 
 
