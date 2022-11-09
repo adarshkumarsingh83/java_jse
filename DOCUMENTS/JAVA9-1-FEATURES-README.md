@@ -172,7 +172,7 @@ jshell> /drop list
 * /open file.jsh
 * /list 
 
-### To set the jar files in the jshell 
+### To open the code snippet from .jsh files 
 ```
 
 $ cat > sample.jsh
@@ -199,6 +199,9 @@ jshell> /list
 jshell> new Sample().operation();
 welcome to espark
 ```
+
+### To set the jar files in the jshell 
+* jshell -v --class-path location-of-jarfile.jar
 
 ---
 
