@@ -125,6 +125,25 @@ jshell> main("adarsh");
 adarsh
 ```
 
+* we can't use undiclared variable inside the method in jshell untill its diclared 
+```
+jshell> public void operaton(){
+   ...>     System.out.println(var);
+   ...> }
+|  created method operaton(), however, it cannot be invoked until variable var is declared
+
+jshell> operaton();
+|  attempted to call method operaton() which cannot be invoked until variable var is declared
+
+jshell> int var = 100
+var ==> 100
+|  created variable var : int
+|    update modified method operaton()
+
+jshell> operaton();
+100
+```
+
 ### static method in jshell 
 ```
 jshell> public static void method(){
