@@ -165,14 +165,21 @@ $23 ==> SUNDAY
   * when variable is the result of any opration and its created automatically its implicit and its also know as strach variable 
 ```
 jshell> 10+20
-$1 ==> 30
-|  created scratch variable $1 : int
+$3 ==> 30
+|  created scratch variable $3 : int
+
+jshell> System.out.println($3);
+30
 ```
   * when variable is created by programmer explicitly its explic variable 
 ```
 jshell> int x = 20+30;
 x ==> 50
-|  created variable x : int
+|  modified variable x : int
+|    update overwrote variable x : int
+
+jshell> System.out.println(x);
+50
 ```
 * variable overriding in jshell is exisits 
 * any java valid java variable creation statement is allowed 
