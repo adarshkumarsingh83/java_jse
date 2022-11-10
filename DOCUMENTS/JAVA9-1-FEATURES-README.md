@@ -276,6 +276,22 @@ jshell> Days.SUNDAY
 $23 ==> SUNDAY
 ```
 
+### classes interface enum in jsheel 
+```
+jshell> interface Service{}
+|  created interface Service
+
+jshell> class PaidService implements Service{}
+|  created class PaidService
+
+jshell> enum Days{}
+|  created enum Days
+
+jshell> /types 
+|    interface Service
+|    class PaidService
+|    enum Days
+```
 
 ### Variable in Jshell 
 * explict & implicit variable 
