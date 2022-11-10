@@ -195,7 +195,9 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
   * even public class from any package if its not exported from module will not be visible to use outside 
 
 * Jdk/jre monolithic structure with large size 
-  * 
+  * till jdk 1.8 JRE size is 201MB 
+  * to run only one line code rt.jar file is requred in classpath which contains everythings 
+  * we can use Jlink to create customized jre for iot with samll size 
 
 
 
