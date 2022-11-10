@@ -350,7 +350,39 @@ jshell> pw.println("welcome to espark");
 ## dropping snippett 
 * /drop snippetId 
 * /drop snippetName 
-  * drop the snippet based on the id or name 
+  * drop the snippet based on the id or name
+```
+jshell> /list 
+
+   1 : 10+20
+   3 : 10+20
+   4 : System.out.println($3);
+   5 : int x = 20+30;
+   6 : System.out.println(x);
+
+jshell> /drop 3
+|  dropped variable $
+
+jshell> /drop x 
+|  dropped variable x
+```
+
+## execute snippet based on id 
+* /snippetId 
+  * it will execute the snippet direclty 
+```
+jshell> /list 
+
+   1 : 10+20
+   3 : 10+20
+   4 : System.out.println($3);
+   5 : int x = 20+30;
+   6 : System.out.println(x);
+
+jshell> /6
+System.out.println(x);
+50
+```
 
 ---
 
