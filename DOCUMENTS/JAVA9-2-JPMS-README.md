@@ -178,13 +178,6 @@ execution half completed
 Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Service
 ```
 
-Free Service Performed
-Service performed
-Paid Service Performed
-Service performed
-
-## delete the Service.class file from 
-
 * Version Conflect/Shadowing 
 * Security
 * Jdk/jre monolithic structure with large size 
