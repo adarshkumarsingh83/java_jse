@@ -376,6 +376,17 @@ jshell> /drop $3
 * /open file.jsh
 * /list 
 
+
+### To save the code sinippet to the file 
+* /save fileName.jsh 
+  * save only active sinnpet to the file 
+* /save -history fielName.jsh 
+  * save the sequential history of all cmd to file 
+* /save -start fileName.jsh 
+  * to save startup sinnpet to the file 
+* /help save // to see the option of save cmd 
+
+
 ### To open the code snippet from .jsh files 
 ```
 
