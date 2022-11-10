@@ -211,3 +211,16 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
   * module contains configuration informaiton in form of module-info.java 
   * if module-info.java is not avaliabe in module then jvm will not consider that moudle as module 
 
+### jar file v/s module 
+* jar file is group of packages 
+  * packages contains interface classes and enum 
+  * claspaht is used for the jar file and evaluted from left to right order 
+* module is group of packages 
+  * packages contains interface classes and enum 
+  * module conatians module-info.java
+    * this file contains configureation related to 
+      * requried modules, classes 
+      * export classes, packages 
+      * trasitivity dependecy 
+      * other configuration 
+  * module path is used to keep modules for program exeuction 
