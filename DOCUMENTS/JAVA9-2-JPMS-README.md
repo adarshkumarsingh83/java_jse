@@ -302,34 +302,34 @@ public class ServiceDriver {
   * $ javac --module-source-path src  -d out -m module_example
 ```
 module-basic-example
+├── out
+│   └── module_example
+│       ├── com
+│       │   └── adarsh
+│       │       ├── ServiceDriver.class
+│       │       ├── free
+│       │       │   └── FreeService.class
+│       │       ├── paid
+│       │       │   └── PaidService.class
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
 └── src
-    ├── module_example //name of module same in module-info.java 
-    │   ├── com
-    │   │   └── adarsh
-    │   │       ├── ServiceDriver.java
-    │   │       ├── free
-    │   │       │   └── FreeService.java
-    │   │       ├── paid
-    │   │       │   └── PaidService.java
-    │   │       └── service
-    │   │           └── Service.java
-    │   └── module-info.java
-    └── out
-        └── module_example
-            ├── com
-            │   └── adarsh
-            │       ├── ServiceDriver.class
-            │       ├── free
-            │       │   └── FreeService.class
-            │       ├── paid
-            │       │   └── PaidService.class
-            │       └── service
-            │           └── Service.class
-            └── module-info.class
+    └── module_example
+        ├── com
+        │   └── adarsh
+        │       ├── ServiceDriver.java
+        │       ├── free
+        │       │   └── FreeService.java
+        │       ├── paid
+        │       │   └── PaidService.java
+        │       └── service
+        │           └── Service.java
+        └── module-info.java
 ```
 * to execute the application 
   * java --module-path /destination-dir-location-for-generated-classes  -m module_name/package/ClassName.class 
-  * java --module-path src/out/ -m module_example/com.adarsh.ServiceDriver
+  * java --module-path out/ -m module_example/com.adarsh.ServiceDriver
 ```
 execution started 
 execution half completed
