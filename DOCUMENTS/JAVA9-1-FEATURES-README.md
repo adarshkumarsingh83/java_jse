@@ -574,6 +574,36 @@ jshell> main("adarsh")
 welcome to espark
 
 ```
+
+
+### Resotre the previous session snippet into the current session 
+* /reload --restore 
+```
+$ jshell --v 
+|  Welcome to JShell -- Version 17.0.2
+|  For an introduction type: /help intro
+
+jshell> int x =10
+x ==> 10
+|  created variable x : int
+
+jshell> int y = 20
+y ==> 20
+|  created variable y : int
+
+jshell> /exit 
+|  Goodbye
+$ jshell --v 
+|  Welcome to JShell -- Version 17.0.2
+|  For an introduction type: /help intro
+
+jshell> /list 
+
+jshell> /reload -restore
+|  Restarting and restoring from previous state.
+-: int x =10;
+-: int y = 20;
+```
 ---
 
 ## jpms(java plateform module system)
