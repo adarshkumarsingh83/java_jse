@@ -192,6 +192,9 @@ jshell> /methods --all
 ### To drop the method 
 * /drop methodName, methodName,... NmethodName
 ```
+jshell> /methods --all
+|    void operationbotton()
+
 jshell> /drop operationbotton
 |  dropped method operationbotton()
 ```
