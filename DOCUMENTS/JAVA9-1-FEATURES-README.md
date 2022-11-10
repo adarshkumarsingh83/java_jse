@@ -56,6 +56,8 @@ jshell> /exit
   * it will list all the type variable import class interface and mehods method call 
 * /list 1snippitId,  2snippitId, ... NsnippitId
   * To list the snippet id 
+* /list 1snippitName,  2snippitName, ... NsnippitName
+  * To list the snippet name 
 
 ### setting up the custom editor with jshell 
 * /set editor "path of the editor" // for only session 
@@ -345,6 +347,10 @@ pw ==> java.io.PrintWriter@1d81eb93
 jshell> pw.println("welcome to espark");
 ```
 
+## dropping snippett 
+* /drop snippetId 
+* /drop snippetName 
+  * drop the snippet based on the id or name 
 
 ---
 
