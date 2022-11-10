@@ -370,7 +370,6 @@ jshell> /drop $3
 |  dropped variable $3
 ```
 
-
 ### To Open java code from java file 
 * create a file .jsh extention 
 * go to the location where file is stored 
