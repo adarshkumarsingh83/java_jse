@@ -217,6 +217,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
   * claspaht is used for the jar file and evaluted from left to right order 
 * module is group of packages 
   * packages contains interface classes and enum 
+  * package is mandaory for every class interfaceand enum if package statment is missing CTE 
   * module conatians module-info.java
     * this file contains configureation related to 
       * requried modules, classes 
@@ -224,3 +225,117 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
       * trasitivity dependecy 
       * other configuration 
   * module path is used to keep modules for program exeuction 
+
+
+### module-info.java structure 
+```
+   module module_name{
+ 
+       //dependency of other module to current module 
+        requires xxxx;
+
+       // dependecy requred by other module via current module 
+        requires transitive  xxxx;
+ 
+      // packages exported by current module to others 
+       export com.xx.xx;
+
+      //
+
+   }
+```
+
+### basic module applicaton 
+```
+module-basic-example
+└── src
+    └── module_example
+        ├── com
+        │   └── adarsh
+        │       ├── ServiceDriver.java
+        │       ├── free
+        │       │   └── FreeService.java
+        │       ├── paid
+        │       │   └── PaidService.java
+        │       └── service
+        │           └── Service.java
+        └── module-info.java        
+
+package com.adarsh.free;
+import com.adarsh.service.Service;
+public class FreeService implements Service {
+    public void freeService(){
+        System.out.println("Free Service Performed");
+        doService();
+    }
+}
+$ javac -d . FreeService.java 
+
+package com.adarsh.paid;
+import com.adarsh.service.Service;
+public class PaidService implements Service {
+    public void paidService(){
+        System.out.println("Paid Service Performed");
+        doService();
+    }
+}
+$ javac -d . PaidService.java
+
+package com.adarsh;
+import com.adarsh.free.FreeService;
+import com.adarsh.paid.PaidService;
+public class ServiceDriver {
+    public static void main(String[] args) throws Exception{
+        System.out.println("execution started ");
+        Thread.currentThread().sleep(1000);
+        System.out.println("execution half completed");
+        FreeService freeService = new FreeService();
+        freeService.freeService();
+        PaidService paidService = new PaidService();
+        paidService.paidService();
+        System.out.println("execution completed");
+    }
+}
+```
+* to Compile module applictaoin 
+  * javac --module-source-path /module-source-directory -d /destination-dir-location-for-generated-classes -m module_name
+  * $ javac --module-source-path src  -d out -m module_example
+```
+module-basic-example
+└── src
+    ├── module_example
+    │   ├── com
+    │   │   └── adarsh
+    │   │       ├── ServiceDriver.java
+    │   │       ├── free
+    │   │       │   └── FreeService.java
+    │   │       ├── paid
+    │   │       │   └── PaidService.java
+    │   │       └── service
+    │   │           └── Service.java
+    │   └── module-info.java
+    └── out
+        └── module_example
+            ├── com
+            │   └── adarsh
+            │       ├── ServiceDriver.class
+            │       ├── free
+            │       │   └── FreeService.class
+            │       ├── paid
+            │       │   └── PaidService.class
+            │       └── service
+            │           └── Service.class
+            └── module-info.class
+```
+* to execute the application 
+  * java --module-path /destination-dir-location-for-generated-classes  -m module_name/package/ClassName.class 
+  * java --module-path src/out/ -m module_example/com.adarsh.ServiceDriver
+```
+execution started 
+execution half completed
+Free Service Performed
+Service performed
+Paid Service Performed
+Service performed
+execution half completed
+```
