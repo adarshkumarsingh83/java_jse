@@ -522,6 +522,25 @@ System.out.println(x);
 50
 ```
 
+
+### edit the snippet 
+* /edit 
+```
+jshell> /edit
+..............................................................
+public static void main(String ...args){
+System.out.println("welcome to espark");
+}
+..............................................................
+click Accept and then Exit 
+
+|  created method main(String ...)
+
+
+jshell> main("adarsh")
+welcome to espark
+
+```
 ---
 
 ## jpms(java platefomr modeul system)
