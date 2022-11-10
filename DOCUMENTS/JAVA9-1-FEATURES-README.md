@@ -5,6 +5,10 @@
 ## jshell 
 * java REPL = read,evaluate,print,loop 
 * any line start with pipe sysmbl its extra info from jshell 
+* jshell can exeucte any java valid statement other then package 
+* Most of the package is already imported in the jsell 
+* jshell internal compiler will check the syntax 
+* checked exception is ignored in jshell 
 
 ### TO Get jshll help 
 ```
