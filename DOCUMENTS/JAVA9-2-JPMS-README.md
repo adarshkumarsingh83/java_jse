@@ -97,6 +97,7 @@ module java.sql
 * NoClassDefFoundError at the runtime 
   * jvm don't check the .class file before program start 
   * if .class file for the Servic is missing it will execute till FreeService/PaidService then NoClassDefError will occured 
+  * but in jdk1.9 module-info.java containes speific rquested statment due to which it will check the avalibity of .class file before execution 
 ```
 ├── FreeService.java
 ├── PaidService.java
@@ -186,7 +187,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
     * if .class file is not found then it will say NoClassDefFound 
     * if multiple jar file contains same .class file with different version of same .class file then what ever is found first will be loaded rest of the jar ignored 
     * due to this .jar file version conflict will result in showing problem also  
-  
+    * but due to required statement in module-info.java it will alwasy pick .class file from specific module 
 
 * Security
 * Jdk/jre monolithic structure with large size 
