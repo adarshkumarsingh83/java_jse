@@ -191,6 +191,17 @@ jshell> System.out.println(x);
 50
 ```
 * variable overriding in jshell is exisits 
+  * when diclared a same variable with same name old copy will be replace with new copy and type 
+```
+jshell> int x = 10;
+x ==> 10
+|  created variable x : int
+
+jshell> String x = "adarsh"
+x ==> "adarsh"
+|  replaced variable x : String
+|    update overwrote variable x : int
+```
 * any java valid java variable creation statement is allowed 
 ```
 jshell> List<String> list = List.of("adarsh","radha");
