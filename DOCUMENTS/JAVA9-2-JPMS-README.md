@@ -179,6 +179,15 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 ```
 
 * Version Conflect/Shadowing 
+  * classpth where .jar file or .class file informtion is provided to execute the progjram 
+  * class path will be evaluted left to right in the class path 
+    * classpath=jar1;jar2....jarN
+    * if .class file is avalable in jar1 then rest of the jar will be ignored 
+    * if .class file is not found then it will say NoClassDefFound 
+    * if multiple jar file contains same .class file with different version of same .class file then what ever is found first will be loaded rest of the jar ignored 
+    * due to this .jar file version conflict will result in showing problem also  
+  
+
 * Security
 * Jdk/jre monolithic structure with large size 
 
