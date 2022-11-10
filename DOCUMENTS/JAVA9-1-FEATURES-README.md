@@ -296,7 +296,7 @@ welcome to espark
 ```
 
 ### checked exception in jshell 
-* jshell will is lenient with checked excpertion in jshell 
+* jshell is lenient with checked excpertion  
 * in below snippet checked exception of FileNotFoundException is ignored by jshell compiler 
 ```
 jshell> PrintWriter pw = new PrintWriter("a.txt")
