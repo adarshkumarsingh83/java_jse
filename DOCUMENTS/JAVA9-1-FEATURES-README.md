@@ -125,7 +125,7 @@ jshell> main("adarsh");
 adarsh
 ```
 
-* we can't use undiclared variable inside the method in jshell untill its diclared 
+* we can diclared method with undiclared variable but can't use any  method untill its variable is diclared 
 ```
 jshell> public void operaton(){
    ...>     System.out.println(var);
@@ -144,7 +144,7 @@ jshell> operaton();
 100
 ```
 
-* we can't use any undiclared method inside the method 
+* we can diclared method with undiclared method but can't use any undiclared method untill its diclared 
 ```
 jshell> public void operationTop(){
    ...>     operationBotton();
