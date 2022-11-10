@@ -24,6 +24,12 @@
 * info about any specific cmd 
   * jshell> /help command 
 
+* to know list of cmd without discrption 
+  * jshell> press tab 
+
+* to know the cmd option in jshell 
+  * jshell> cmd [press the tab]
+
 ### to start 
 ```
 $ jshell 
