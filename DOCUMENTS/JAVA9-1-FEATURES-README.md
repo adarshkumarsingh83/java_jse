@@ -10,10 +10,19 @@
 * jshell internal compiler will check the syntax 
 * checked exception is ignored in jshell 
 
-### TO Get jshll help 
-```
-jshell> /help
-```
+
+### help in jshell 
+* list of option avaliable with jjshell 
+  * akumar $ jshell --help  
+
+* jshell infor 
+  * jshell> /help intro 
+
+* jshell command list 
+  * jshell> /help
+
+* info about any specific cmd 
+  * jshell> /help command 
 
 ### to start 
 ```
