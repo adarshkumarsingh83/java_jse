@@ -176,12 +176,24 @@ jshell> method();
 welcome to espark
 ```
 
-
-
 ### to list the active method sinippt 
 ```
- jshell> /methods -all
-|    void method()
+jshell> /methods --all
+|    void main(String ...)
+|    void main(String ...)
+|    void method(String ...)
+|    void method(int ...)
+|    void operaton()
+|    void operationTop()
+|    void operationbotton()
+|    void operationBotton()
+```
+
+### To drop the method 
+* /drop methodName
+```
+jshell> /drop operationbotton
+|  dropped method operationbotton()
 ```
 
 ### import statement in jshell 
