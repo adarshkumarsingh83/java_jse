@@ -609,6 +609,23 @@ jshell> /list
    1 : int x =10;
    2 : int y = 20;
 ```
+
+### To reset the jshell to default state 
+* /rest 
+  * reset to the default state 
+```
+jshell> /list
+
+   1 : int x =10;
+   2 : int y = 20;
+
+jshell> /reset
+|  Resetting state.
+
+jshell> /list
+
+```
+
 ---
 
 ## jpms(java plateform module system)
