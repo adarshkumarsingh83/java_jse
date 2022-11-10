@@ -603,6 +603,11 @@ jshell> /reload -restore
 |  Restarting and restoring from previous state.
 -: int x =10;
 -: int y = 20;
+
+jshell> /list
+
+   1 : int x =10;
+   2 : int y = 20;
 ```
 ---
 
