@@ -301,6 +301,12 @@ public class ServiceDriver {
   * $ javac --module-source-path src  -d out -m module_example
   * or 
    * $ javac --module-source-path src  -d out --module module_example
+  * or 
+  * javac --module-source-path out src/module_example/module-info.java src/module_example/com/adarsh/service/Service.java src/module_example/com/adarsh/free/FreeService.java src/module_example/com/adarsh/paid/PaidService.java src/module_example/com/adarsh/ServiceDriver.java
+    * relative path with path starts with src directory 
+  * or 
+ * javac --module-source-path out src/module_example/module-info.java /desktop/module-basic-example/src/module_example/com/adarsh/service/Service.java /desktop/module-basic-examplesrc/module_example/com/adarsh/free/FreeService.java /desktop/module-basic-examplesrc/module_example/com/adarsh/paid/PaidService.java /desktop/module-basic-examplesrc/module_example/com/adarsh/ServiceDriver.java
+  * absulate path of the files 
 ```
 module-basic-example
 ├── out
@@ -332,11 +338,10 @@ module-basic-example
   * java --module-path /destination-dir-location-for-generated-classes  -m module_name/package/ClassName.class 
   * java --module-path out/ -m module_example/com.adarsh.ServiceDriver
   * or 
-  * java --module-path out src/module_example/module-info.java src/module_example/com/adarsh/service/Service.java src/module_example/com/adarsh/free/FreeService.java src/module_example/com/adarsh/paid/PaidService.java src/module_example/com/adarsh/ServiceDriver.java
-    * with path starts with src directory 
+  * java --module-path out/ --module module_example/com.adarsh.ServiceDriver
   * or 
- * java --module-path out src/module_example/module-info.java /desktop/module-basic-example/src/module_example/com/adarsh/service/Service.java /desktop/module-basic-examplesrc/module_example/com/adarsh/free/FreeService.java /desktop/module-basic-examplesrc/module_example/com/adarsh/paid/PaidService.java /desktop/module-basic-examplesrc/module_example/com/adarsh/ServiceDriver.java
-  * absulate path of the files 
+  * java --module-path out/ --add-modules module_example com.adarsh.ServiceDriver
+
 ```
 execution started 
 execution half completed
