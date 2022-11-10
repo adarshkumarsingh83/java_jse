@@ -86,6 +86,44 @@ jshell> public void method(){
 jshell> method()
 welcome to espark
 ```
+* method overloading 
+```
+jshell> public void method(String ...args){
+   ...>      Arrays.asList(args).stream().forEach(System.out::println);
+   ...> }
+|  created method method(String ...)
+
+jshell> public void method(int ...args){
+   ...>      Arrays.asList(args).stream().forEach(System.out::println);
+   ...> }
+|  created method method(int ...)
+
+jshell> method("adarsh");
+adarsh
+
+jshell> method(10,20);
+[I@4edde6e5
+```
+
+* method overriding 
+```
+jshell> public void main(String ...args){
+   ...>     System.out.println("welcom");
+   ...> }
+|  created method main(String ...)
+
+jshell> main("adarsh");
+welcom
+
+jshell> public void main(String ...args){
+   ...>     Arrays.asList(args).stream().forEach(System.out::println);
+   ...> }
+|  modified method main(String ...)
+|    update overwrote method main(String ...)
+
+jshell> main("adarsh");
+adarsh
+```
 
 ### static method in jshell 
 ```
@@ -97,6 +135,8 @@ jshell> public static void method(){
 jshell> method();
 welcome to espark
 ```
+
+
 
 ### to list the active method sinippt 
 ```
