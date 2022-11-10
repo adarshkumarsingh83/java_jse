@@ -190,11 +190,24 @@ jshell> /methods --all
 ```
 
 ### To drop the method 
-* /drop methodName
+* /drop methodName, methodName,... NmethodName
 ```
 jshell> /drop operationbotton
 |  dropped method operationbotton()
 ```
+* if multiple methods exists with same name all will be deleted 
+```
+jshell> /methods --all
+|    void m()
+|    void m(int)
+|    void m(String)
+
+jshell> /drop m
+|  dropped method m()
+|  dropped method m(int)
+|  dropped method m(String)
+```
+
 
 ### import statement in jshell 
 ```
