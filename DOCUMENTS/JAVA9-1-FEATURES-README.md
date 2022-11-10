@@ -565,7 +565,7 @@ welcome to espark
 ```
 ---
 
-## jpms(java plateform modeul system)
+## jpms(java plateform module system)
 
 
 ---
