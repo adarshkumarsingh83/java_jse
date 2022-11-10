@@ -190,7 +190,14 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
     * but due to "required module" statement in module-info.java it will alwasy pick .class file from specific module 
 
 * Security
+  * jar file contains multiple packages its pulbic to everyone their is lack of option to provide accessablity to the packges of the jar file until jdk1.8 
+  * from jdk1.9 we have define the "export package" satement in module-info.java so that only requred package can be made visible to use 
+  * even public class from any package if its not exported from module will not be visible to use outside 
+
 * Jdk/jre monolithic structure with large size 
+  * 
+
+
 
 ### Module based developmet 
 * till jdk 1.8 programming style 
