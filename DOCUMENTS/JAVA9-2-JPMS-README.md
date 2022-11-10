@@ -147,7 +147,7 @@ import com.adarsh.paid.PaidService;
 public class ServiceDriver {
     public static void main(String[] args) throws Exception{
         System.out.println("execution started ");
-        Thread.currentThread().sleep(10000);
+        Thread.currentThread().sleep(1000);
         System.out.println("execution half completed");
         FreeService freeService = new FreeService();
         freeService.freeService();
