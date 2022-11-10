@@ -265,15 +265,22 @@ jshell> /types
 
 ### enum in jshell 
 ```
-jshell> public enum Days{
-   ...>     SUNDAY,
-   ...>     MONDAY,
-   ...>     TUESEDAY,
+jshell> enum Days{
+   ...>     SUNDAY("FUNDAY"),MONDAY("WORKDAY"),TUSEDAY("TIRED");
+   ...>     String desc;
+   ...>     Days(String desc){
+   ...>         this.desc = desc;
+   ...>     }
+   ...>     public String getDesc(){
+   ...>         return this.desc;
+   ...>     }
    ...> }
-|  created enum 
+|  replaced enum Days
+|    update overwrote enum Days
 
-jshell> Days.SUNDAY
-$23 ==> SUNDAY
+jshell> Days.SUNDAY.getDesc()
+$6 ==> "FUNDAY"
+|  created scratch variable $6 : String
 ```
 
 ### classes interface enum in jsheel 
