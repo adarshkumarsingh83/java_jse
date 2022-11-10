@@ -212,7 +212,11 @@ adarsh
 radha
 ```
 * To view the active variable 
-  * /vars --all
+  * /vars --all [name] [id]
+  * /vars --all [name] [id]
+  * /var --all [name] [id]
+  * /v  --all [name] [id]
+
 ```
 jshell> /vars -all 
 |    List<String> list = (not-active)
@@ -220,9 +224,19 @@ jshell> /vars -all
 ```
 * dropping variabe in jshell 
   * /drop variable-name 
+  * /drop variable-id
 ```
 jshell> /drop list 
 |  dropped variable list
+
+or 
+
+jshell> 10+20
+$3 ==> 30
+|  created scratch variable $3 : int
+
+jshell> /drop $3
+|  dropped variable $3
 ```
 
 
