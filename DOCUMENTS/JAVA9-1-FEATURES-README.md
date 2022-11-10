@@ -48,6 +48,11 @@ welcome to espark
 ```
 jshell> /exit
 |  Goodbye
+
+or 
+
+jshell> /ex 
+|  Goodbye
 ```
 
 ### To list active snippet 
@@ -166,7 +171,7 @@ $23 ==> SUNDAY
 
 ### Variable in Jshell 
 * explict & implicit variable 
-  * when variable is the result of any opration and its created automatically its implicit and its also know as strach variable 
+  * when variable is the result of any opration and its created automatically its implicit and its also know as strach variable to hold the operation result 
 ```
 jshell> 10+20
 $3 ==> 30
