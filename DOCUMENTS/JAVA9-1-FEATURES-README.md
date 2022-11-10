@@ -144,6 +144,27 @@ jshell> operaton();
 100
 ```
 
+* we can't use any undiclared method inside the method 
+```
+jshell> public void operationTop(){
+   ...>     operationBotton();
+   ...> }
+|  created method operationTop(), however, it cannot be invoked until method operationBotton() is declared
+
+
+jshell> operationTop()
+|  attempted to call method operationTop() which cannot be invoked until method operationBotton() is declared
+
+jshell> public void operationBotton(){
+   ...>     System.out.println("welcome to the espark");
+   ...> }
+|  created method operationBotton()
+|    update modified method operationTop()
+
+jshell> operationTop()
+welcome to the espark
+```
+
 ### static method in jshell 
 ```
 jshell> public static void method(){
