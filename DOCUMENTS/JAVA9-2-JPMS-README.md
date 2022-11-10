@@ -303,7 +303,7 @@ public class ServiceDriver {
 ```
 module-basic-example
 └── src
-    ├── module_example
+    ├── module_example //name of module same in module-info.java 
     │   ├── com
     │   │   └── adarsh
     │   │       ├── ServiceDriver.java
