@@ -218,7 +218,8 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 * module is group of packages 
   * packages contains interface classes and enum 
   * package is mandaory for every class interfaceand enum if package statment is missing CTE 
-  * module conatians module-info.java
+  * module conatians module-info.java its mandatory otherwise jvm will not consider module 
+  * module name ends with digit is not recommended compiler will warn for this 
     * this file contains configureation related to 
       * requried modules, classes 
       * export classes, packages 
