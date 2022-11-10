@@ -270,7 +270,6 @@ public class FreeService implements Service {
         doService();
     }
 }
-$ javac -d . FreeService.java 
 
 package com.adarsh.paid;
 import com.adarsh.service.Service;
@@ -280,7 +279,6 @@ public class PaidService implements Service {
         doService();
     }
 }
-$ javac -d . PaidService.java
 
 package com.adarsh;
 import com.adarsh.free.FreeService;
