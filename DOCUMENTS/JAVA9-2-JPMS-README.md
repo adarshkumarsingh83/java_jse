@@ -477,7 +477,7 @@ module main {
 
 * To Compile multiple module 
   * javac --module-source-path /module-source-directory -d /destination-dir-location-for-generated-classes -m module1, moduel2 ... moduleN 
-  * javac --module-source-path src -d out -m free_service,free_service,service,main
+  * javac --module-source-path src -d out -m free_service,paid_service,service,main
     * note : in -m option no space betwen multiple module names otherwise it will not compile 
 
 ```
@@ -545,3 +545,134 @@ Paid Service Performed
 Service performed
 execution half completed
 ```
+
+### when compiled files are in multiple directories 
+* javac --module-source-path src -d out1 -m service
+* javac --module-source-path src -d out2 -m free_service
+* javac --module-source-path src -d out3 -m paid_service
+* javac --module-source-path src -d out4 -m main
+```
+├── README.md
+├── out1
+│   └── service
+│       ├── com
+│       │   └── adarsh
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
+├── out2
+│   ├── free_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── free
+│   │   │           └── FreeService.class
+│   │   └── module-info.class
+│   └── service
+│       ├── com
+│       │   └── adarsh
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
+├── out3
+│   ├── paid_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── paid
+│   │   │           └── PaidService.class
+│   │   └── module-info.class
+│   └── service
+│       ├── com
+│       │   └── adarsh
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
+├── out4
+│   ├── free_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── free
+│   │   │           └── FreeService.class
+│   │   └── module-info.class
+│   ├── main
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── ServiceDriver.class
+│   │   └── module-info.class
+│   ├── paid_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── paid
+│   │   │           └── PaidService.class
+│   │   └── module-info.class
+│   └── service
+│       ├── com
+│       │   └── adarsh
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
+└── src
+    ├── free_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── free
+    │   │           └── FreeService.java
+    │   └── module-info.java
+    ├── main
+    │   ├── README.md
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── ServiceDriver.java
+    │   └── module-info.java
+    ├── paid_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── paid
+    │   │           └── PaidService.java
+    │   └── module-info.java
+    └── service
+        ├── com
+        │   └── adarsh
+        │       └── service
+        │           └── Service.java
+        └── module-info.java
+```
+* To Execute Application Moduels with different directories 
+  * java --upgrade-module-path out1;out2;out3;out4; -m main/com.adarsh.ServiceDriver
+
+### when source file is in multiple locaction 
+```
+└── src1
+    ├── free_service
+       ├── com
+       │   └── adarsh
+       │       └── free
+       │           └── FreeService.java
+       └── module-info.java
+└── src2
+    ├── main
+       ├── README.md
+       ├── com
+       │   └── adarsh
+       │       └── ServiceDriver.java
+       └── module-info.java
+└── src3
+    ├── paid_service
+       ├── com
+       │   └── adarsh
+       │       └── paid
+       │           └── PaidService.java
+       └── module-info.java
+└── src4
+    └── service
+        ├── com
+        │   └── adarsh
+        │       └── service
+        │           └── Service.java
+        └── module-info.java
+```
+* To compile sources from multiple directories 
+  * java --module-source-path src1;src2;src3;src4 -d out service,free_service,paid_service,main
+* To run application 
+  * java --module-path out -m main/com.adarsh.ServiceDrier 
+
+
