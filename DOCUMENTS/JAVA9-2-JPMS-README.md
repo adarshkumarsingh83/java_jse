@@ -256,6 +256,10 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
          // packages exported by current module to others module 
        export com.xx.xx;
 
+
+         // qualified export 
+         // this package is exported only to xxxx_modules list but not for other modules 
+       export com.espark.adarsh to xxxx_module1,xxxx_module1... xxxx_moduleN;
       
 
    }
