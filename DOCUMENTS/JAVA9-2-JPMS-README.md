@@ -478,6 +478,7 @@ module main {
 * To Compile multiple module 
   * javac --module-source-path /module-source-directory -d /destination-dir-location-for-generated-classes -m module1, moduel2 ... moduleN 
   * javac --module-source-path src -d out -m free_service,free_service,service,main
+    * note : in -m option no space betwen multiple module names otherwise it will not compile 
 
 ```
 mutli-module-basic-example
@@ -533,7 +534,8 @@ mutli-module-basic-example
 ```
 * To Execute multiple module app 
   * java --module-path /destination-dir-location-for-generated-classes -m module-with-main-class/com.xxx.MainClass 
-  * java --module-path out -m main/com.adarsh.
+  * java --module-path out -m main/com.adarsh.ServiceDriver
+  ###
 ```
 execution started 
 execution half completed
