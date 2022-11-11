@@ -233,19 +233,21 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
    module module_name{
         
     
-       // required directive is only for module 
-       //dependency of other module to current module 
-       // required direcive is used for one module at at time for every module requried directive has to be repeate 
+          // required directive is only for module 
+          //dependency of other module to current module 
+          // required direcive is used for one module at at time for every module requried directive has to be repeate 
         requires xxxx_module;
-        
 
-       // dependecy requred by other module via current module 
+
+          // dependecy requred by other module via current module 
         requires transitive  xxxx;
  
-      // packages exported by current module to others 
+         // export directive to export package 
+         // every packgae in module is by default private 
+         // packages exported by current module to others module 
        export com.xx.xx;
 
-      //
+      
 
    }
 ```
