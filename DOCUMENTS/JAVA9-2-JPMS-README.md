@@ -229,6 +229,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 
 
 ### module-info.java structure 
+* cyclic module dependency is not allowed in jpms 
 ```
    module module_name{
         
@@ -247,8 +248,6 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
         // required optional modules 
         // dependent module is mandatory at compile time but optional at runtime
         requires static xxxx_module;
-
-
 
  
          // export directive to export package only not for module and classes 
