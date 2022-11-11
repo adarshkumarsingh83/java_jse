@@ -242,6 +242,14 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
           // dependecy requred by other module via current module 
           // if current module is getting modules packages and if consumer of current module need that packages it can access via current module 
         requires transitive  xxxx_module;
+
+ 
+        // required optional modules 
+        // at compile time its required but at runtime its optional 
+        requires static xxxx_module;
+
+
+        
  
          // export directive to export package only not for module and classes 
          // for multiple packages export directly must be repeated don't add * for packages 
