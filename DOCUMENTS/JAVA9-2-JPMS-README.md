@@ -210,6 +210,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
   * module is group of packages 
   * module contains configuration informaiton in form of module-info.java 
   * if module-info.java is not avaliabe in module then jvm will not consider that moudle as module 
+  * two modules with same package name is not allowed in jpms since jdk 1.9 othewise CTE 
 
 ### jar file v/s module 
 * jar file is group of packages 
@@ -693,3 +694,18 @@ execution half completed
 * all predefine module and the modules specified in modeule path which are observabe by jvm in runtime 
 * $ java --list-modules 
 * $ java --module-path module-directory --list-modules 
+
+
+### Module Resolution Process 
+* how jvm relove the module and in which order 
+* java --module-path mdoule-directory --show-module-resolution -m module_name/package.name.MainClassName
+* Steps jvm will check 
+  * dependent module is not avaliable cte 
+  * mulitple modeule with same name cte 
+  * cyclic dependency cte
+  * two module with same package name cte
+
+### Restive keyword 
+* module,exports,required,transitive 
+* all restrictive k/w is only inside the module-info.java 
+* we can use restivcitve k/w as java identifier in java class 
