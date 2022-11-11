@@ -240,7 +240,8 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 
 
           // dependecy requred by other module via current module 
-        requires transitive  xxxx;
+          // if current module is getting modules packages and if consumer of current module need that packages it can access via current module 
+        requires transitive  xxxx_module;
  
          // export directive to export package only not for module and classes 
          // for multiple packages export directly must be repeated don't add * for packages 
@@ -641,7 +642,7 @@ execution half completed
 
 ### when source file is in multiple locaction 
 ```
-└── src1
+└── src1 
     ├── free_service
        ├── com
        │   └── adarsh
