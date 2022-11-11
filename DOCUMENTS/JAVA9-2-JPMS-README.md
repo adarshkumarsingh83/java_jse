@@ -689,3 +689,7 @@ execution half completed
   * java --module-path out -m main/com.adarsh.ServiceDrier 
 
 
+### Observable Modules 
+* all predefine module and the modules specified in modeule path which are observabe by jvm in runtime 
+* $ java --list-modules 
+* $ java --module-path module-directory --list-modules 
