@@ -235,7 +235,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
     
           // required directive is only for module 
           //dependency of other module to current module 
-          // required direcive is used for one module at at time for every module requried directive has to be repeate 
+          // for every module requried directive must be repeated don't add * for multiple modules 
         requires xxxx_module;
 
 
@@ -243,6 +243,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
         requires transitive  xxxx;
  
          // export directive to export package only not for module and classes 
+         // for multiple packages export directly must be repeated don't add * for packages 
          // every packgae in module is by default private 
          // packages exported by current module to others module 
        export com.xx.xx;
