@@ -232,7 +232,8 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 ### module-info.java structure 
 * cyclic module dependency is not allowed in jpms 
 ```
-   module module_name{
+  // open keyword to open and explicitly grant permission for other modules to do reflection on our module classes
+  open module module_name{
         
     
           // required directive is only for module 
@@ -264,6 +265,23 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
        export com.espark.adarsh to xxxx_module1,xxxx_module1... xxxx_moduleN;
       
 
+        // to bring the specific interface/abstract class from other module to current module so that our implementing service can be completed its spcification 
+        // class.name = inteface or absract class 
+        uses class.name;
+
+        //module can also be a service provider that other modules can consume.
+        // Service Spcification and then its ImplementationClass 
+        provides interface/abstract-class with ImplementationClass;
+
+
+        //  to allow reflection of private types, but we don't want expose all module code just specific package 
+        // opens directive to expose specific packages
+        opens com.my.package;
+
+
+        // to allow reflection of private types, but we don't want expose all module code just specific package and 
+        // selectively open our packages to a pre-approved list of modules
+        opens com.my.package to module1, module2,.....moduleN;
    }
 ```
 
