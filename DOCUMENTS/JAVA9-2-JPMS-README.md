@@ -245,11 +245,11 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 
  
         // required optional modules 
-        // at compile time its required but at runtime its optional 
+        // dependent module is mandatory at compile time but optional at runtime
         requires static xxxx_module;
 
 
-        
+
  
          // export directive to export package only not for module and classes 
          // for multiple packages export directly must be repeated don't add * for packages 
