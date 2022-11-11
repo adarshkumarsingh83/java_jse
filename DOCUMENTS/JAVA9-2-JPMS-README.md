@@ -242,7 +242,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
           // dependecy requred by other module via current module 
         requires transitive  xxxx;
  
-         // export directive to export package 
+         // export directive to export package only not for module and classes 
          // every packgae in module is by default private 
          // packages exported by current module to others module 
        export com.xx.xx;
