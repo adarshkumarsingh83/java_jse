@@ -637,7 +637,7 @@ execution half completed
         └── module-info.java
 ```
 * To Execute Application Moduels with different directories 
-  * java --upgrade-module-path out1;out2;out3;out4; -m main/com.adarsh.ServiceDriver
+  * java --upgrade-module-path out1;out2;out3;out4 -m main/com.adarsh.ServiceDriver
 
 ### when source file is in multiple locaction 
 ```
