@@ -359,4 +359,187 @@ Service performed
 execution half completed
 ```
 
-### 
+### multi-module example 
+```
+└── src
+    ├── free_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── free
+    │   │           └── FreeService.java
+    │   └── module-info.java
+    ├── main
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── ServiceDriver.java
+    │   └── module-info.java
+    ├── paid_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── paid
+    │   │           └── PaidService.java
+    │   └── module-info.java
+    └── service
+        ├── com
+        │   └── adarsh
+        │       └── service
+        │           └── Service.java
+        └── module-info.java
+```
+
+* service module 
+```
+* Service.java 
+
+package com.adarsh.service;
+public interface Service {
+     default void doService(){
+        System.out.println("Service performed");
+    }
+}
+
+* module-info.java
+
+module service {
+    exports com.adarsh.service;
+}
+```
+* free_service
+```
+* FreeService.java
+
+package com.adarsh.free;
+import com.adarsh.service.*;
+public class FreeService implements Service {
+    public void freeService() {
+        System.out.println("Free Service Performed");
+        doService();
+    }
+}
+
+* module-info.java
+
+module free_service {
+    requires service;
+    exports com.adarsh.free;
+}
+```
+
+* paid_service
+```
+* PaidService.java
+
+package com.adarsh.paid;
+import com.adarsh.service.*;
+public class PaidService implements Service {
+    public void paidService(){
+        System.out.println("Paid Service Performed");
+        doService();
+    }
+}
+
+* module-info.java
+
+module paid_service {
+    requires service;
+    exports com.adarsh.paid;
+}
+```
+
+* main 
+```
+* ServiceDriver.java
+
+package com.adarsh;
+import com.adarsh.free.FreeService;
+import com.adarsh.paid.PaidService;
+public class ServiceDriver {
+    public static void main(String[] args) throws Exception{
+        System.out.println("execution started ");
+        Thread.currentThread().sleep(10000);
+        System.out.println("execution half completed");
+        FreeService freeService = new FreeService();
+        freeService.freeService();
+        PaidService paidService = new PaidService();
+        paidService.paidService();
+        System.out.println("execution half completed");
+    }
+}
+
+* module-info.java
+
+module main {
+    requires free_service;
+    requires paid_service;
+    exports com.adarsh;
+}
+```
+
+* To Compile multiple module 
+  * javac --module-source-path /module-source-directory -d /destination-dir-location-for-generated-classes -m module1, moduel2 ... moduleN 
+  * javac --module-source-path src -d out -m free_service,free_service,service,main
+
+```
+mutli-module-basic-example
+├── out
+│   ├── free_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── free
+│   │   │           └── FreeService.class
+│   │   └── module-info.class
+│   ├── main
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── ServiceDriver.class
+│   │   └── module-info.class
+│   ├── paid_service
+│   │   ├── com
+│   │   │   └── adarsh
+│   │   │       └── paid
+│   │   │           └── PaidService.class
+│   │   └── module-info.class
+│   └── service
+│       ├── com
+│       │   └── adarsh
+│       │       └── service
+│       │           └── Service.class
+│       └── module-info.class
+└── src
+    ├── free_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── free
+    │   │           └── FreeService.java
+    │   └── module-info.java
+    ├── main
+    │   ├── README.md
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── ServiceDriver.java
+    │   └── module-info.java
+    ├── paid_service
+    │   ├── com
+    │   │   └── adarsh
+    │   │       └── paid
+    │   │           └── PaidService.java
+    │   └── module-info.java
+    └── service
+        ├── com
+        │   └── adarsh
+        │       └── service
+        │           └── Service.java
+        └── module-info.java
+```
+* To Execute multiple module app 
+  * java --module-path /destination-dir-location-for-generated-classes -m module-with-main-class/com.xxx.MainClass 
+  * java --module-path out -m main/com.adarsh.
+```
+execution started 
+execution half completed
+Free Service Performed
+Service performed
+Paid Service Performed
+Service performed
+execution half completed
+```
