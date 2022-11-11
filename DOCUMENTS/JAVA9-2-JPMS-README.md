@@ -231,9 +231,13 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/adarsh/service/Se
 ### module-info.java structure 
 ```
    module module_name{
- 
+        
+    
+       // required directive is only for module 
        //dependency of other module to current module 
-        requires xxxx;
+       // required direcive is used for one module at at time for every module requried directive has to be repeate 
+        requires xxxx_module;
+        
 
        // dependecy requred by other module via current module 
         requires transitive  xxxx;
@@ -351,3 +355,5 @@ Paid Service Performed
 Service performed
 execution half completed
 ```
+
+### 
