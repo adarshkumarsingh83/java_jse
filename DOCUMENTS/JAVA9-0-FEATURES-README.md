@@ -216,6 +216,92 @@ esparkjre
 welccome to jlink us-guest
 ```
 
+### jre size compression 
+* jlink --help 
+```
+  -c, --compress=<0|1|2>                Enable compression of resources:
+                                          Level 0: No compression
+                                          Level 1: Constant string sharing
+                                          Level 2: ZIP
+```                                          
+* to Compress the size of custom jre with compress jre 
+  * jlink --module-path out --add-modules main,java.base --compress 2 --output esparkjre
+```
+├── bin
+│   ├── java
+│   └── keytool
+├── conf
+│   ├── net.properties
+│   └── security
+│       ├── java.policy
+│       ├── java.security
+│       └── policy
+│           ├── README.txt
+│           ├── limited
+│           │   ├── default_US_export.policy
+│           │   ├── default_local.policy
+│           │   └── exempt_local.policy
+│           └── unlimited
+│               ├── default_US_export.policy
+│               └── default_local.policy
+├── include
+│   ├── classfile_constants.h
+│   ├── darwin
+│   │   └── jni_md.h
+│   ├── jni.h
+│   ├── jvmti.h
+│   └── jvmticmlr.h
+├── legal
+│   └── java.base
+│       ├── COPYRIGHT
+│       ├── LICENSE
+│       ├── aes.md
+│       ├── asm.md
+│       ├── c-libutl.md
+│       ├── cldr.md
+│       ├── icu.md
+│       ├── public_suffix.md
+│       └── unicode.md
+├── lib
+│   ├── classlist
+│   ├── jrt-fs.jar
+│   ├── jspawnhelper
+│   ├── jvm.cfg
+│   ├── libjava.dylib
+│   ├── libjimage.dylib
+│   ├── libjli.dylib
+│   ├── libjsig.dylib
+│   ├── libnet.dylib
+│   ├── libnio.dylib
+│   ├── libosxsecurity.dylib
+│   ├── libverify.dylib
+│   ├── libzip.dylib
+│   ├── modules
+│   ├── security
+│   │   ├── blocked.certs
+│   │   ├── cacerts
+│   │   ├── default.policy
+│   │   └── public_suffix_list.dat
+│   ├── server
+│   │   ├── libjsig.dylib
+│   │   └── libjvm.dylib
+│   └── tzdb.dat
+├── man
+│   └── man1
+│       ├── java.1
+│       └── keytool.1
+└── release
+
+15 directories, 49 files
+```
+
+* to run applkciation 
+  *  ./esparkjre/bin/java -m main/com.espark.adarsh.ApplicationMain
+``` 
+welccome to jlink us-guest
+```
+
+
 ---
 
 ## http2 client 
