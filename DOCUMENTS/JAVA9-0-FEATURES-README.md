@@ -334,6 +334,13 @@ welccome to jlink us-guest
   * Optional<Duration> opt = info.totalCpuDuration(); // cpu duration for this process
 * Stream<ProcessHandle> stream = ProcessHandle.allProcess(); // to get all the running procewss  
 * Stream<ProcessHandle> chld = processHandle.children(); // to get all the child process 
+* to do action on exiting of the process 
+```
+ProcessBuild pb = new ProcessBuild(xxx,xx);
+Process p = pb.start();
+CompletableFuture<Process> feature = p.onEdit();
+sout(feature.get());
+```
 
 
 * To start Nodepad 
