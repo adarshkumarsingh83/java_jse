@@ -88,9 +88,7 @@ mutli-module-basic-example
 
 - To Execute multiple module app
   - java --module-path /destination-dir-location-for-generated-classes -m module-with-main-class/com.xxx.MainClass
-  - java --module-path out -m main/com.adarsh.ServiceDriver
-  ###
-
+  - java --module-path out -m main/com.adarsh.ServiceDriver 
 ```
 execution started
 execution half completed

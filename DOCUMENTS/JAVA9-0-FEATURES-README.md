@@ -312,8 +312,26 @@ welccome to jlink us-guest
 
 ---
 
-## process api 
+### process api update JEP 102 
+* into in jdk 
+* create new process 
+* get details of process parent & child process 
+* destry the process 
+* java.lang.Process class 
+* java.lang.ProcessBuilder class 
+* java.lang.ProcessHandle interface new in jdk1.9
+  * java.lang.ProcessHandle.Info inner interface new in jdk1.9
 
+
+### how to get the proceshandle instace 
+* ProcecessHandle handle = ProcessHandle.curent();
+* ProcessHandle handle = process.toHandle();
+* Optional<ProcessHandle> handleOptional = ProcessHandle.of(processId);
+* ProcessHandle.Info info = handle.info();
+  * Optional<String> user = info.user();  // which user has started this process 
+  * Optional<String> cmd = info.command(); //which cmd has started this process 
+  * Optiona<Insant> optio = info.startInstant(); // when  this process is started 
+  * Optional<Duration> opt = info.totalCpuDuration(); // cpu duration for this process 
 ---
 
 ## private method in interface 
