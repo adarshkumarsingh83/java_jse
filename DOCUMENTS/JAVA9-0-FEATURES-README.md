@@ -301,7 +301,11 @@ welccome to jlink us-guest
 welccome to jlink us-guest
 ```
 
-
+### laucher plugin for costom jre 
+* to lauch the app using some keywords 
+* jlink --module-path out --add-modules main,java.base --launcher espark=main/com.espark.adarsh.ApplicationMain --compress 2 --output esparkjre
+* To execute the applicaion 
+  * $ ./esparkjre/bin/espark
 ---
 
 ## http2 client 
