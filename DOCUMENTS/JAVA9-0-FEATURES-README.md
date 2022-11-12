@@ -331,7 +331,31 @@ welccome to jlink us-guest
   * Optional<String> user = info.user();  // which user has started this process 
   * Optional<String> cmd = info.command(); //which cmd has started this process 
   * Optiona<Insant> optio = info.startInstant(); // when  this process is started 
-  * Optional<Duration> opt = info.totalCpuDuration(); // cpu duration for this process 
+  * Optional<Duration> opt = info.totalCpuDuration(); // cpu duration for this process
+* Stream<ProcessHandle> stream = ProcessHandle.allProcess(); // to get all the running procewss  
+* Stream<ProcessHandle> chld = processHandle.children(); // to get all the child process 
+
+
+* To start Nodepad 
+```
+ProcessBuilder pb = new ProcessBuild("notepad","filename.txt");
+pb.start();
+```
+
+* To compile java code
+```
+ProcessBuilder pb = new ProcessBuild("javac","XXX.java");
+pb.st
+```
+
+
+* To execute java code
+```
+ProcessBuilder pb = new ProcessBuild("java","XXXFileName");
+pb.st
+```
+
+
 ---
 
 ## private method in interface 
