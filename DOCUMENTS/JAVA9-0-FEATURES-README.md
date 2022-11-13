@@ -309,6 +309,13 @@ welccome to jlink us-guest
 ---
 
 ## http2 client 
+* into in jdk 1.9 
+* supports http 1 and http2 
+* support text and binary daa 
+* mulitple request 
+* synchronus and asycnchronous 
+
+
 
 ---
 
