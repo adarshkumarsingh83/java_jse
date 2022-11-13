@@ -1,7 +1,3 @@
-## JAVA9 NEW FEATURES (21 sept 2017 )
-
----
-
 
 ## http2 client 
 * into in jdk 1.9 

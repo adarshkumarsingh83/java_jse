@@ -1,6 +1,3 @@
-## JAVA9 NEW FEATURES (21 sept 2017 )
-
----
 
 ## jpms(java plateform module system)
 * JEP for modular programming development started in 2005  

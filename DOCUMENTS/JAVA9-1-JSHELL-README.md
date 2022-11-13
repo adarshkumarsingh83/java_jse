@@ -1,6 +1,4 @@
-## JAVA9 NEW FEATURES (21 sept 2017 )
 
----
 
 ## jshell 
 * java REPL = read,evaluate,print,loop 

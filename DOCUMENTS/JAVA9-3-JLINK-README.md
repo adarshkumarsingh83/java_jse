@@ -1,6 +1,3 @@
-## JAVA9 NEW FEATURES (21 sept 2017 )
-
----
 
 ## jlink 
 * to create custom jre 
