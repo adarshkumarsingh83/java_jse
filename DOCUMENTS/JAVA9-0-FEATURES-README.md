@@ -64,17 +64,18 @@ jshell> /ex
 * into in jdk 1.9 in 2017 
 * jigsaw project is based for jpms 
 
-
-![JPMS HELP](./JAVA9-2-JPMS-README.md)
+### [JPMS HELP](./JAVA9-2-JPMS-README.md)
 
 ---
 
 ## jlink 
-### ![jlink doc](./JAVA9-3-JLINK-README.md)
+
+### [jlink doc](./JAVA9-3-JLINK-README.md)
 
 ---
 
 ## http2 client 
+
 ### [HTTP2CLIENT DOC](./JAVA9-4-HTTP2CLIENT-README.md)
 
 ---
