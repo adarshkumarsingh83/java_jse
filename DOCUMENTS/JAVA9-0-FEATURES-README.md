@@ -54,7 +54,9 @@ or
 jshell> /ex 
 |  Goodbye
 ```
-![JSHELL HELP](./JAVA9-1-JSHELL-README.md)
+
+### [JSHELL HELP](./JAVA9-1-JSHELL-README.md)
+
 ---
 
 ## jpms(java plateform module system)
@@ -68,13 +70,12 @@ jshell> /ex
 ---
 
 ## jlink 
-
-![jlink doc](./JAVA9-3-JLINK-README.md)
+### ![jlink doc](./JAVA9-3-JLINK-README.md)
 
 ---
 
 ## http2 client 
-![HTTP2CLIENT DOC](./JAVA9-4-HTTP2CLIENT-README.md)
+### [HTTP2CLIENT DOC](./JAVA9-4-HTTP2CLIENT-README.md)
 
 ---
 
