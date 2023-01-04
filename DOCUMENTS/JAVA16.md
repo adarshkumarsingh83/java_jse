@@ -77,3 +77,11 @@ if (v instanceof Car c) {
 	* The Java language recognizes sealed, non-sealed, and permits as contextual keywords (similar to abstract and extends)
 	* Restrict the ability to create local classes that are subclasses of a sealed class (similar to the inability to create anonymous classes of sealed classes).
 	* Stricter checks when casting sealed classes and classes derived from sealed classes
+
+
+### Day Period Support Added to java.time Formats
+```
+ System.out.println( DateTimeFormatter.ofPattern("B").format(LocalTime.now()));
+in the afternoon
+```
+
