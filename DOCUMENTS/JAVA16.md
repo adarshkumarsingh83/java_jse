@@ -85,3 +85,12 @@ if (v instanceof Car c) {
 in the afternoon
 ```
 
+### Vector API (Incubator)
+* new Vector APIs to allow developers to perform the vector operations explicitly.
+* A Vector processor processes multiple data at a time, known as single instruction, multiple data (SIMD).
+* A Scalar processor processes only one data at a time, known as single instruction, single data (SISD).
+
+
+### Elastic Metaspace
+* Java 8 JEP 122 removed the PermGen (Permanent Generation), and introduced Metaspace, a native off-heap memory manager in the hotspot.
+* This JEP improves the metaspace memory management by returning unused HotSpot class-metadata or metaspace memory to the operating system more promptly, reducing the metaspace footprint, and simplifying the metaspace code.
