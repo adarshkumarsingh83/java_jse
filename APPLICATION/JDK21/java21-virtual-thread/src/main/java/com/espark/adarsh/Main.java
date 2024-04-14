@@ -4,9 +4,9 @@ package com.espark.adarsh;
 import java.util.concurrent.Executors;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
 
-/*        Runnable runnable = () -> System.out.println("Inside Runnable");
+    public static void virtualThreadWithPool(){
+              Runnable runnable = () -> System.out.println("Inside Runnable");
 
 //1
         Thread.startVirtualThread(runnable);
@@ -17,13 +17,14 @@ public class Main {
 //3
         var executor = Executors.newVirtualThreadPerTaskExecutor();
 
-        executor.submit(runnable);*/
+        executor.submit(runnable);
+    }
 
-
-Thread.Builder builder = Thread.ofVirtual().name("worker-", 0);
-Runnable task = () -> {
-    System.out.println("Thread ID: " + Thread.currentThread().threadId());
-};
+    public static void virtualThreadWithBuilder()throws InterruptedException{
+        Thread.Builder builder = Thread.ofVirtual().name("worker-", 0);
+        Runnable task = () -> {
+            System.out.println("Thread ID: " + Thread.currentThread().threadId());
+        };
 
 // name "worker-0"
         Thread t1 = builder.start(task);
@@ -40,4 +41,12 @@ Runnable task = () -> {
         t3.join();
         System.out.println(t3.getName() + " terminated");
     }
+
+    public static void main(String[] args) throws InterruptedException {
+
+          virtualThreadWithBuilder();
+          virtualThreadWithPool();
+    }
+
+
 }
