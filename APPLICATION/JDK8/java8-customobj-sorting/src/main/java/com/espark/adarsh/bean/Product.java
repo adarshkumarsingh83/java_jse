@@ -10,6 +10,6 @@ public class Product {
 
     String categoryId;
     String productName;
-    Float productPrice;
+    Double productPrice;
 
 }
