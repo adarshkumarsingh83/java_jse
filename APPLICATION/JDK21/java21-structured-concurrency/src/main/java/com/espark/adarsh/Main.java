@@ -15,7 +15,6 @@ public class Main{
 
             Supplier<User> userSupplier = scope.fork(() -> getUser());
             Supplier<Accounts> accountsSupplier = scope.fork(() -> getAccounts());
-
             scope.join();	
             scope.throwIfFailed(e -> new RuntimeException("Execution Failed "+e.getLocalizedMessage() ));
 
@@ -26,14 +25,14 @@ public class Main{
     }
 
     public static User getUser() throws InterruptedException {
-        System.out.println("waiting for user data");
+        System.out.println("waiting for user data "+Thread.currentThread().getName());
         Thread.sleep(2000L);
         System.out.println("waiting over for user data");
         return new User(1,"User No 1");
     }
 
     public static Accounts getAccounts()throws InterruptedException {
-        System.out.println("waiting for account date ");
+        System.out.println("waiting for account date "+Thread.currentThread().getName());
         Thread.sleep(2000L);
         System.out.println("waiting over for account date ");
         return new Accounts(1,"Saving ");
