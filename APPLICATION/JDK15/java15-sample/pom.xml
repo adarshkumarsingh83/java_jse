@@ -5,14 +5,14 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>jdk10to13-sample</groupId>
-    <artifactId>jdk10to13-sample</artifactId>
+    <groupId>java15-sample</groupId>
+    <artifactId>java15-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <project.name>jdk10to13-sample</project.name>
+        <project.name>java15-sample</project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>13</java.version>
+        <java.version>15</java.version>
     </properties>
 
 
@@ -24,21 +24,14 @@
                  <configuration>
                      <source>${java.version}</source>
                      <target>${java.version}</target>
-                     <compilerArgs>
-                         --enable-preview
-                     </compilerArgs>
                  </configuration>
              </plugin>
              <plugin>
-                 <artifactId>maven-surefire-plugin</artifactId>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
                  <configuration>
-                     <argLine>--enable-preview</argLine>
-                 </configuration>
-             </plugin>
-             <plugin>
-                 <artifactId>maven-failsafe-plugin</artifactId>
-                 <configuration>
-                     <argLine>--enable-preview</argLine>
+                     <source>17</source>
+                     <target>17</target>
                  </configuration>
              </plugin>
          </plugins>
