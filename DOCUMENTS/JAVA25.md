@@ -82,5 +82,12 @@ import module java.base;
 * to hold immutable values 
 * initilised before use and once init then no change 
 
-### 
+### AOT Ahead of Time 
+* compilation before execution keep in AOT cache 
+
+### AOT method profiling 
+* AOT cahce for method which is used frequently based on profile and perforamce is improved 
+
+
+
 
